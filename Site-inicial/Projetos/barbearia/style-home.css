@@ -1,0 +1,67 @@
+Html{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+background-image: url('./img-inicial/banner.jpg');
+border-radius:15px;
+box-sizing: border-box;
+border: 2px solid black; 
+}
+.titulo{
+    color:rgb(240, 239, 233);
+    padding: 3px;
+    margin: 8px 0 8px 8px;
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: uppercase;
+    width: 550px;
+    
+}
+.principal
+{
+
+    color:rgb(240, 239, 233);
+    background:none;
+    padding: 25px;
+    margin:5px;
+    top:19%;
+    position:absolute;
+    font-size: 20px;
+    
+}
+.bemvindo{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 90px;
+    text-transform:uppercase;
+}
+p{
+    text-align: center;
+    padding: 6px;
+}
+
+.missao{
+    font-size: 22px
+}
+em strong{
+    color:rgb(240, 239, 233);
+    font-weight: bolder;
+}
+.itens {
+    font-style: italic;
+
+}
+.beneficios {
+    background: none;
+    padding:20px;
+    position: absolute;
+    padding: 20px;
+    top:60%;
+}
+
+ul{
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right:15%;
+}
+.imgbeneficios{
+    width: 50%;
+}

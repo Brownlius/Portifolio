@@ -1,0 +1,130 @@
+header{
+    background: #bbbabb;
+    padding: 20px 0;
+}
+.logo{
+    transition: 0.75s all;
+    }
+    .logo:hover{
+        transform:scale(1.2);
+        cursor:pointer;
+    }
+    .logo:active{
+        transform: scale(0.8);
+    }
+.caixa{
+    position:relative;
+    width:940px;
+    margin: 0 auto; 
+}
+body{
+    font-family: 'Martel', serif;
+}
+.caixa{
+    position:relative;
+    width:940px;
+    margin: 0 auto; 
+}
+nav{
+    position:absolute;
+    top: 115px;
+    right:0px;
+}
+nav li{
+    display: inLine;
+    margin: 0 0 0 15px;
+}
+nav a{
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+nav a:hover{
+    color:rgb(243, 200, 130);
+    font-size: 24px;
+}
+main{
+    width:940px;
+    margin:0 auto;
+}
+form{
+    margin:40px 0;
+}
+form label, form legend,.tipo-contato{ 
+    display:block;
+    font-size:20px; 
+    margin: 10px 0 10px;
+}
+.input-padrao{
+    display:block;
+    margin:0 0 20px;
+    padding: 10px 25px;
+    width:50%;
+}
+.checkbox{
+    margin:20px 0;
+}
+
+.copyright{
+    color: rgb(243, 200, 130);
+    font-size: 14px;
+    margin: 20px 0 0;
+}
+.enviar{
+    width: 40%;
+    padding:15px 0;
+    background: rgb(243, 200, 130);
+    color:black;
+    font-weight: bold;
+    font-size: 18px;
+    border:2px solid black;
+    border-radius:15px;
+    transition: 0.5s background;
+}
+
+.enviar:hover{
+    background: rgb(243, 175, 66);
+    cursor:pointer;
+    transition: 0.5s transform;
+    transform:scale(1.01) rotate(0.5deg);
+}
+table{
+    margin:20px;
+}
+thead{
+background:black;
+color:rgb(243, 200, 130);
+font-weight: bold;
+}
+td,thead th{
+    border:2px solid black;
+    padding:8px 15px;
+    text-align: center;
+}
+footer {
+    text-align: center;
+    background: url("img-produto/bg.jpg");
+    padding:40px 0;
+}
+@media screen and (max-width: 480px){
+    .caixa,ul.produtos{
+        width:auto;
+    }
+    h1{
+        text-align: center;
+    }
+    nav{
+        position: static;
+        text-align: center;
+    }
+    main{
+        width: auto;
+    }
+    form,.input-padrao,.enviar,table {
+        text-align: center  ;
+        width: 75%;
+        margin: 10px auto ;
+    }
+    }
