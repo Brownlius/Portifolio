@@ -1,0 +1,62 @@
+@font-face {
+    font-family:'personalizada';
+    src: url('./fonts/I-pixel-u.ttf') format('truetype');
+  }
+header{
+    font-family:  'personalizada';
+    font-size:3em;
+    margin: 0 auto;
+    padding: 5px;
+    color: rgb(24, 214, 119);
+    width: 500px;
+    background-color:rgb(20, 33, 44) ;
+    border: 4px solid aliceblue;
+    border-radius: 5px;
+    border-bottom: none;
+}
+body{
+    text-align: center;
+    background-color: rgb(26, 157, 245);
+}
+canvas{
+    border: 4px solid aliceblue;
+    border-radius: 5px;
+}
+
+
+
+/* *{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  rgb(20, 33, 44);
+    border:6px solid aliceblue;
+}
+#fundo-jogo{
+    
+    background-color: rgb(28, 143, 104);
+    border: 6px solid aliceblue;
+    height: 100vmin;
+    width: 100vmin;
+    display:grid;
+    grid-template-columns: repeat(31,1fr);
+    grid-template-rows: repeat(31,1fr);
+}
+
+.cobra{
+    background-color:  rgb(26, 157, 245);
+    border: 0.25vmin solid rgb(20, 33, 44);
+}
+
+.comida{
+    background-color: rgb(24, 214, 119);
+    border: 0.25vmin solid rgb(20, 33, 44);
+
+} */
