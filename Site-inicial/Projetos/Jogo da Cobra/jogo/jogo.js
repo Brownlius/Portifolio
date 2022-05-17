@@ -14,8 +14,11 @@ var corpoCobra = [];
 //comida
 var xSushi;
 var ySushi;
+//Marca pontos
+var pontos = 0;
 //fim de jogo
 var gameOver = false;
+
 
 window.onload = function (){
     tela = document.getElementById("fundo-jogo");
@@ -25,14 +28,17 @@ window.onload = function (){
 
     colocarComida();
     document.addEventListener('keyup',mudaDirecao);
-    setInterval(update, 1000/13);
+    setInterval(update, 1000/12);
 
+    marcaPontos();
 }
 
 function update(){
     if (gameOver){
         return;
     }
+    //Marca Pontos
+    
 
     ctx.fillStyle = 'rgb(20, 33, 44)'; // fundo - azul-escuro
     ctx.fillRect(0, 0, tela.width,tela.height); // tela
@@ -63,18 +69,23 @@ function update(){
         ctx.fillRect(corpoCobra[i][0], corpoCobra[i][1], tamanhoBloco, tamanhoBloco)
         
     }
-
     //Condições para fim do jogo
-    if (xGabi < 0 || xGabi > colunas * tamanhoBloco || yGabi < 0 || yGabi > linhas * tamanhoBloco){
+    if ((xGabi) < 0 || (xGabi + tamanhoBloco)  > colunas * tamanhoBloco || (yGabi) < 0 || (yGabi +  tamanhoBloco) > linhas * tamanhoBloco){ //colisa-borda
         gameOver = true;
         alert("Fim de jogo");
     }
-    for (let i = 0; i < corpoCobra.length; i++) {
-        if(xGabi == corpoCobra[i][0] && yGabi == corpoCobra[i][1]){
+    for (let i = 0; i < corpoCobra.length; i++) { // auto-colisao
+        if(xGabi == corpoCobra[i][0] && yGabi == corpoCobra[i][1]){ 
         gameOver = true;
         alert("Fim de jogo");
         }
     } 
+   
+}
+function marcaPontos(){
+    textAlign(CENTER);
+    textSize(25);
+    text(pontos, 750 , 50);
 }
 
 function colocarComida(){
