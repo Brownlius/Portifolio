@@ -21,7 +21,7 @@ window.onload = function (){
 
     colocarComida();
     document.addEventListener('keyup',mudaDirecao);
-    setInterval(update, 1000/10);
+    setInterval(update, 1000/9);
 
 }
 
@@ -31,6 +31,7 @@ function update(){
 
     ctx.fillStyle = 'aliceblue'; //sushi - branco
     ctx.fillRect(xSushi, ySushi, (tamanhoBloco - 10), (tamanhoBloco - 10));
+
 
     if (xGabi == xSushi && yGabi == ySushi){
         colocarComida();
@@ -52,16 +53,16 @@ function colocarComida(){
 
 function mudaDirecao(event){
     
-    if (event.code == "ArrowUp"){
+    if (event.code == "ArrowUp" && yVelocidade != 1){
         xVelocidade = 0 ;
         yVelocidade = -1;
-    }else if (event.code == "ArrowDown"){
+    }else if (event.code == "ArrowDown" && yVelocidade != -1){
         xVelocidade = 0;
         yVelocidade = 1;
-    }else if (event.code == "ArrowLeft"){
+    }else if (event.code == "ArrowLeft" && xVelocidade != 1){
         xVelocidade = -1 ;
         yVelocidade = 0;
-    }else if (event.code == "ArrowRight"){
+    }else if (event.code == "ArrowRight" && xVelocidade != -1){
         xVelocidade = 1;
         yVelocidade = 0;
     }
