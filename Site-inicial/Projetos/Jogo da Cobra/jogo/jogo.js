@@ -14,6 +14,8 @@ var corpoCobra = [];
 //comida
 var xSushi;
 var ySushi;
+//fim de jogo
+var gameOver = false;
 
 window.onload = function (){
     tela = document.getElementById("fundo-jogo");
@@ -28,14 +30,18 @@ window.onload = function (){
 }
 
 function update(){
+    if (gameOver){
+        return;
+    }
+
     ctx.fillStyle = 'rgb(20, 33, 44)'; // fundo - azul-escuro
-    ctx.fillRect(0, 0, tela.width,tela.height);
+    ctx.fillRect(0, 0, tela.width,tela.height); // tela
 
     ctx.fillStyle = 'aliceblue'; //sushi - branco
-    ctx.fillRect(xSushi, ySushi, (tamanhoBloco - 10), (tamanhoBloco - 10));
+    ctx.fillRect(xSushi, ySushi, (tamanhoBloco - 10), (tamanhoBloco - 10)); //comida
 
 
-    if (xGabi == xSushi && yGabi == ySushi){
+    if (xGabi == xSushi && yGabi == ySushi){ //Quando comer, add corpo e muda posição da comida.
         corpoCobra.push([xSushi,ySushi]);
         colocarComida();
     }
@@ -48,12 +54,25 @@ function update(){
     ctx.fillStyle= 'rgb(24, 214, 119)'; // verde - claro - cabeça
     xGabi += xVelocidade * tamanhoBloco;
     yGabi += yVelocidade  * tamanhoBloco;
+
     ctx.fillRect(xGabi,yGabi,tamanhoBloco,tamanhoBloco)
 
     for (let i = 0; i < corpoCobra.length; i++) {
         ctx.fillRect(corpoCobra[i][0], corpoCobra[i][1], tamanhoBloco, tamanhoBloco)
         
     }
+
+    //Condições para fim do jogo
+    if (xGabi < 0 || xGabi > colunas * tamanhoBloco || yGabi < 0 || yGabi > linhas * tamanhoBloco){
+        gameOver = true;
+        alert("Fim de jogo");
+    }
+    for (let i = 0; i < corpoCobra.length; i++) {
+        if(xGabi == corpoCobra[i][0] && yGabi == corpoCobra[i][1]){
+        gameOver = true;
+        alert("Fim de jogo");
+        }
+    } 
 }
 
 function colocarComida(){
