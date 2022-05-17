@@ -9,6 +9,8 @@ var xGabi = 5 * tamanhoBloco;
 var yGabi = 5 * tamanhoBloco;
 var xVelocidade = 0;
 var yVelocidade = 0;
+//corpo
+var corpoCobra = [];
 //comida
 var xSushi;
 var ySushi;
@@ -34,15 +36,24 @@ function update(){
 
 
     if (xGabi == xSushi && yGabi == ySushi){
+        corpoCobra.push([xSushi,ySushi]);
         colocarComida();
     }
-
+    for (let i = corpoCobra.length - 1 ; i > 0; i --) {
+        corpoCobra [i] = corpoCobra[i-1];
+    }
+    if (corpoCobra.length){
+        corpoCobra[0] = [xGabi,yGabi]
+    }
     ctx.fillStyle= 'rgb(24, 214, 119)'; // verde - claro - cabeça
     xGabi += xVelocidade * tamanhoBloco;
     yGabi += yVelocidade  * tamanhoBloco;
     ctx.fillRect(xGabi,yGabi,tamanhoBloco,tamanhoBloco)
 
-    
+    for (let i = 0; i < corpoCobra.length; i++) {
+        ctx.fillRect(corpoCobra[i][0], corpoCobra[i][1], tamanhoBloco, tamanhoBloco)
+        
+    }
 }
 
 function colocarComida(){
