@@ -1,6 +1,6 @@
-var tamanhoBloco = 15;
-var linhas = 30;
-var colunas = 30;
+var tamanhoBloco = 20;
+var linhas = 40;
+var colunas = 40;
 var tela;
 var ctx;
 

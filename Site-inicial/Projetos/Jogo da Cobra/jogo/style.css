@@ -2,13 +2,13 @@
     font-family:'personalizada';
     src: url('./fonts/I-pixel-u.ttf') format('truetype');
   }
-header{
+.titulo{
     font-family:  'personalizada';
     font-size:3em;
     margin: 0 auto;
     padding: 5px;
     color: rgb(24, 214, 119);
-    width: 500px;
+    width: calc(808px - 5px );
     background-color:rgb(20, 33, 44) ;
     border: 4px solid aliceblue;
     border-radius: 5px;
