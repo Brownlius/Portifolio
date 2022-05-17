@@ -1,6 +1,6 @@
-var tamanhoBloco = 25;
-var linhas = 20;
-var colunas = 20;
+var tamanhoBloco = 15;
+var linhas = 30;
+var colunas = 30;
 var tela;
 var ctx;
 
@@ -25,7 +25,7 @@ window.onload = function (){
 
     colocarComida();
     document.addEventListener('keyup',mudaDirecao);
-    setInterval(update, 1000/9);
+    setInterval(update, 1000/13);
 
 }
 
@@ -52,6 +52,8 @@ function update(){
         corpoCobra[0] = [xGabi,yGabi]
     }
     ctx.fillStyle= 'rgb(24, 214, 119)'; // verde - claro - cabeça
+    ctx.strokeStyle = "aliceblue";
+    ctx.stroke( );
     xGabi += xVelocidade * tamanhoBloco;
     yGabi += yVelocidade  * tamanhoBloco;
 
