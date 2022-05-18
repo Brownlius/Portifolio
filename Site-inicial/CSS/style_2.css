@@ -172,6 +172,7 @@ html{
            
 }
 
+
 .projetos h3{
     display: flex;
     justify-content: center;
@@ -188,7 +189,7 @@ html{
     border-radius: 3%;
 }
 
-.logo-alura,.logo-freeway,.logo-pong{
+.logo-alura,.logo-freeway,.logo-pong,.logo-snake{
     margin: 15px;
     width: 250PX; /* width of container */
     height:  250PX; /* height of container */
