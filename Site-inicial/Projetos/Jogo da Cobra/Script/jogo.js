@@ -33,7 +33,7 @@ window.onload = function (){
     colocarObstaculo();
     colocarComida();
     document.addEventListener('keyup',mudaDirecao);
-    setInterval(update, 1000/12);
+    setInterval(update, 1000/6);
 }
 
 function update(){
@@ -89,13 +89,13 @@ function update(){
         xGabi = tela.width  -1;
     }
     if (xGabi > tela.width ){
-        xGabi = 0;
+        xGabi = 0 - tamanhoBloco;
     } 
     if (yGabi < 0){
         yGabi = tela.height;
     } 
     if (yGabi > tela.height){
-        yGabi = 0;
+        yGabi = 0 - tamanhoBloco;
     } 
 //Condições para fim do jogo
     
