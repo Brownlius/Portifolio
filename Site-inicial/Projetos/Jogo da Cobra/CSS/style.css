@@ -1,6 +1,6 @@
 @font-face {
     font-family:'personalizada';
-    src: url('./fonts/I-pixel-u.ttf') format('truetype');
+    src: url('../fonts/I-pixel-u.ttf') format('truetype');
   }
 .titulo{
     font-family:  'personalizada';

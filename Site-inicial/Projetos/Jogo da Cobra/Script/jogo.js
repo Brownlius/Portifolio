@@ -80,15 +80,25 @@ function update(){
 
     ctx.fillRect(xGabi,yGabi,tamanhoBloco,tamanhoBloco)
 
-    for (let i = 0; i < corpoCobra.length; i++) {
-        ctx.fillRect(corpoCobra[i][0], corpoCobra[i][1], tamanhoBloco, tamanhoBloco)
+    for (let i = 0; i < corpoCobra.length; i++) { // aumentando corpo da cobra
+        ctx.fillRect(corpoCobra[i][0] , corpoCobra[i][1]  , tamanhoBloco  , tamanhoBloco)
         
     }
-    //Condições para fim do jogo
-    if ((xGabi) < 0 || (xGabi + tamanhoBloco)  > colunas * tamanhoBloco || (yGabi) < 0 || (yGabi +  tamanhoBloco) > linhas * tamanhoBloco){ //colisa-borda
-        gameOver = true;
-        alert("Fim de jogo");
+    //Rolagem infinita
+    if (xGabi < 0){
+        xGabi = tela.width  -1;
     }
+    if (xGabi > tela.width ){
+        xGabi = 0;
+    } 
+    if (yGabi < 0){
+        yGabi = tela.height;
+    } 
+    if (yGabi > tela.height){
+        yGabi = 0;
+    } 
+//Condições para fim do jogo
+    
     for (let i = 0; i < corpoCobra.length; i++) { // auto-colisao
         if(xGabi == corpoCobra[i][0] && yGabi == corpoCobra[i][1]){ 
         gameOver = true;
