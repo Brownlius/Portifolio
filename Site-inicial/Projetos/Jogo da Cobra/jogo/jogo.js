@@ -9,49 +9,64 @@ var xGabi = 5 * tamanhoBloco;
 var yGabi = 5 * tamanhoBloco;
 var xVelocidade = 0;
 var yVelocidade = 0;
+
 //corpo
 var corpoCobra = [];
 //comida
 var xSushi;
 var ySushi;
+// Obstaculos
+var xObstaculos;
+var yObstaculos;
 //Marca pontos
-var pontos = 0;
+var vida = 5;
 //fim de jogo
 var gameOver = false;
-
+var xColisorCobra = xGabi + tamanhoBloco;
+var yColisorCobra = yGabi + tamanhoBloco;
 
 window.onload = function (){
     tela = document.getElementById("fundo-jogo");
     tela.width = linhas * tamanhoBloco;
     tela.height = colunas * tamanhoBloco;
     ctx = tela.getContext('2d');
-
+    colocarObstaculo();
     colocarComida();
     document.addEventListener('keyup',mudaDirecao);
     setInterval(update, 1000/12);
-
-    marcaPontos();
 }
 
 function update(){
     if (gameOver){
         return;
     }
-    //Marca Pontos
-    
 
+    xColisorCobra = xGabi + tamanhoBloco;
+    yColisorCobra = yGabi + tamanhoBloco;
+    
     ctx.fillStyle = 'rgb(20, 33, 44)'; // fundo - azul-escuro
     ctx.fillRect(0, 0, tela.width,tela.height); // tela
+        //
+        ctx.fillStyle = 'aliceblue'; //sushi - branco
+        ctx.fillRect(xSushi, ySushi, (tamanhoBloco * 0.75), (tamanhoBloco * 0.75)); //comida
+        
+        if (xGabi == xSushi && yGabi == ySushi){ //Quando comer, add corpo e muda posição da comida.
+            corpoCobra.push([xSushi,ySushi]);
+            colocarComida();
+        }
+        //
 
-    ctx.fillStyle = 'aliceblue'; //sushi - branco
-    ctx.fillRect(xSushi, ySushi, (tamanhoBloco - 10), (tamanhoBloco - 10)); //comida
-
-
-    if (xGabi == xSushi && yGabi == ySushi){ //Quando comer, add corpo e muda posição da comida.
-        corpoCobra.push([xSushi,ySushi]);
-        colocarComida();
+        //
+      
+    ctx.fillStyle = 'rgb(138,118,138)'; // Obstaculo
+    ctx.fillRect(xObstaculos - tamanhoBloco, yObstaculos - tamanhoBloco, tamanhoBloco, tamanhoBloco)
+    
+    if (xColisorCobra == xObstaculos  && yColisorCobra  == yObstaculos ){ //Colisao com obstaculo
+        colocarObstaculo();
     }
-    for (let i = corpoCobra.length - 1 ; i > 0; i --) {
+        //
+
+    for (let i = corpoCobra.length - 1 ; i > 0; i --) { //colisao com o corpo
         corpoCobra [i] = corpoCobra[i-1];
     }
     if (corpoCobra.length){
@@ -92,6 +107,12 @@ function colocarComida(){
     xSushi = Math.floor(Math.random() * colunas) * tamanhoBloco;
     ySushi = Math.floor(Math.random() * linhas) * tamanhoBloco;
 
+}
+function colocarObstaculo(){
+    for (let i = 1; i < 5; i++) {
+    xObstaculos = Math.floor(Math.random() * colunas) * tamanhoBloco;
+    yObstaculos = Math.floor(Math.random() * linhas) * tamanhoBloco;
+    }
 }
 
 function mudaDirecao(event){
