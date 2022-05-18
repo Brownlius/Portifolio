@@ -85,17 +85,17 @@ function update(){
         
     }
     //Rolagem infinita
-    if (xGabi < 0){
-        xGabi = tela.width  -1;
+    if (xGabi < -1){
+        xGabi = tela.width - tamanhoBloco;
     }
-    if (xGabi > tela.width ){
-        xGabi = 0 - tamanhoBloco;
+    if (xGabi  > tela.width - 1 ){
+        xGabi = 0 ;
     } 
-    if (yGabi < 0){
-        yGabi = tela.height;
+    if (yGabi < -1){
+        yGabi = tela.height - tamanhoBloco;
     } 
-    if (yGabi > tela.height){
-        yGabi = 0 - tamanhoBloco;
+    if (yGabi > tela.height - 1){
+        yGabi = 0 ;
     } 
 //Condições para fim do jogo
     
