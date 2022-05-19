@@ -32,10 +32,10 @@ window.onload = function (){
     colocarObstaculo();
     colocarComida();
     document.addEventListener('keyup',mudaDirecao);
-    setInterval(update, 1000/6);
+    setInterval(update, 1000/15);
 }
 function update(){
-    console.log(comidasComidas);
+    console.log(vidas);
     if (gameOver){
         return;
     }
@@ -53,9 +53,6 @@ function update(){
             comidasComidasTotal += 1
         }
 
-    ctx.fillStyle = 'rgb(138,118,138)'; // Gera o obstaculo
-    ctx.fillRect(xObstaculos , yObstaculos , tamanhoBloco, tamanhoBloco)
-    
     if (xGabi == xObstaculos  && yGabi  == yObstaculos ){ //Colisao com obstaculo. Atualiza local, e perde vida
         colocarObstaculo();
         perdeVida();
@@ -125,11 +122,28 @@ function colocarComida(){
     xSushi = Math.floor(Math.random() * colunas) * tamanhoBloco;
     ySushi = Math.floor(Math.random() * linhas) * tamanhoBloco;
 }
+var qtdObstaculos =  []; //inicializa o array com 10 posições
+qtdObstaculos.length = 10;
+function preencheArray(){
+        
+        for(let i = 0; i < qtdObstaculos.length ; i++)   // troquei > por <
+        {  
+            qtdObstaculos[i] = (i)(Math.random() *10); // atribui o valoor aleatório à posição i      
+       }  
+      
+   } 
+console.log(qtdObstaculos)
 function colocarObstaculo(){
-    for (let i = 1; i < 5; i++) {
+    for (let i = 0; i < 10; i++) {
+
     xObstaculos = Math.floor(Math.random() * colunas) * tamanhoBloco;
     yObstaculos = Math.floor(Math.random() * linhas) * tamanhoBloco;
-    }
+
+    ctx.fillStyle = 'rgb(138,118,138)'; // Gera o obstaculo
+    ctx.fillRect(xObstaculos[i], yObstaculos[i] , tamanhoBloco, tamanhoBloco)
+   
+}
+   
 }
 function mudaDirecao(event){
     if (event.code == "ArrowUp" && yVelocidade != 1){
