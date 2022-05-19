@@ -21,8 +21,7 @@ var vidas= 5;
 var comidasComidas = 0;
 //fim de jogo
 var gameOver = false;
-var xColisorCobra = xGabi + tamanhoBloco;
-var yColisorCobra = yGabi + tamanhoBloco;
+
 
 window.onload = function (){
     tela = document.getElementById("fundo-jogo");
@@ -34,19 +33,15 @@ window.onload = function (){
     document.addEventListener('keyup',mudaDirecao);
     setInterval(update, 1000/6);
 }
-
 function update(){
-    console.log(comidasComidas);
+    console.log(vidas);
     if (gameOver){
         return;
     }
 
-    xColisorCobra = xGabi + tamanhoBloco;
-    yColisorCobra = yGabi + tamanhoBloco;
-    
     ctx.fillStyle = 'rgb(20, 33, 44)'; // fundo - azul-escuro
     ctx.fillRect(0, 0, tela.width,tela.height); // tela
-        //
+
         ctx.fillStyle = 'aliceblue'; //sushi - branco
         ctx.fillRect(xSushi, ySushi, (tamanhoBloco * 0.75), (tamanhoBloco * 0.75)); //comida
         
@@ -55,13 +50,13 @@ function update(){
             colocarComida();
             aumentaComidasComidas();
         }
-        
-        //
-    ctx.fillStyle = 'rgb(138,118,138)'; // Obstaculo
-    ctx.fillRect(xObstaculos - tamanhoBloco, yObstaculos - tamanhoBloco, tamanhoBloco, tamanhoBloco)
+
+    ctx.fillStyle = 'rgb(138,118,138)'; // Gera o obstaculo
+    ctx.fillRect(xObstaculos , yObstaculos , tamanhoBloco, tamanhoBloco)
     
-    if (xColisorCobra == xObstaculos  && yColisorCobra  == yObstaculos ){ //Colisao com obstaculo
+    if (xGabi == xObstaculos  && yGabi  == yObstaculos ){ //Colisao com obstaculo. Atualiza local, e perde vida
         colocarObstaculo();
+        perdeVida();
     }
         //
 
@@ -119,6 +114,9 @@ function aumentaComidasComidas(){
         vidas +=1;
         comidasComidas = 0;
     }
+}
+function perdeVida(){
+    vidas = vidas - 1
 }
 function colocarComida(){
     xSushi = Math.floor(Math.random() * colunas) * tamanhoBloco;
