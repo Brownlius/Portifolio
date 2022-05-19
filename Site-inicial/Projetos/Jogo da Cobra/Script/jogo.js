@@ -35,7 +35,7 @@ window.onload = function (){
     setInterval(update, 1000/6);
 }
 function update(){
-    console.log(vidas);
+    console.log(comidasComidas);
     if (gameOver){
         return;
     }
@@ -101,7 +101,7 @@ function update(){
         alert("Fim de jogo");
         }
     } 
-    if(vidas == 0 || comidasComidasTotal == 2){
+    if(vidas == 0 || comidasComidasTotal == 15){
         gameOver = true;
         alert("Fim de jogo");
     }
@@ -111,9 +111,9 @@ function update(){
 //     vidas -= 1
 // }
 function aumentaComidasComidas(){
-    if(comidasComidas < 3){
+    if(comidasComidas < 3 && vidas < 5){
         comidasComidas += 1
-    }else if(comidasComidas == 3){
+    }else if(comidasComidas == 3 && vidas < 5){
         vidas +=1;
         comidasComidas = 0;
     }
