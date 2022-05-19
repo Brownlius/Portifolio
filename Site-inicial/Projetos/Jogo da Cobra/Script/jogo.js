@@ -19,6 +19,7 @@ var yObstaculos;
 //Marca pontos
 var vidas= 5;
 var comidasComidas = 0;
+var comidasComidasTotal = 0;
 //fim de jogo
 var gameOver = false;
 
@@ -49,6 +50,7 @@ function update(){
             corpoCobra.push([xSushi,ySushi]);
             colocarComida();
             aumentaComidasComidas();
+            comidasComidasTotal += 1
         }
 
     ctx.fillStyle = 'rgb(138,118,138)'; // Gera o obstaculo
@@ -99,10 +101,11 @@ function update(){
         alert("Fim de jogo");
         }
     } 
-    if(vidas == 0){
+    if(vidas == 0 || comidasComidasTotal == 2){
         gameOver = true;
         alert("Fim de jogo");
     }
+    
 }
 // if ((xGabi == xObstaculos) && (yGabi == yObstaculos)){
 //     vidas -= 1
