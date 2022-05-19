@@ -3,13 +3,11 @@ var linhas = 30;
 var colunas = 30;
 var tela;
 var ctx;
-
 //cabeça
 var xGabi = 5 * tamanhoBloco; 
 var yGabi = 5 * tamanhoBloco;
 var xVelocidade = 0;
 var yVelocidade = 0;
-
 //corpo
 var corpoCobra = [];
 //comida
@@ -19,7 +17,8 @@ var ySushi;
 var xObstaculos;
 var yObstaculos;
 //Marca pontos
-var vida = 5;
+var vidas= 5;
+var comidasComidas = 0;
 //fim de jogo
 var gameOver = false;
 var xColisorCobra = xGabi + tamanhoBloco;
@@ -37,6 +36,7 @@ window.onload = function (){
 }
 
 function update(){
+    console.log(comidasComidas);
     if (gameOver){
         return;
     }
@@ -50,14 +50,13 @@ function update(){
         ctx.fillStyle = 'aliceblue'; //sushi - branco
         ctx.fillRect(xSushi, ySushi, (tamanhoBloco * 0.75), (tamanhoBloco * 0.75)); //comida
         
-        if (xGabi == xSushi && yGabi == ySushi){ //Quando comer, add corpo e muda posição da comida.
+        if (xGabi == xSushi && yGabi == ySushi){ //Quando comer, add corpo,  muda posição da comida, aumenta contador vida 
             corpoCobra.push([xSushi,ySushi]);
             colocarComida();
+            aumentaComidasComidas();
         }
+        
         //
-
-        //
-      
     ctx.fillStyle = 'rgb(138,118,138)'; // Obstaculo
     ctx.fillRect(xObstaculos - tamanhoBloco, yObstaculos - tamanhoBloco, tamanhoBloco, tamanhoBloco)
     
@@ -105,18 +104,25 @@ function update(){
         alert("Fim de jogo");
         }
     } 
-   
+    if(vidas == 0){
+        gameOver = true;
+        alert("Fim de jogo");
+    }
 }
-function marcaPontos(){
-    textAlign(CENTER);
-    textSize(25);
-    text(pontos, 750 , 50);
+// if ((xGabi == xObstaculos) && (yGabi == yObstaculos)){
+//     vidas -= 1
+// }
+function aumentaComidasComidas(){
+    if(comidasComidas < 3){
+        comidasComidas += 1
+    }else if(comidasComidas == 3){
+        vidas +=1;
+        comidasComidas = 0;
+    }
 }
-
 function colocarComida(){
     xSushi = Math.floor(Math.random() * colunas) * tamanhoBloco;
     ySushi = Math.floor(Math.random() * linhas) * tamanhoBloco;
-
 }
 function colocarObstaculo(){
     for (let i = 1; i < 5; i++) {
@@ -124,9 +130,7 @@ function colocarObstaculo(){
     yObstaculos = Math.floor(Math.random() * linhas) * tamanhoBloco;
     }
 }
-
 function mudaDirecao(event){
-    
     if (event.code == "ArrowUp" && yVelocidade != 1){
         xVelocidade = 0 ;
         yVelocidade = -1;
