@@ -14,8 +14,8 @@ var corpoCobra = [];
 var xSushi;
 var ySushi;
 // Obstaculos
-var xObstaculos;
-var yObstaculos;
+var xObstaculos = [];
+var yObstaculos = [];
 //Marca pontos
 var vidas= 5;
 var comidasComidas = 0;
@@ -142,9 +142,9 @@ function mudaDirecao(event){
 }
 
 function colocarObstaculo(){
-    // xObstaculos = Math.floor(Math.random() * colunas) * tamanhoBloco;
-    // yObstaculos = Math.floor(Math.random() * linhas) * tamanhoBloco;
-    xObstaculos = [70,52,89,145,370];
-    yObstaculos = [50,32,69,125,350];
+for (let i = 0 ; i < 10 ; i++){
+  xObstaculos.push(Math.floor(Math.random() * colunas) * tamanhoBloco);
+  yObstaculos.push(Math.floor(Math.random() * colunas) * tamanhoBloco);
+}
     }
     
