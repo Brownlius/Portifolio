@@ -60,12 +60,12 @@ function update(){
             comidasComidasTotal += 1
   
     }
-
-    if (xGabi == xObstaculos  && yGabi  == yObstaculos ){ //Colisao com obstaculo. Atualiza local, e perde vida
-        colocarObstaculo();
+    for (let i = 0; i < yObstaculos.length; i++) {    
+    if (xGabi == xObstaculos[i]  && yGabi  == yObstaculos[i] ){ //Colisao com obstaculo. Atualiza local, e perde vida
         perdeVida();
+        apagarObstaculo();
     }
-      
+    }  
 
     for (let i = corpoCobra.length - 1 ; i > 0; i --) { //colisao com o corpo
         corpoCobra [i] = corpoCobra[i-1];
@@ -142,9 +142,13 @@ function mudaDirecao(event){
 }
 
 function colocarObstaculo(){
-for (let i = 0 ; i < 10 ; i++){
-  xObstaculos.push(Math.floor(Math.random() * colunas) * tamanhoBloco);
-  yObstaculos.push(Math.floor(Math.random() * colunas) * tamanhoBloco);
-}
+    for (let i = 0 ; i < 10 ; i++){
+    xObstaculos.push(Math.floor(Math.random() * colunas) * tamanhoBloco);
+    yObstaculos.push(Math.floor(Math.random() * colunas) * tamanhoBloco);
     }
-    
+}
+
+function apagarObstaculo(){
+    xObstaculos.slice(0);
+    yObstaculos.slice(0);
+}
