@@ -29,10 +29,10 @@ window.onload = function (){
     tela.width = linhas * tamanhoBloco;
     tela.height = colunas * tamanhoBloco;
     ctx = tela.getContext('2d');
-    colocarObstaculo();
     colocarComida();
     document.addEventListener('keyup',mudaDirecao);
     setInterval(update, 1000/15);
+    colocarObstaculo();
 }
 function update(){
     console.log(vidas);
@@ -43,21 +43,29 @@ function update(){
     ctx.fillStyle = 'rgb(20, 33, 44)'; // fundo - azul-escuro
     ctx.fillRect(0, 0, tela.width,tela.height); // tela
 
-        ctx.fillStyle = 'aliceblue'; //sushi - branco
-        ctx.fillRect(xSushi, ySushi, (tamanhoBloco * 0.75), (tamanhoBloco * 0.75)); //comida
+    ctx.fillStyle = 'aliceblue'; //sushi - branco
+    ctx.fillRect(xSushi, ySushi, (tamanhoBloco * 0.75), (tamanhoBloco * 0.75)); //comida
+    
+    for (let i = 0; i <= xObstaculos.length; i++) {
+        ctx.fillStyle = 'rgb(138,118,138)'; // Gera o obstaculo
+        ctx.fillRect(xObstaculos[i], yObstaculos[i] , tamanhoBloco, tamanhoBloco);
         
-        if (xGabi == xSushi && yGabi == ySushi){ //Quando comer, add corpo,  muda posição da comida, aumenta contador vida 
+    }
+    
+
+    if (xGabi == xSushi && yGabi == ySushi){ //Quando comer, add corpo,  muda posição da comida, aumenta contador vida 
             corpoCobra.push([xSushi,ySushi]);
             colocarComida();
             aumentaComidasComidas();
             comidasComidasTotal += 1
-        }
+  
+    }
 
     if (xGabi == xObstaculos  && yGabi  == yObstaculos ){ //Colisao com obstaculo. Atualiza local, e perde vida
         colocarObstaculo();
         perdeVida();
     }
-        //
+      
 
     for (let i = corpoCobra.length - 1 ; i > 0; i --) { //colisao com o corpo
         corpoCobra [i] = corpoCobra[i-1];
@@ -66,16 +74,12 @@ function update(){
         corpoCobra[0] = [xGabi,yGabi]
     }
     ctx.fillStyle= 'rgb(24, 214, 119)'; // verde - claro - cabeça
-    ctx.strokeStyle = "aliceblue";
-    ctx.stroke( );
+    ctx.fillRect(xGabi,yGabi,tamanhoBloco,tamanhoBloco)
     xGabi += xVelocidade * tamanhoBloco;
     yGabi += yVelocidade  * tamanhoBloco;
 
-    ctx.fillRect(xGabi,yGabi,tamanhoBloco,tamanhoBloco)
-
     for (let i = 0; i < corpoCobra.length; i++) { // aumentando corpo da cobra
-        ctx.fillRect(corpoCobra[i][0] , corpoCobra[i][1]  , tamanhoBloco  , tamanhoBloco)
-        
+        ctx.fillRect(corpoCobra[i][0] , corpoCobra[i][1]  , tamanhoBloco  , tamanhoBloco)        
     }
     //Rolagem infinita
     if (xGabi < -1){
@@ -104,9 +108,6 @@ function update(){
     }
     
 }
-// if ((xGabi == xObstaculos) && (yGabi == yObstaculos)){
-//     vidas -= 1
-// }
 function aumentaComidasComidas(){
     if(comidasComidas < 3 && vidas < 5){
         comidasComidas += 1
@@ -121,30 +122,9 @@ function perdeVida(){
 function colocarComida(){
     xSushi = Math.floor(Math.random() * colunas) * tamanhoBloco;
     ySushi = Math.floor(Math.random() * linhas) * tamanhoBloco;
+    
 }
-var qtdObstaculos =  []; //inicializa o array com 10 posições
-qtdObstaculos.length = 10;
-function preencheArray(){
-        
-        for(let i = 0; i < qtdObstaculos.length ; i++)   // troquei > por <
-        {  
-            qtdObstaculos[i] = (i)(Math.random() *10); // atribui o valoor aleatório à posição i      
-       }  
-      
-   } 
-console.log(qtdObstaculos)
-function colocarObstaculo(){
-    for (let i = 0; i < 10; i++) {
 
-    xObstaculos = Math.floor(Math.random() * colunas) * tamanhoBloco;
-    yObstaculos = Math.floor(Math.random() * linhas) * tamanhoBloco;
-
-    ctx.fillStyle = 'rgb(138,118,138)'; // Gera o obstaculo
-    ctx.fillRect(xObstaculos[i], yObstaculos[i] , tamanhoBloco, tamanhoBloco)
-   
-}
-   
-}
 function mudaDirecao(event){
     if (event.code == "ArrowUp" && yVelocidade != 1){
         xVelocidade = 0 ;
@@ -160,3 +140,11 @@ function mudaDirecao(event){
         yVelocidade = 0;
     }
 }
+
+function colocarObstaculo(){
+    // xObstaculos = Math.floor(Math.random() * colunas) * tamanhoBloco;
+    // yObstaculos = Math.floor(Math.random() * linhas) * tamanhoBloco;
+    xObstaculos = [70,52,89,145,370];
+    yObstaculos = [50,32,69,125,350];
+    }
+    
