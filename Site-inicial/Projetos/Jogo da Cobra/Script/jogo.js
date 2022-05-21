@@ -61,7 +61,7 @@ function update(){
   
     }
     for (let i = 0; i < yObstaculos.length; i++) {    
-    if (xGabi == xObstaculos[i]  && yGabi  == yObstaculos[i] ){ //Colisao com obstaculo. Atualiza local, e perde vida
+    if (xGabi == xObstaculos[i]  && yGabi  == yObstaculos[i]){ //Colisao com obstaculo. Atualiza local, e perde vida
         perdeVida();
         apagarObstaculo();
     }
