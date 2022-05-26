@@ -22,9 +22,11 @@ var comidasComidas = 0;
 var comidasComidasTotal = 0;
 //fim de jogo
 var gameOver = false;
-
-
+    var duracao = 60 * 2.99; //convertido para segundos
+    var mostra = document.querySelector('.timer');
+    
 window.onload = function (){
+    iniciaContador(duracao, mostra);
     tela = document.getElementById("fundo-jogo");
     tela.width = linhas * tamanhoBloco;
     tela.height = colunas * tamanhoBloco;
@@ -33,6 +35,7 @@ window.onload = function (){
     document.addEventListener('keyup',mudaDirecao);
     setInterval(update, 1000/15);
     colocarObstaculo();
+    
 }
 function update(){
     console.log(vidas);
@@ -151,4 +154,22 @@ function colocarObstaculo(){
 function apagarObstaculo(){
     xObstaculos.slice(0);
     yObstaculos.slice(0);
+}
+
+function iniciaContador(duracao, mostra){
+    var timer = duracao, minutos, segundos;
+    
+    setInterval(function(){
+        minutos = parseInt(timer / 60, 10);
+        segundos = parseInt(timer % 60, 10);
+        
+        minutos = minutos < 10 ? "0" + minutos : minutos;
+        segundos = segundos < 10 ? "0" + segundos : segundos;
+           
+        mostra.textContent = minutos + ":" + segundos;
+        
+        if(--timer < 0){
+            timer = duracao;
+        }
+    }, 1000);
 }
