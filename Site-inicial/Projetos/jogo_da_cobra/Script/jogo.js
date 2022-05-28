@@ -26,7 +26,7 @@ var xComidasComidas;
 var coracao;
 //fim de jogo
 var gameOver = false;
-var duracao = 60 * 1.49; //convertido para segundos
+var duracao = 60 * 0.74; //convertido para segundos
 var mostra = document.querySelector('.timer');
 
 window.onload = function (){
@@ -37,7 +37,7 @@ window.onload = function (){
     colocarComida();
     
     document.addEventListener('keyup',mudaDirecao);
-    setInterval(update, 1000/15);
+    setInterval(update, 1000/18);
     colocarObstaculo();
 }
 function update(){
