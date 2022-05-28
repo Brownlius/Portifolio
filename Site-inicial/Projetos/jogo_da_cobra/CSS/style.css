@@ -4,7 +4,7 @@
   }
 .titulo{
     font-family:  'personalizada';
-    font-size:4em;
+    font-size:3em;
     margin: 5px auto 0 ;
     padding: 5px;
     color: rgb(24, 214, 119);
@@ -16,7 +16,9 @@
 body{
     text-align: center;
     background-color: rgb(26, 157, 245);
-    height: 90vh;
+}
+#coracao, #obstaculos, #sushi,#gabi-cima, #gabi-baixo, #gabi-esquerda, #gabi-direita,#corpo{
+    display: none;
 }
 .corpo{
     display: flex;
@@ -25,21 +27,20 @@ body{
 }
 
 .timer{
+    width: 15vw;
+    background-color: rgb(20, 33, 44);
     display: flex;
     font-family:'personalizada';
     font-size : 2em; 
     color: rgb(24, 214, 119);
     justify-content: center;
-    margin: 0;
+    margin: 0 auto;
 }
 
 canvas{
     margin: 0 auto;
-    width: 45vw;
-    height: 75vh;
     border: 4px solid aliceblue;
     border-radius: 5px;
     display: flex;
 }
-
 
