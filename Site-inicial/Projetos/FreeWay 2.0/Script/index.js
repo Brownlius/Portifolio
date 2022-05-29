@@ -1,9 +1,15 @@
 let tela;
 let ctx;
+let fundoimg = new Image();
 
 window.onload = function (){
     geraCanvas();
     update();
+    fundo();
+}
+function fundo(){
+    fundoimg.src = "Site-inicial/Projetos/FreeWay 2.0/Imagens/estrada.png";
+    ctx.drawImage(fundoimg, 0, 0);  
 }
 
 function geraCanvas(){
@@ -14,13 +20,13 @@ function geraCanvas(){
 }
 
 function update(){
-    desenhaCanvas();
-}
-
-function desenhaCanvas(){
+    // desenhaCanvas();
     
-    ctx.fillStyle = "black";
-    ctx.fillRect(0,0, tela.width, tela.height);
-
 }
+
+// function desenhaCanvas(){
+//     ctx.fillStyle = "black";
+//     ctx.fillRect(0,0, tela.width, tela.height);
+
+// }
 
