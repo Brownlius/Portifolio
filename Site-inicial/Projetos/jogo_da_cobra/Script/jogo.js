@@ -1,6 +1,6 @@
-var tamanhoBloco = 18;
-var linhas = 32;
-var colunas = 32;
+var tamanhoBloco = 26;
+var linhas = 30;
+var colunas = 30;
 var tela;
 var ctx;
 //cabeça
@@ -14,6 +14,7 @@ var corpoCobra = [];
 //comida
 var xSushi;
 var ySushi;
+let imgSushi;
 // Obstaculos
 var xObstaculos = [];
 var yObstaculos = [];
@@ -34,11 +35,10 @@ window.onload = function (){
     iniciaMovimento();
     iniciaContador(duracao, mostra);
     canvas();
-    colocarComida();
-    
+    geraLocalDaComida();
     document.addEventListener('keyup',mudaDirecao);
-    setInterval(update, 1000/18);
-    colocarObstaculo();
+    setInterval(update, 1000/13);
+    geraLocalDoObstaculo();
 }
 function update(){
 
@@ -103,13 +103,13 @@ function aumentaComidasComidas(){
 function perdeVida(){
     qtdVidas -= 1
 }
-function colocarComida(){
+function geraLocalDaComida(){
     xSushi = Math.floor(Math.random() * colunas) * tamanhoBloco;
     ySushi = Math.floor(Math.random() * (linhas - 2) + 2) * tamanhoBloco;
 }
 
-function colocarObstaculo(){
-    for (let i = 0 ; i < 10 ; i++){
+function geraLocalDoObstaculo(){
+    for (let i = 0 ; i < 26 ; i++){
     xObstaculos.push(Math.floor(Math.random() * colunas) * tamanhoBloco);
     yObstaculos.push(Math.floor(Math.random() * (linhas - 2) + 2) * tamanhoBloco);
     }
@@ -174,25 +174,24 @@ function iniciaMovimento(){
         yVelocidade = 0;
     }
 } 
-
+//cabeçalho
 function mostraComidas(){
     for (let i = 1; i <= comidasComidas; i++) {  
-        xComidasComidas += 15;
-        ctx.fillStyle = 'aliceblue';
-        ctx.fillRect(((tela.width /10) * 6) + xComidasComidas, 5, 10, 10);
+        xComidasComidas += (tamanhoBloco/100) * 10 + tamanhoBloco;
+        ctx.drawImage(imgSushi,((tela.width /10) * 5.5) + xComidasComidas, 5, tamanhoBloco, tamanhoBloco);
     }
 }
 function mostraCoracao(){
     let imagemCoracao = document.getElementById('coracao');
     for (let i = 1; i <= qtdVidas; i++) {
-        xVidas += 30; 
-        ctx.drawImage(imagemCoracao, ((tela.width / 10) * 7) + xVidas, 5, 20, 20);
+        xVidas += (tamanhoBloco/100) * 70 + tamanhoBloco;
+        ctx.drawImage(imagemCoracao, ((tela.width / 10) * 6.5) + xVidas, 7.5, tamanhoBloco * 1.25, tamanhoBloco * 1.25);
     }
 }
 function mostraPontos(){
-    ctx.font = '32px personalizada';
+    ctx.font = '42px personalizada';
     ctx.fillStyle = 'aliceblue';
-    ctx.fillText(comidasComidasTotal, 5, 26);
+    ctx.fillText(comidasComidasTotal,15, 36);
 }
 
 function rolagemInfinita(){
@@ -211,7 +210,7 @@ function rolagemInfinita(){
 }
 
 function geraSushi(){
-    let imgSushi = document.getElementById("sushi");
+    imgSushi = document.getElementById("sushi");
     ctx.drawImage(imgSushi, xSushi, ySushi, tamanhoBloco , tamanhoBloco); //comida
 }
 function geraObstaculos(){
@@ -223,7 +222,7 @@ function geraObstaculos(){
 function colisaoComida(){
     if (xGabi == xSushi && yGabi == ySushi){ //Quando comer, add corpo,  muda posição da comida, aumenta contador vida 
             corpoCobra.push([xSushi,ySushi]);
-            colocarComida();
+            geraLocalDaComida();
             aumentaComidasComidas();
             comidasComidasTotal += 1
     }
@@ -245,14 +244,11 @@ function colisaoObstaculo(){
             perdeVida();    
             yObstaculos.splice(i, 1);
             xObstaculos.splice(i, 1);
-        
         }
         if(comidasComidas == 3 && qtdVidas == 4 ){
             aumentaComidasComidas();
         }
     } 
-    console.log(xObstaculos)
-    console.log(yObstaculos)
 }
 
 function colisaoCabeca(){
@@ -276,14 +272,13 @@ function aumentaCorpo(){
     }
 }
 function condiçõesFimJogo(){
-    //Condições para fim do jogo
     for (let i = 0; i < corpoCobra.length; i++) { // auto-colisao
         if(xGabi == corpoCobra[i][0] && yGabi == corpoCobra[i][1]){ 
             perdeuJogo();
         }
-    } 
-    if(qtdVidas == 0 || comidasComidasTotal == 15){ //Comidas igual a 15
-        ganhouJogo();
+    }
+    if(qtdVidas == 0){
+        perdeuJogo();
     }
 }
 
