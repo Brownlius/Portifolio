@@ -1,32 +1,34 @@
 let tela;
 let ctx;
-let fundoimg = new Image();
 
 window.onload = function (){
-    geraCanvas();
     update();
-    fundo();
 }
-function fundo(){
-    fundoimg.src = "Site-inicial/Projetos/FreeWay 2.0/Imagens/estrada.png";
-    ctx.drawImage(fundoimg, 0, 0);  
+
+function novaImagem(src){
+    var imagem = new Image();
+    imagem.src = src;
+    return imagem
+}
+
+function update(){
+
+    geraCanvas();
+    fundo();
 }
 
 function geraCanvas(){
     tela = document.getElementById("canvas");
-    tela.width = 1920/1.5;
-    tela.height = 1080/1.5;
     ctx = tela.getContext("2d");
+    tela.width = 1920/1.5;
+    tela.height = 1080/1.5;   
 }
 
-function update(){
-    // desenhaCanvas();
-    
+function fundo(){
+    let fundoimg = novaImagem("Imagens/estrada.png");
+    ctx.drawImage(fundoimg, 0, 0, tela.width, tela.height);  
 }
 
-// function desenhaCanvas(){
-//     ctx.fillStyle = "black";
-//     ctx.fillRect(0,0, tela.width, tela.height);
 
-// }
+
 
