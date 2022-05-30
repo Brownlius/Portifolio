@@ -6,15 +6,16 @@ window.onload = function (){
 }
 
 function novaImagem(src){
-    var imagem = new Image();
-    imagem.src = src;
-    return imagem
+    var img = new Image();
+    img.src = src;
+    return img
 }
 
 function update(){
 
     geraCanvas();
     fundo();
+
 }
 
 function geraCanvas(){
