@@ -42,6 +42,7 @@ function update(){
     if (gameOver){
         return;
     }
+    
 
     ctx.fillStyle = 'rgb(20, 33, 44)'; // fundo - azul-escuro
     ctx.fillRect(0, 0, tela.width,tela.height); // tela
@@ -69,6 +70,7 @@ function update(){
         apagarObstaculo();
     }
     }  
+    
 
     for (let i = corpoCobra.length - 1 ; i > 0; i --) { //colisao com o corpo
         corpoCobra [i] = corpoCobra[i-1];
@@ -109,6 +111,8 @@ function update(){
         gameOver = true;
         alert("Fim de jogo");
     }
+    var xVidas = 0;
+    mostraVidas();
     
 }
 function aumentaComidasComidas(){
@@ -172,4 +176,13 @@ function iniciaContador(duracao, mostra){
             timer = duracao;
         }
     }, 1000);
+}
+function mostraVidas(){
+
+    for (let i = 1; i <= vidas; i++) {  //Gera figuras de vida conforme QtdVidas 
+        xVidas += 30;
+        ctx.fillStyle = 'rgb(160, 29, 29)';
+        ctx.fillRect(((tela.width /10) * 7) + xVidas, 5, 20, 20);
+        
+    }
 }
