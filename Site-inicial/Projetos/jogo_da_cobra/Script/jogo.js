@@ -116,19 +116,19 @@ function geraLocalDoObstaculo(){
 }
 
 function mudaDirecao(event){
-    if (event.code == "ArrowUp" && yVelocidade != 1){
+    if (event.code == "KeyW" && yVelocidade != 1){
         xVelocidade = 0 ;
         yVelocidade = -1;
         
-    }else if (event.code == "ArrowDown" && yVelocidade != -1){
+    }else if (event.code == "KeyS" && yVelocidade != -1){
         xVelocidade = 0;
         yVelocidade = 1;
         
-    }else if (event.code == "ArrowLeft" && xVelocidade != 1){
+    }else if (event.code == "KeyA" && xVelocidade != 1){
         xVelocidade = -1 ;
         yVelocidade = 0;
         
-    }else if (event.code == "ArrowRight" && xVelocidade != -1){
+    }else if (event.code == "KeyD" && xVelocidade != -1){
         xVelocidade = 1;
         yVelocidade = 0;
         
