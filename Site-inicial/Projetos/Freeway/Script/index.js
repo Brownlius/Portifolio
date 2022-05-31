@@ -46,23 +46,25 @@ function personagem(){
 }
 
 function movimenta(event){
-    if (event.code == "ArrowUp"){
-        tucaRocha.y -= tucaRocha.veloc;
+    if(tucaRocha.x > 0 && tucaRocha.x < tela.width){
+            
         
-    }else if (event.code == "ArrowDown"){
-        tucaRocha.y += tucaRocha.veloc;
-        
-    }else if (event.code == "ArrowLeft"){
-        tucaRocha.x -= tucaRocha.veloc;
-        
-    }else if (event.code == "ArrowRight"){
-        tucaRocha.x += tucaRocha.veloc;
-        
+        if (event.code == "ArrowUp"){
+            tucaRocha.y -= tucaRocha.veloc;
+            
+        }else if (event.code == "ArrowDown"){
+            tucaRocha.y += tucaRocha.veloc;
+            
+        }else if (event.code == "ArrowLeft"){
+            tucaRocha.x -= tucaRocha.veloc;
+            
+        }else if (event.code == "ArrowRight"){
+            tucaRocha.x += tucaRocha.veloc;
+            
+        }
     }
 }
 
 function colisaoBorda(){
-    if(tucaRocha.x > 0 && tucaRocha.x < tela.width && tucaRocha.y > 0 && < tela.height){
-            
-    }
+    
 }
