@@ -1,7 +1,7 @@
 let tela;
 let ctx;
 //personagem
-tucaRocha = {x : 50, y : 25, altura : 64, largura : 64, velocidade : 5};
+tucaRocha = {x : 50, y : 25, altura : 64, largura : 64, veloc : 5};
 
 
 window.onload = function (){
@@ -10,19 +10,22 @@ window.onload = function (){
     update();
     window.addEventListener('keydown', movimenta);
     
+    
 }
 
 function novaImagem(src){
-    var img = new Image();
-    img.src = src;
+    let img = document.createElement("img");
+    img.src = src
+    document.querySelector('#canvas').appendChild(img)
     return img
 }
 
 function update(){
     geraCanvas();
     fundo();
+    colisaoBorda();
     personagem();
-    
+    console.log(tucaRocha.x)
 }
 
 function geraCanvas(){
@@ -44,16 +47,22 @@ function personagem(){
 
 function movimenta(event){
     if (event.code == "ArrowUp"){
-        tucaRocha.y -= tucaRocha.velocidade;
+        tucaRocha.y -= tucaRocha.veloc;
         
     }else if (event.code == "ArrowDown"){
-        tucaRocha.y += tucaRocha.velocidade;
+        tucaRocha.y += tucaRocha.veloc;
         
     }else if (event.code == "ArrowLeft"){
-        tucaRocha.x -= tucaRocha.velocidade;
+        tucaRocha.x -= tucaRocha.veloc;
         
     }else if (event.code == "ArrowRight"){
-        tucaRocha.x += tucaRocha.velocidade;
+        tucaRocha.x += tucaRocha.veloc;
         
+    }
+}
+
+function colisaoBorda(){
+    if(tucaRocha.x > 0 && tucaRocha.x < tela.width && tucaRocha.y > 0 && < tela.height){
+            
     }
 }
