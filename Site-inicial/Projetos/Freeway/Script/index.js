@@ -1,14 +1,15 @@
 let tela;
 let ctx;
-let xVelocidade;
-let yVelocidade;
 //personagem
-xTucaRocha = 50;
-yTucaRocha = 25;
+tucaRocha = {x : 50, y : 25, altura : 64, largura : 64, velocidade : 5};
+
 
 window.onload = function (){
+    
+    setInterval(update, 1000/1000);
     update();
-    document.addEventListener('keydown',mudaDirecao);
+    window.addEventListener('keydown', movimenta);
+    
 }
 
 function novaImagem(src){
@@ -18,13 +19,9 @@ function novaImagem(src){
 }
 
 function update(){
-
     geraCanvas();
     fundo();
     personagem();
-    movimenta();
-    
-    
     
 }
 
@@ -42,30 +39,21 @@ function fundo(){
 
 function personagem(){
     let personagem = novaImagem("Imagens/personagem.png");
-    ctx.drawImage(personagem, xTucaRocha, yTucaRocha, 64, 64);  
+    ctx.drawImage(personagem, tucaRocha.x, tucaRocha.y, tucaRocha.altura, tucaRocha.largura);  
 }
 
-function movimenta(){
-    xTucaRocha += xVelocidade; 
-    yTucaRocha += yVelocidade; 
-}
-
-function mudaDirecao(event){
+function movimenta(event){
     if (event.code == "ArrowUp"){
-        xVelocidade = 0 ;
-        yVelocidade = -1;
+        tucaRocha.y -= tucaRocha.velocidade;
         
     }else if (event.code == "ArrowDown"){
-        xVelocidade = 0;
-        yVelocidade = 1;
+        tucaRocha.y += tucaRocha.velocidade;
         
     }else if (event.code == "ArrowLeft"){
-        xVelocidade = -1 ;
-        yVelocidade = 0;
+        tucaRocha.x -= tucaRocha.velocidade;
         
     }else if (event.code == "ArrowRight"){
-        xVelocidade = 1;
-        yVelocidade = 0;
+        tucaRocha.x += tucaRocha.velocidade;
         
     }
 }
