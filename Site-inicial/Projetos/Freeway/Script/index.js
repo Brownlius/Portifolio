@@ -4,13 +4,14 @@ let ctx;
 tucaRocha = {x : 50, y : 25, altura : 64, largura : 64, veloc : 5};
 //carros
 let ImgCarros = []; 
-let carros = [{x : -200, y : 134, altura : 160, largura : 140, veloc : 6},
-    {x : -300, y : 450, altura : 140, largura : 120, veloc : 3.5}];
+let carros = [{x : -200, y : 134, altura : 160, largura : 140, veloc : 6.0},
+              {x : -300, y : 450, altura : 140, largura : 120, veloc : 3.5},
+              {x : -1500, y : 450, altura : 120, largura : 130, veloc : 7.5}];
 
 
 window.onload = function (){
     
-    setInterval(update, 1000/1000);
+    setInterval(update, 1000/500);
     update();
     CarregaImgCarro();
     window.addEventListener('keydown', movimenta);
@@ -31,7 +32,7 @@ function update(){
     imgPersonagem();
     imgCarros();
     movimentaCarro();
-    console.log(tucaRocha.x)
+    ultrapassagem()
 }
 
 function geraCanvas(){
@@ -51,9 +52,11 @@ function imgPersonagem(){
     ctx.drawImage(personagem, tucaRocha.x, tucaRocha.y, tucaRocha.altura, tucaRocha.largura);  
 }
 function CarregaImgCarro(){
+
     let carro1 = novaImagem("Imagens/car1.png");
-    let carro2 = novaImagem("Imagens/car2.png")
-    ImgCarros.push(carro1, carro2);
+    let carro2 = novaImagem("Imagens/car2.png");
+    let carro3 = novaImagem("Imagens/car3.png")
+    ImgCarros.push(carro1, carro2,carro3);
 }   
 
 function imgCarros(){
@@ -93,6 +96,15 @@ function movimenta(e){
     tucaRocha.x = Math.max(-3, Math.min(tela.width - tucaRocha.largura + 3, tucaRocha.x));
     tucaRocha.y = Math.max(0, Math.min(tela.height - tucaRocha.largura, tucaRocha.y));
 }
-function colisaoComOCarro(){
-    
+function ultrapassagem(){
+
+    if(carros[2].x == (carros[1].x - carros[1].largura * 1.5)){
+        while(carros[2].y < 520 ){ 
+            carros[2].y += 5;
+        }
+        }else if(carros[2].x > carros[1].x * 2){
+            do
+                carros[2].y -= 5;
+            while(carros[2].y > 450)
+    }
 }
