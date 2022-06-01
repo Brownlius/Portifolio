@@ -1,12 +1,12 @@
 let tela;
 let ctx;
 //personagem
-tucaRocha = {posicaoX : 50, posicaoY : 25, altura : 64, largura : 64, veloc : 5};
+michael = {posicaoX : 600, posicaoY : 25, altura : 64, largura : 64, veloc : 4};
 //carros
 let ImgCarros = []; 
-let carros = [{posicaoX : -200, posicaoY : 134, altura : 160, largura : 140, veloc : 4},
-              {posicaoX : -300, posicaoY : 450, altura : 140, largura : 120, veloc : 3},
-              {posicaoX : -600, posicaoY : 450, altura : 120, largura : 130, veloc : 4}];
+let carros = [{posicaoX : -200, posicaoY : 134, altura : 160, largura : 140, veloc : 6},
+              {posicaoX : -300, posicaoY : 450, altura : 140, largura : 120, veloc : 4},
+              {posicaoX : -600, posicaoY : 450, altura : 120, largura : 140, veloc : 8}];
 
 
 
@@ -28,10 +28,9 @@ function update(){
     movimentaCarro();
     ultrapassagem();    
     colisaoComCarro();
-    if(carros[1].posicaoX == carros[2].posicaoX){
-        console.log(carros[1].posicaoX); 
-        console.log(carros[2].posicaoX);
-    }
+    // console.log(michael.posicaoY);
+    // console.log(carros[0].posicaoY)
+  
 }
 
 function novaImagem(src){
@@ -55,7 +54,7 @@ function imgFundo(){
 
 function imgPersonagem(){
     let personagem = novaImagem("Imagens/personagem.png");
-    ctx.drawImage(personagem, tucaRocha.posicaoX, tucaRocha.posicaoY, tucaRocha.altura, tucaRocha.largura);  
+    ctx.drawImage(personagem, michael.posicaoX, michael.posicaoY, michael.altura, michael.largura);  
 }
 function CarregaImgCarro(){
 
@@ -87,33 +86,37 @@ function reiniciaPosicaoCarro(){
 }
 function colisaoComCarro(){
     for (let i = 0; i < carros.length; i++) {
-        if(tucaRocha.posicaoX == (carros[i].posicaoX + carros[i].largura) && tucaRocha.posicaoY == (carros[i].posicaoY))
-            alert("ai!");
+        if(michael.x >= carros[i].posicaoX && michael.posicaoX <= carros[i].posicaoX + carros[i].largura &&
+             michael.posicaoY >= carros[i].posicaoY && michael.posicaoY <= (carros[i].posicaoY + carros[i].altura)){
+                imgPersonagem();
+            }
+
     }
 }
 
+
 function movimenta(e){
     if (e.code == "ArrowUp" ||e.code ==  'KeyW'){
-        tucaRocha.posicaoY -= tucaRocha.veloc;
+        michael.posicaoY -= michael.veloc;
             
         }else if (e.code == "ArrowDown" || e.code ==  'KeyS'){
-            tucaRocha.posicaoY += tucaRocha.veloc;
+            michael.posicaoY += michael.veloc;
                 
         }else if (e.code == "ArrowLeft" || e.code ==  'KeyA'){
-            tucaRocha.posicaoX -= tucaRocha.veloc;
+            michael.posicaoX -= michael.veloc;
                 
         }else if (e.code == "ArrowRight" || e.code ==  'KeyD'){
-            tucaRocha.posicaoX += tucaRocha.veloc;  
+            michael.posicaoX += michael.veloc;  
             }
-    tucaRocha.x = Math.max(-3, Math.min(tela.width - tucaRocha.largura + 3, tucaRocha.posicaoX));
-    tucaRocha.posicaoY = Math.max(0, Math.min(tela.height - tucaRocha.largura, tucaRocha.posicaoY));
+    michael.x = Math.max(-3, Math.min(tela.width - michael.largura + 3, michael.posicaoX));
+    michael.posicaoY = Math.max(0, Math.min(tela.height - michael.largura, michael.posicaoY));
 }
 function ultrapassagem(){ 
-    if(carros[2].posicaoX == (carros[1].posicaoX - carros[1].largura) && carros[2].posicaoY == carros[1].posicaoY ){
+    if(carros[2].posicaoX  == carros[1].posicaoX - carros[1].largura){
         while(carros[2].posicaoY < 520 ){ 
             carros[2].posicaoY += 1;
         }
-    }else if(carros[2].posicaoX == (carros[1].posicaoX + carros[1].largura + 30)){
+    }else if(carros[2].posicaoX == (carros[1].posicaoX + carros[1].largura)){
         while(carros[2].posicaoY > 450){
             carros[2].posicaoY -= 1; 
         }
