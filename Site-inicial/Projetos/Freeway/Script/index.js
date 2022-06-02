@@ -1,14 +1,13 @@
 let tela;
 let ctx;
 //personagem
-michael = {posicaoX : 600, posicaoY : 25, altura : 64, largura : 64, veloc : 4};
+let michael = {posicaoX : 600, inicialX: 600, inicialY : 25, posicaoY : 25, altura : 64, largura : 64, veloc : 4};
+let vidas ={qtd : 5, posicaoX : 5, posicaoY : 0, altura : 25, largura : 25};
 //carros
 let ImgCarros = []; 
 let carros = [{posicaoX : -200, posicaoY : 134, altura : 160, largura : 140, veloc : 6},
               {posicaoX : -300, posicaoY : 450, altura : 140, largura : 120, veloc : 4},
               {posicaoX : -600, posicaoY : 450, altura : 120, largura : 140, veloc : 8}];
-
-
 
 
 window.onload = function (){
@@ -23,6 +22,7 @@ window.onload = function (){
 function update(){
     geraCanvas();
     imgFundo();
+    mostraVida();
     imgPersonagem();
     imgCarros();
     movimentaCarro();
@@ -51,6 +51,15 @@ function imgFundo(){
     let fundoimg = novaImagem("Imagens/estrada.png");
     ctx.drawImage(fundoimg, 0, 0, tela.width, tela.height);  
 }
+
+function mostraVida(){
+    let ImgVidas = novaImagem("Imagens/vida.png")
+    let deslocamento = 0;
+    for (let i = 1; i <= vidas.qtd; i++) {
+        ctx.drawImage(ImgVidas,(vidas.posicaoX + deslocamento),vidas.posicaoY,vidas.altura,vidas.largura);
+        deslocamento += 30;
+}   
+    }
 
 function imgPersonagem(){
     let personagem = novaImagem("Imagens/personagem.png");
@@ -84,12 +93,17 @@ function reiniciaPosicaoCarro(){
         }
     }
 }
+function perdeVida(){
+    vidas.qtd--
+}
 function colisaoComCarro(){
     for (let i = 0; i < carros.length; i++) {
         if(michael.x >= carros[i].posicaoX && michael.posicaoX <= carros[i].posicaoX + carros[i].largura &&
              michael.posicaoY >= carros[i].posicaoY && michael.posicaoY <= (carros[i].posicaoY + carros[i].altura)){
-                imgPersonagem();
-            }
+                michael.posicaoX = michael.inicialX;
+                michael.posicaoY = michael.inicialY;
+                perdeVida();
+            }   
 
     }
 }
