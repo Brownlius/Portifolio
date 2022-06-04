@@ -5,9 +5,9 @@ let michael = {posicaoX : 600, inicialX: 600, inicialY : 25, posicaoY : 25, altu
 let vidas ={qtd : 5, posicaoX : 5, posicaoY : 0, altura : 25, largura : 25};
 //carros
 let ImgCarros = []; 
-let carros = [{posicaoX : -200, posicaoY : 134, altura : 160, largura : 140, veloc : 6},
-              {posicaoX : -300, posicaoY : 450, altura : 140, largura : 120, veloc : 4},
-              {posicaoX : -600, posicaoY : 450, altura : 120, largura : 140, veloc : 8}];
+let carros = [{posicaoX : -200, inicialX: -200, inicialY: 134, posicaoY : 134, altura : 160, largura : 140, veloc : 6},
+              {posicaoX : -300, inicialX: -300, inicialY: 450, posicaoY : 450, altura : 140, largura : 120, veloc : 4},
+              {posicaoX : -600, inicialX: -600, inicialY: 450, posicaoY : 450, altura : 120, largura : 140, veloc : 8}];
 
 
 window.onload = function (){
@@ -24,13 +24,12 @@ function update(){
     imgFundo();
     mostraVida();
     imgPersonagem();
+    buraco();
     imgCarros();
+    
     movimentaCarro();
     ultrapassagem();    
     colisaoComCarro();
-    // console.log(michael.posicaoY);
-    // console.log(carros[0].posicaoY)
-  
 }
 
 function novaImagem(src){
@@ -50,6 +49,11 @@ function geraCanvas(){
 function imgFundo(){
     let fundoimg = novaImagem("Imagens/estrada.png");
     ctx.drawImage(fundoimg, 0, 0, tela.width, tela.height);  
+}
+
+function buraco(){
+    let buraco = novaImagem("Imagens/buraco.png");
+    ctx.drawImage(buraco, 250, 184, 30, 30);  
 }
 
 function mostraVida(){
