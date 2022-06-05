@@ -1,86 +1,99 @@
 let chanceDeErro = 0;
 let meusPontos = 0;
 let pontosOponente = 0;
+
+let tela;
 //variáveis da bolinha
-let xBolinha = 300;
-let yBolinha = 200;
-let diametro = 15;
-let raio = diametro / 2 ;
-let corbola = ('#ffff');
+let bola = {X : 300, Y : 200, raio : 15, cor : ('#ffff')};
 //sons do jogo
 let raquetada;
 let pontuacao;
 let trilha;
+let canvas = {comprimento : 920, altura:920};
 
 //velocidade da bolinha
-let velocidadeXBolinha = 6;
-let velocidadeYBolinha = 6;
-let velocidadeYOponente;
+let velocBola = {X: 6, Y : 6};
 
-//variáveis da raquete
-let xRaquete = 5;
-let yRaquete = 150;
-let raqueteComprimento = 10;
-let raqueteAltura = 90;
-let corRaquete = ('#1fff')
-let hit = false;
+//variáveis da raquete aliada
+let raquete = { X: 5, Y:150, comprimento : 15, altura : 130 , cor: ('aliceblue')};
+
 //variáveis da raquete oponente
-let xRaqueteOponente = 585;
-let yRaqueteOponente = 150;
+let raqueteOponente = {X : (canvas.comprimento - raquete.comprimento -5), Y : canvas.altura/2};
 
-function preload(){
-trilha = loadSound ("trilha.mp3");
-pontuacao = loadSound ("ponto.mp3");
-raquetada = loadSound ("raquetada.mp3");
+
+
+function geraCanvas(){
+  tela = document.getElementById("canvas");
+  ctx = tela.getContext('2d');
+  
 }
-function setup() {
-  createCanvas(600, 400);
-  trilha.loop();
+function createCanvas(){
+  tela.width = 920;
+  tela.height = 920;
+  ctx.fillStyle = 'rgb(20, 33, 44)';
+  ctx.fillRect(0, 0, tela.width, tela.height);
+
 }
 
-function draw() {
-  background(0);
+window.onload = function (){
+  
+  geraCanvas();
+  setInterval(update, 1000/80);
+  
+}
+
+function update() {
+  
+  createCanvas();
   mostraBolinha();
   movimentaBolinha();
   verificaColisaoBorda();
-  mostraRaquete(xRaquete,yRaquete);
-  movimentaMinhaRaquete();
-  verificaColisaoRaquete(xRaquete,yRaquete);
-  mostraRaquete (xRaqueteOponente, yRaqueteOponente)
-  movimentoRaqueteOponente();
-  verificaColisaoRaquete(xRaqueteOponente, yRaqueteOponente);
-  incluiPlacar();
-  marcarponto();
-  calculaChanceDeErro();
+  mostraRaquete();
+  mostraRaqueteOponente();
+  // movimentaMinhaRaquete();
+  // verificaColisaoRaquete(xRaquete,yRaquete);
+  // mostraRaquete (xRaqueteOponente, yRaqueteOponente)
+  // movimentoRaqueteOponente();
+  // verificaColisaoRaquete(xRaqueteOponente, yRaqueteOponente);
+  // incluiPlacar();
+  // marcarponto();
+  // calculaChanceDeErro();
 }
 
   
 function mostraBolinha(){
-  fill (corbola);
-  noStroke();
-  circle(xBolinha, yBolinha, diametro);
+  ctx.beginPath();
+  ctx.arc(bola.X, bola.Y, bola.raio, (0,2 * Math.PI), false);
+  ctx.lineWidth = 2;
+  ctx.strokeStyle = 'rgb(24, 214, 119)';
+  ctx.fillStyle = 'aliceblue';
+  ctx.fill();
+  ctx.stroke();
 }
 
 function movimentaBolinha(){
-  xBolinha += velocidadeXBolinha;
-  yBolinha += velocidadeYBolinha;
+  bola.X += velocBola.X;
+  bola.Y += velocBola.Y;
 }
 
 function verificaColisaoBorda(){
-  if (xBolinha + raio> width ||
-     xBolinha - raio< 0){
-    velocidadeXBolinha *= -1;
+  if (bola.X + bola.raio > tela.width ||
+    bola.X - bola.raio < 0){
+    velocBola.X *= -1;
   }
-  if (yBolinha + raio> height ||
-     yBolinha - raio < 0){
-    velocidadeYBolinha *= -1;
+  if (bola.Y + bola.raio> tela.height ||
+    bola.Y - bola.raio < 0){
+    velocBola.Y *= -1;
   }
 }
 
-function mostraRaquete(x,y){
-  fill(corRaquete);
-  noStroke ();
-  rect(x,y,raqueteComprimento,raqueteAltura, 15);
+function mostraRaquete(){
+  ctx.fillStyle = raquete.cor;
+  ctx.fillRect(raquete.X, raquete.Y,raquete.comprimento, raquete.altura )
+}
+function mostraRaqueteOponente(){
+  ctx.fillStyle = raquete.cor;
+  ctx.fillRect(raqueteOponente.X, raqueteOponente.Y,raquete.comprimento, raquete.altura )
 }
 
 function movimentaMinhaRaquete(){

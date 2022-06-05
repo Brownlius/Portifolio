@@ -59,7 +59,7 @@ function update(){
     colisaoObstaculo();
     colisaoCabeca();
     colisaoComida();
-    movimentaGabi()
+    movimentaGabi();
     rolagemInfinita();
     condiçõesFimJogo();
     
