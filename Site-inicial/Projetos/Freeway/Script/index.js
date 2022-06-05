@@ -26,7 +26,6 @@ function update(){
     imgPersonagem();
     buraco();
     imgCarros();
-    
     movimentaCarro();
     ultrapassagem();    
     colisaoComCarro();
