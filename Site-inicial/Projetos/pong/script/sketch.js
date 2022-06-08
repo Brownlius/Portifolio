@@ -4,21 +4,21 @@ let pontosOponente = 0;
 
 let tela;
 //variáveis da bolinha
-let bola = {X : 300, Y : 200, raio : 15, cor : ('#ffff')};
+let bola = {X : 300, Y : 200, Raio : 15, cor : ('#ffff')};
 //sons do jogo
 let raquetada;
 let pontuacao;
 let trilha;
-let canvas = {comprimento : 920, altura:920};
+let canvas = {Comprimento : 920, Altura:920};
 
 //velocidade da bolinha
-let velocBola = {X: 6, Y : 6};
+let velocBola = {X: 6, Y : 3};
 
 //variáveis da raquete aliada
-let raquete = { X: 5, Y:150, comprimento : 15, altura : 130 , cor: ('aliceblue')};
+let raquete = { X: 5, Y:150, Comprimento : 15, Altura : 130 , cor: ('aliceblue')};
 
 //variáveis da raquete oponente
-let raqueteOponente = {X : (canvas.comprimento - raquete.comprimento -5), Y : canvas.altura/2};
+let raqueteOponente = {X : (canvas.Comprimento - raquete.Comprimento -5), Y : canvas.Altura/2};
 
 
 
@@ -39,9 +39,18 @@ window.onload = function (){
   
   geraCanvas();
   setInterval(update, 1000/80);
+  window.addEventListener('keydown', (e) =>{
+
+    if (e.code == "KeyW"){
+      raquete.Y -= 10;
+    }
+    if (e.code == "KeyS"){
+      raquete.Y += 10;
+    }
+  });
   
 }
-
+ 
 function update() {
   
   createCanvas();
@@ -50,20 +59,22 @@ function update() {
   verificaColisaoBorda();
   mostraRaquete();
   mostraRaqueteOponente();
-  // movimentaMinhaRaquete();
-  // verificaColisaoRaquete(xRaquete,yRaquete);
+  verificaColisaoRaquete();
+  console.log(bola.Y);
+  console.log(raquete.Y);
   // mostraRaquete (xRaqueteOponente, yRaqueteOponente)
   // movimentoRaqueteOponente();
   // verificaColisaoRaquete(xRaqueteOponente, yRaqueteOponente);
   // incluiPlacar();
   // marcarponto();
   // calculaChanceDeErro();
+
 }
 
   
 function mostraBolinha(){
   ctx.beginPath();
-  ctx.arc(bola.X, bola.Y, bola.raio, (0,2 * Math.PI), false);
+  ctx.arc(bola.X, bola.Y, bola.Raio, (0,2 * Math.PI), false);
   ctx.lineWidth = 2;
   ctx.strokeStyle = 'rgb(24, 214, 119)';
   ctx.fillStyle = 'aliceblue';
@@ -77,41 +88,30 @@ function movimentaBolinha(){
 }
 
 function verificaColisaoBorda(){
-  if (bola.X + bola.raio > tela.width ||
-    bola.X - bola.raio < 0){
+  if (bola.X + bola.Raio > tela.width ||
+    bola.X - bola.Raio < 0){
     velocBola.X *= -1;
   }
-  if (bola.Y + bola.raio> tela.height ||
-    bola.Y - bola.raio < 0){
+  if (bola.Y + bola.Raio> tela.height ||
+    bola.Y - bola.Raio < 0){
     velocBola.Y *= -1;
   }
 }
 
 function mostraRaquete(){
   ctx.fillStyle = raquete.cor;
-  ctx.fillRect(raquete.X, raquete.Y,raquete.comprimento, raquete.altura )
-}
-function mostraRaqueteOponente(){
+  ctx.fillRect(raquete.X, raquete.Y,raquete.Comprimento, raquete.Altura)}
+
+  function mostraRaqueteOponente(){
   ctx.fillStyle = raquete.cor;
-  ctx.fillRect(raqueteOponente.X, raqueteOponente.Y,raquete.comprimento, raquete.altura )
-}
+  ctx.fillRect(raqueteOponente.X, raqueteOponente.Y,raquete.Comprimento, raquete.Altura )}
 
-function movimentaMinhaRaquete(){
-  if (keyIsDown(UP_ARROW)){
-    yRaquete -= 10;
-  }
-  if (keyIsDown(DOWN_ARROW)){
-    yRaquete += 10;
+function verificaColisaoRaquete(){
+  if ((bola.X - bola.Raio ) < raquete.X + raquete.Comprimento ){
+    velocBola .X *= -1;
   }
 }
 
-function verificaColisaoRaquete(x,y){
-   hit = collideRectCircle(x,y, raqueteComprimento, raqueteAltura, xBolinha,yBolinha, raio);
-  if (hit){
-    velocidadeXBolinha *= -1;
-    raquetada.play();
-  }
-}
 function calculaChanceDeErro() {
   if (pontosOponente >= meusPontos) {
     chanceDeErro += 1.5
