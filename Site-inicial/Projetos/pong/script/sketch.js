@@ -54,17 +54,21 @@ window.onload = function (){
 function update() {
   
   createCanvas();
+
   mostraBolinha();
+
   movimentaBolinha();
+
   verificaColisaoBorda();
+
   mostraRaquete();
+
   mostraRaqueteOponente();
+
   verificaColisaoRaquete();
-  console.log(bola.Y);
-  console.log(raquete.Y);
-  // mostraRaquete (xRaqueteOponente, yRaqueteOponente)
+  
+  // verificaColisaoRaqueteOponente();
   // movimentoRaqueteOponente();
-  // verificaColisaoRaquete(xRaqueteOponente, yRaqueteOponente);
   // incluiPlacar();
   // marcarponto();
   // calculaChanceDeErro();
@@ -107,8 +111,8 @@ function mostraRaquete(){
   ctx.fillRect(raqueteOponente.X, raqueteOponente.Y,raquete.Comprimento, raquete.Altura )}
 
 function verificaColisaoRaquete(){
-  if ((bola.X - bola.Raio ) < raquete.X + raquete.Comprimento ){
-    velocBola .X *= -1;
+  if ((bola.X - bola.Raio - 3) < (raquete.X + raquete.Comprimento) && (bola.Y + bola.Raio) > raquete.Y && (bola.Y < raquete.Y + raquete.Altura)){
+    velocBola.X *= -1;
   }
 }
 
