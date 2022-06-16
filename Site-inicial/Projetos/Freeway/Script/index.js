@@ -9,6 +9,9 @@ let carros = [{posicaoX : -200, inicialX: -200, inicialY: 134, posicaoY : 134, a
               {posicaoX : -300, inicialX: -300, inicialY: 450, posicaoY : 450, altura : 140, largura : 120, veloc : 4},
               {posicaoX : -600, inicialX: -600, inicialY: 450, posicaoY : 450, altura : 120, largura : 140, veloc : 8}];
 
+//buracos
+let buracos = [{posicaoX : 250, posicaoY : 184, altura : 30, largura : 30},
+               {posicaoX : 750, posicaoY : 484, altura : 40, largura : 40}];
 
 window.onload = function (){
     
@@ -24,7 +27,7 @@ function update(){
     imgFundo();
     mostraVida();
     imgPersonagem();
-    buraco();
+    geraBuraco();
     imgCarros();
     movimentaCarro();
     ultrapassagem();    
@@ -50,9 +53,13 @@ function imgFundo(){
     ctx.drawImage(fundoimg, 0, 0, tela.width, tela.height);  
 }
 
-function buraco(){
+function geraBuraco(){
+    
     let buraco = novaImagem("Imagens/buraco.png");
-    ctx.drawImage(buraco, 250, 184, 30, 30);  
+    for (let i = 0; i < buracos.length; i++){
+        ctx.drawImage(buraco, buracos[i].posicaoX, buracos[i].posicaoY, buracos[i].altura, buracos[i].largura);  
+    }
+        
 }
 
 function mostraVida(){
