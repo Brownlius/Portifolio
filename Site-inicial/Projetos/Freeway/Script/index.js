@@ -32,6 +32,7 @@ function update(){
     movimentaCarro();
     ultrapassagem();    
     colisaoComCarro();
+    colisaoBuracoCarro();
 }
 
 function novaImagem(src){
@@ -59,7 +60,7 @@ function geraBuraco(){
     for (let i = 0; i < buracos.length; i++){
         ctx.drawImage(buraco, buracos[i].posicaoX, buracos[i].posicaoY, buracos[i].altura, buracos[i].largura);  
     }
-        
+
 }
 
 function mostraVida(){
@@ -108,16 +109,34 @@ function perdeVida(){
 }
 function colisaoComCarro(){
     for (let i = 0; i < carros.length; i++) {
-        if(michael.x >= carros[i].posicaoX && michael.posicaoX <= carros[i].posicaoX + carros[i].largura &&
+        if(michael.posicaoX >= carros[i].posicaoX && michael.posicaoX <= carros[i].posicaoX + carros[i].largura &&
              michael.posicaoY >= carros[i].posicaoY && michael.posicaoY <= (carros[i].posicaoY + carros[i].altura)){
                 michael.posicaoX = michael.inicialX;
                 michael.posicaoY = michael.inicialY;
-                perdeVida();
+                perdeVida();    
             }   
 
     }
 }
 
+void diminuiVeloc(){
+    carros[0].veloc -= 0.5;
+    setTimeout(() =>{
+        carros[0].veloc += 0.5
+     }, 500);
+
+}
+
+function colisaoBuracoCarro(){
+    for (let i = 0; i < buracos.length; i++) {
+        for (let j = 0; j < carros.length; j++) {
+            if(buracos[i].posicaoX >= carros[j].posicaoX && buracos[i].posicaoX <= carros[j].posicaoX + carros[j].largura &&
+                buracos[i].posicaoY >= carros[j].posicaoY && buracos[i].posicaoY <= (carros[j].posicaoY + carros[j].altura)){
+                    diminuiVeloc();
+            }
+        }
+    }
+}
 
 function movimenta(e){
     if (e.code == "ArrowUp" ||e.code ==  'KeyW'){
