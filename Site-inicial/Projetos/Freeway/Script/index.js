@@ -122,7 +122,7 @@ function colisaoComCarro(){
 void diminuiVeloc(){
     carros[0].veloc -= 0.5;
     setTimeout(() =>{
-        carros[0].veloc += 0.5
+        carros[0].veloc += 0.5;
      }, 500);
 
 }
