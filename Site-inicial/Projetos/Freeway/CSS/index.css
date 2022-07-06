@@ -24,8 +24,15 @@ body{
     text-align: center;
     background-color: rgb(26, 157, 245);
 }
-
-img{
+.img-voltar{
+    display: flex;
+    transition: 1s;
+}
+.img-voltar:hover{
+    transform: scale(1.05) rotate(1deg);
+    cursor: pointer;
+}
+.img-personagem{
     display: none;
 }
 #canvas{
