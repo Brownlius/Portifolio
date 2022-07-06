@@ -1,0 +1,259 @@
+html{
+    font-family: 'Oswald', sans-serif;
+}
+@font-face {
+    font-family: 'pixel-font';
+    src: url('../fonts/Pixel\ Emulator.otf') format('truetype');
+  }
+
+.container-main{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(26, 157, 245);
+    background-size: cover; 
+    min-height:100vh;
+    color: aliceblue;
+}
+.container-img_perfil{
+    
+    background: rgb(20, 33, 44);
+    border-radius: 1%;  
+    margin: 20px;
+}
+.perfil-img{
+    
+    display: flex;
+    justify-content:space-between;
+    width: 20vw;
+    height: 37vh;
+    object-fit:cover;
+    transition: 0.3s all;
+    display:flex;
+}
+    .perfil-img:hover{
+        transform: scale(1.01);
+
+    }
+.nome_img{
+    
+    font-family: 'pixel-font';
+    text-align: center;
+    padding: 5px;
+    font-size: 1.5em;
+}
+.funcao_img{
+    text-align: center;
+    padding: 5px;
+    font-size: 1.5em;
+    
+    color: rgb(24, 214, 119);
+}
+.baixar-curriculo{
+    padding: 20px ;
+    width: 90%;
+    font-size: 1.4em;
+    background-color: aliceblue;
+    font-family: 'pixel-font';
+    text-align: center;
+    justify-content: center;
+    
+    margin: 5px ;
+    border: none;
+}
+.download-gif{
+    width: 75px;
+
+}
+
+.texto-container{
+    height: 25%;
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10% 0 0 0;
+    line-height: 4.5em;
+    
+    }
+        .desktop{
+            font-size: 2em;
+            white-space:nowrap;
+            overflow:hidden;
+            width: 30em;
+            animation: type 8s steps(60, end); 
+        }
+        
+        .texto-container em{
+            color: rgb(24, 214, 119);
+            font-weight: bolder;
+        }
+
+.projetos-geral{
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center; 
+
+}
+.projetos-geral h2{
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+.projetos{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    padding: 10px ; 
+    flex-wrap: wrap;
+    text-align: center;
+           
+}
+.projetos h3{
+    display: flex;
+    justify-content: center;
+    font-family: 'pixel-font';
+    font-size: 2em;
+    width: 300px;
+    height: 2em;
+    color:rgb(20, 33, 44);
+    transition: 0.5s all;
+}
+.projetos h3:hover{
+    color: rgb(24, 214, 119);
+    background-color: rgb(20, 33, 44);
+    border-radius: 3%;
+}
+
+.logo-alura,.logo-freeway,.logo-pong,.logo-snake{
+    margin: 15px;
+    width: 250PX; /* width of container */
+    height:  250PX; /* height of container */
+    object-fit:fill;
+    border-radius: 1%;
+    background-color: aliceblue;
+    border: 4px solid  aliceblue;
+    transition: 0.4s all;       
+}
+
+.logo-alura:hover,.logo-freeway:hover,.logo-pong:hover,.logo-snake:hover{
+    cursor: pointer;
+    transform: scale(1.01)rotate(1deg);
+}
+.logo-alura:active,.logo-freeway:active,.logo-pong:active{
+    transform: scale(0.99);
+}
+
+.container-pe {
+    padding: 10px 0 0 0;
+    line-height: 2em;
+    color: aliceblue;
+    background-color: rgb(20, 33, 44);
+    border-top: 4px solid aliceblue;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+}
+.container-pe em {
+    color:rgb(24, 214, 119);
+}
+@media screen and (max-width: 480px){
+
+    .perfil-img{
+        width: calc(100% - 10px);
+        margin: 10px;
+    }
+    .perfil-img:hover{      
+            transform: none;
+            box-shadow: none;
+        
+    }
+
+    .cabecalho{
+        justify-content:flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+   
+    .descricao{
+        text-align: center;
+        font-size: 2em;
+        width: 100%;
+        flex-direction: column;
+        padding: 10px;         
+    
+    }
+    
+    .social-icons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social-icons_UL{
+        flex-direction: row;
+    }
+    .social-icons_UL li, .navegacao-sites_UL li{
+        padding: 0 10px 10px 0; 
+    }
+    .navegacao-sites{
+        margin: 10px;
+    }
+
+    .social-icons img{
+        padding: 10px;
+    }
+    .texto-container{
+ 
+        width: calc(100% - 10px);
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 10px;
+        line-height: 4.5em;
+        
+        }
+         .desktop{
+             display: none;
+            }
+        .mobile{
+            display: flex;
+            font-size: 3.5em;
+
+        }
+
+    
+    .projetos-geral{
+        width: calc(100%-10px);
+        margin: 10px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center; 
+    
+    }
+    .projetos-geral h2{
+        margin: 25px 0;
+        font-size: 2em;
+    }
+    .projetos{
+        justify-content:center;
+        padding: 0 ; 
+    }
+    .logo-alura,.logo-freeway,.logo-pong{
+        margin: 15px;
+        width: 250PX; /* width of container */
+        height:  250PX; /* height of container */
+        object-fit:contain;
+        
+        transition: none;     
+    }
+
+
+    }

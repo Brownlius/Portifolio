@@ -1,0 +1,96 @@
+html{
+    font-family: 'Oswald', sans-serif;
+}
+@font-face {
+    font-family: 'pixel-font';
+    src: url('../fonts/Pixel\ Emulator.otf') format('truetype');
+  }
+.cabecalho{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    
+    background-color: rgb(20, 33, 44);
+    color:aliceblue;
+    border-bottom: 4px solid aliceblue ;
+}
+ /* Nome e função */
+.saudacao{
+    font-family: 'pixel-font';
+    text-align: center;
+    font-size: 2em ;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;  
+    line-height: 1.2em;  
+}
+.ola{
+    
+    color: rgb(24, 214, 119);
+}
+.funcao{
+    font-family: 'pixel-font';
+    text-align: center;
+    font-size: 0.8em ;
+}
+
+/*  Nome e função */
+.lista{
+    display: flex;
+    
+}
+.social-icons,.navegacao-sites{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    font-family: 'pixel-font';
+}
+
+.social-icons_UL,.navegacao-sites_UL{
+    display: flex;
+}
+
+.social-icons_UL li, .navegacao-sites_UL li{
+    padding: 0 15px 15px 0;
+    font-size: 1.5em;   
+
+}
+.navegacao-sites_UL li:hover{
+    transform: scale(1.02) rotate(1deg);
+    cursor: pointer;
+}
+.navegacao-sites_UL li :active{
+    transform: scale(0.9);
+}
+.navegacao-sites{
+    text-transform: uppercase;
+}
+.navegacao-sites a{
+    font-weight: bolder;
+}
+.marca-site{
+    color: rgb(24, 214, 119);
+    text-decoration: none;
+    
+}
+.social-icons img{
+    width: 35px;
+    padding: 10px;
+    animation: rede-sociais 3s linear infinite;
+}
+@keyframes rede-sociais{
+    from {transform:scale(1.01) rotate(2deg);}
+    50% {transform: scale(0.95) rotate(1.5deg);}
+    75% {transform: scale(0.92) rotate(-1deg);}
+    to {transform: scale(1) rotate(2deg);}
+
+}
+.social-icons li :hover{
+    animation-play-state: paused;
+    cursor: pointer;
+    transform: rotate(2deg);
+}
+
+
