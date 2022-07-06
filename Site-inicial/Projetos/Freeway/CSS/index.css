@@ -3,24 +3,28 @@
     src: url('../fonts/I-pixel-u.ttf') format('truetype');
 }
 
+.cabeca{
+    display: flex;
+    justify-content: center;
+    background-color:rgb(20, 33, 44) ;
+    border: 4px solid aliceblue;
+    border-radius: 5px;
+    width: 50vw;
+    padding: 15px;
+    margin: 0 auto;
+}
+.titulo{
+    font-family:  'personalizada';
+    font-size:3em;
+    margin: 5px auto 0 ;
+    color: rgb(24, 214, 119);
+}
 body{ 
     
     text-align: center;
     background-color: rgb(26, 157, 245);
 }
 
-header{
-    font-family:'personalizada';
-    font-size: 2em;
-    margin: 0;
-    padding: 15px 0;
-    text-transform: uppercase;
-    color: rgb(24, 214, 119);
-    width: 100vw;
-    background-color: rgb(20, 33, 44);
-    border-bottom: 4px solid aliceblue ;
-
-}
 img{
     display: none;
 }

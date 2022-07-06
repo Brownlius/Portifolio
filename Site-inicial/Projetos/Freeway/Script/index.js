@@ -36,9 +36,9 @@ function update(){
 
 function novaImagem(src){
     let img = document.createElement("img");
-    img.src = src
-    document.querySelector('#canvas').appendChild(img)
-    return img
+    img.src = src;
+    document.querySelector('#canvas').appendChild(img);
+    return img;
 }
 
 function geraCanvas(){
