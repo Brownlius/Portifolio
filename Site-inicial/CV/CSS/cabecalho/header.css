@@ -10,7 +10,6 @@ html{
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    
     background-color: rgb(20, 33, 44);
     color:aliceblue;
     border-bottom: 4px solid aliceblue ;
@@ -19,7 +18,7 @@ html{
 .saudacao{
     font-family: 'pixel-font';
     text-align: center;
-    font-size: 2em ;
+    font-size: 1.6em ;
     display: flex;
     flex-direction: column;
     padding: 20px;  

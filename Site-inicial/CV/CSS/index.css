@@ -8,15 +8,39 @@ html{
 
 .container-main{
     display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap:nowrap;
+    justify-self: start;
+    justify-content:flex-start;
+    
     background-color: rgb(26, 157, 245);
     background-size: cover; 
     min-height:100vh;
     color: aliceblue;
 }
-.container-img_perfil{
+.texto-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 35px 0;
+    line-height: 4.5em;
     
+    }
+
+.saudacao-main{
+    font-family: 'pixel-font';
+    font-size: 2.5em;
+    width: 100%;
+    height: 2.5em;
+
+
+}
+.apresentacao-main{
+    font-size: 1.2em;
+    line-height: 1.6em;
+
+}
+.container-img_perfil{
+    display: inline-flexbox;
+    justify-content: center;
     background: rgb(20, 33, 44);
     border-radius: 1%;  
     margin: 20px;
@@ -24,7 +48,7 @@ html{
 .perfil-img{
     
     display: flex;
-    justify-content:space-between;
+    align-items: center;
     width: 20vw;
     height: 37vh;
     object-fit:cover;
@@ -36,7 +60,6 @@ html{
 
     }
 .nome_img{
-    
     font-family: 'pixel-font';
     text-align: center;
     padding: 5px;
@@ -46,105 +69,34 @@ html{
     text-align: center;
     padding: 5px;
     font-size: 1.5em;
-    
     color: rgb(24, 214, 119);
 }
 .baixar-curriculo{
-    padding: 20px ;
-    width: 90%;
-    font-size: 1.4em;
+    margin: 35px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    font-size: 1.1em;
     background-color: aliceblue;
     font-family: 'pixel-font';
-    text-align: center;
-    justify-content: center;
-    
-    margin: 5px ;
-    border: none;
+    border:none;
+    border-radius: 2px;
+    transition: 0.5s;
+}
+
+.baixar-curriculo:hover{
+    transform: scale(1.01);
+    cursor: pointer;
+
 }
 .download-gif{
-    width: 75px;
-
+    width: 45px;
 }
 
-.texto-container{
-    height: 25%;
-    width: 75%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 10% 0 0 0;
-    line-height: 4.5em;
-    
-    }
-        .desktop{
-            font-size: 2em;
-            white-space:nowrap;
-            overflow:hidden;
-            width: 30em;
-            animation: type 8s steps(60, end); 
-        }
-        
-        .texto-container em{
-            color: rgb(24, 214, 119);
-            font-weight: bolder;
-        }
 
-.projetos-geral{
-    width: 100%;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    text-align: center; 
 
-}
-.projetos-geral h2{
-    margin-bottom: 20px;
-    font-size: 2.5em;
-}
-.projetos{
-    justify-content: space-between;
-    display: flex;
-    flex-direction: row;
-    padding: 10px ; 
-    flex-wrap: wrap;
-    text-align: center;
-           
-}
-.projetos h3{
-    display: flex;
-    justify-content: center;
-    font-family: 'pixel-font';
-    font-size: 2em;
-    width: 300px;
-    height: 2em;
-    color:rgb(20, 33, 44);
-    transition: 0.5s all;
-}
-.projetos h3:hover{
-    color: rgb(24, 214, 119);
-    background-color: rgb(20, 33, 44);
-    border-radius: 3%;
-}
 
-.logo-alura,.logo-freeway,.logo-pong,.logo-snake{
-    margin: 15px;
-    width: 250PX; /* width of container */
-    height:  250PX; /* height of container */
-    object-fit:fill;
-    border-radius: 1%;
-    background-color: aliceblue;
-    border: 4px solid  aliceblue;
-    transition: 0.4s all;       
-}
-
-.logo-alura:hover,.logo-freeway:hover,.logo-pong:hover,.logo-snake:hover{
-    cursor: pointer;
-    transform: scale(1.01)rotate(1deg);
-}
-.logo-alura:active,.logo-freeway:active,.logo-pong:active{
-    transform: scale(0.99);
-}
 
 .container-pe {
     padding: 10px 0 0 0;

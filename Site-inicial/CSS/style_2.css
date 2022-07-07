@@ -37,6 +37,8 @@ html{
     
 }
 .social-icons,.navegacao-sites{
+    
+    font-family: 'pixel-font';
     display: flex;
     flex-direction: column;
     align-items: center;
