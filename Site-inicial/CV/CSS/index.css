@@ -9,6 +9,7 @@ html{
     width: 100%;
     color: rgb(26, 157, 245);
     font-family: 'pixel-font';
+    font-size: 1.3em;
 }
 .container-main{
     display:flex;
@@ -110,7 +111,7 @@ html{
 }
 .detalhes{
     line-height: 1.2em;
-    padding: 0 15px;
+    padding: 0 10px;
     font-size: 1.1em;
 }
 

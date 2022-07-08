@@ -4,8 +4,9 @@
 }
 
 .input-field{
+   margin: 15px 0;
    display: flex;
-   justify-content: flex-start;
+   justify-content: center;
    font-size: 1.2em;
    color: aliceblue;
    padding: 5px 5px 5px 0;
@@ -24,5 +25,7 @@
 }
 
 .materialize-textarea{
-   flex-wrap: wrap;
+   background: rgb(20, 33, 44);
+   border: none;
+   color: aliceblue;
 }
