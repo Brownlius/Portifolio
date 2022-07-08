@@ -1,0 +1,28 @@
+
+.me-contrate{
+   margin: 0 10px;
+}
+
+.input-field{
+   display: flex;
+   justify-content: flex-start;
+   font-size: 1.2em;
+   color: aliceblue;
+   padding: 5px 5px 5px 0;
+   border-bottom: 2px solid aliceblue;
+}
+
+.input-field input{
+   width: 100%;
+   font-family: 'Oswald', sans-serif;
+   color: aliceblue;
+   padding: 5px 5px 5px 0;
+   margin: 5px 10px;
+   background: rgb(20, 33, 44);
+   border: none;
+   transition: 0.1s;
+}
+
+.materialize-textarea{
+   flex-wrap: wrap;
+}
