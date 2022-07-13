@@ -114,6 +114,24 @@ html{
     padding: 0 10px;
     font-size: 1.1em;
 }
+.skills-container{
+    padding:10px;
+}
+
+.graficos{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 50px;
+}
+.grafico{
+    display: flex;
+    margin: 20px ;
+    width: 250px;
+    height: 250px;  
+    border-radius: 50%;
+    background: conic-gradient(rgb(24, 214, 119) 75%, rgb(20, 33, 44) 25%);
+
+}
 
 .container-pe {
     padding: 10px 0 0 0;
@@ -132,6 +150,7 @@ html{
 .container-pe em {
     color:rgb(24, 214, 119);
 }
+
 @media screen and (max-width: 480px){
 
     .perfil-img{
