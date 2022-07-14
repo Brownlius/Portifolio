@@ -9,7 +9,8 @@ html{
     width: 100%;
     color: rgb(26, 157, 245);
     font-family: 'pixel-font';
-    font-size: 1.3em;
+    font-size: 1.5em;
+    line-height: 1.6em;
 }
 .container-main{
     display:flex;
@@ -32,7 +33,7 @@ html{
     font-family: 'pixel-font';
     font-size: 2.5em;
     margin: 20px 0;
-   width: calc(100% - 40px);
+    width: calc(100% - 40px);
     height: 2em;
     padding: 10px;
     background: rgb(20, 33, 44);
@@ -40,8 +41,8 @@ html{
 }
 .apresentacao-main{
     padding: 10px;
-   width: calc(100% - 40px);
-    font-size: 1.2em;
+    width: calc(100% - 40px);
+    font-size: 1.3em;   
     line-height: 1.6em;
     background: rgb(20, 33, 44);
     border-radius: 3px;
@@ -117,21 +118,36 @@ html{
 .skills-container{
     padding:10px;
 }
-
-.graficos{
+.subtitulo{
+    display: flex;
+    color: rgb(24, 214, 119);
+    font-size: 1.5em;
+    justify-content: center;
+}
+.container-graficos{
     display: flex;
     justify-content: space-between;
     margin: 20px 50px;
 }
-.grafico{
+#graficos{
     display: flex;
     margin: 20px ;
     width: 250px;
     height: 250px;  
     border-radius: 50%;
-    background: conic-gradient(rgb(24, 214, 119) 75%, rgb(20, 33, 44) 25%);
-
 }
+     .html{
+        background: conic-gradient(rgb(24, 214, 119) 75%, rgb(20, 33, 44) 25%);
+    }
+     .css{
+        background: conic-gradient(rgb(24, 214, 119) 70%, rgb(20, 33, 44) 30%);
+    }
+     .js{
+        background: conic-gradient(rgb(24, 214, 119) 50%, rgb(20, 33, 44) 50%);
+    }
+     .illustrator{
+        background: conic-gradient(rgb(24, 214, 119) 85%, rgb(20, 33, 44) 15%);
+    }
 
 .container-pe {
     padding: 10px 0 0 0;
