@@ -1,9 +1,14 @@
 html{
     font-family: 'Oswald', sans-serif;
+    color: aliceblue;
 }
 @font-face {
     font-family: 'pixel-font';
     src: url('../fonts/Pixel\ Emulator.otf') format('truetype');
+  }
+body{
+    
+    background-color: rgb(26, 157, 245);
   }
 .subtitulo-azul{
     width: 100%;
@@ -13,131 +18,67 @@ html{
     line-height: 1.6em;
 }
 .container-main{
-    display:flex;
-    flex-wrap:nowrap;
-    justify-self: start;
-    justify-content:flex-start;
-    background-color: rgb(26, 157, 245);
+    width: 70%;
+    float: right;
+    margin: 20px;
     background-size: cover; 
     min-height:100vh;
     color: aliceblue;
 }
-.texto-container{
-    margin: 0;
-    line-height: 4.5em;
-    }
 
 .saudacao-main{
-    display: flex;
-    justify-content: ce;
+    text-align: center;
     font-family: 'pixel-font';
     font-size: 2.5em;
-    margin: 20px 0;
-    width: calc(100% - 40px);
-    height: 2em;
     padding: 10px;
     background: rgb(20, 33, 44);
     border-radius: 3px;
 }
-.apresentacao-main{
+.sobre_mim-main{
+    margin: 20px 0;
     padding: 10px;
-    width: calc(100% - 40px);
-    font-size: 1.3em;   
-    line-height: 1.6em;
+    line-height: 1.8em;
     background: rgb(20, 33, 44);
     border-radius: 3px;
+}
+.texto {
+    font-size: 1.3em;
+    
 }
 .skills-container{
     width: calc(100% - 20px);
     margin: 20px 0;
+    padding: 10px;
     background: rgb(20, 33, 44);
     border-radius: 3px;
     height: 100vh;
 }
-.container-img_perfil{
-    display: inline-flexbox;
-    justify-content: center;
-    background: rgb(20, 33, 44);
-    border-radius: 3px; 
-    margin: 20px;
-}
-.perfil-img{
-    
-    display: flex;
-    margin: 0 auto;
-    align-items: center;
-    width: 20vw;
-    height: 37vh;
-    object-fit:cover;
-    transition: 0.3s all;
-}
-    .perfil-img:hover{
-        transform: scale(1.01);
-
-    }
-.nome_img{
-    font-family: 'pixel-font';
-    text-align: center;
-    padding: 5px;
-    font-size: 1.5em;
-}
-.funcao_img{
-    text-align: center;
-    padding: 5px;
-    font-size: 1.5em;
-    color: rgb(24, 214, 119);
-}
-.botao{
-    margin: 25px auto 20px auto    ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    height: 3em;
-    font-size: 1em;
-    background-color: aliceblue;
-    font-family: 'pixel-font';
-    border:none;
-    border-radius: 3px;
-    transition: 0.5s;
-}
-
-.botao:hover{
-    transform: scale(1.01);
-    cursor: pointer;
-
-}
-.download-gif{
-    width: 45px;
-}
-.detalhes{
-    line-height: 1.2em;
-    padding: 0 10px;
-    font-size: 1.1em;
-}
-.skills-container{
-    padding:10px;
-}
 .subtitulo{
     display: flex;
-    color: rgb(24, 214, 119);
-    font-size: 1.5em;
+    color: aliceblue;
+    font-family: 'pixel-font';  
+    font-size: 1.25em;
     justify-content: center;
 }
 .container-graficos{
+    margin: 40px 0;
     display: flex;
     justify-content: space-between;
-    margin: 20px 50px;
+    
 }
 #graficos{
     display: flex;
-    margin: 20px ;
-    width: 250px;
-    height: 250px;  
+    padding: 30px;
+    width: 200px;
+    height: 200px;  
     border-radius: 50%;
+    
+    
 }
      .html{
+        
         background: conic-gradient(rgb(24, 214, 119) 75%, rgb(20, 33, 44) 25%);
+        
     }
      .css{
         background: conic-gradient(rgb(24, 214, 119) 70%, rgb(20, 33, 44) 30%);
@@ -149,115 +90,3 @@ html{
         background: conic-gradient(rgb(24, 214, 119) 85%, rgb(20, 33, 44) 15%);
     }
 
-.container-pe {
-    padding: 10px 0 0 0;
-    line-height: 2em;
-    color: aliceblue;
-    background-color: rgb(20, 33, 44);
-    border-top: 4px solid aliceblue;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.copyright{
-    width: 100%;
-    text-align: center;
-}
-.container-pe em {
-    color:rgb(24, 214, 119);
-}
-
-@media screen and (max-width: 480px){
-
-    .perfil-img{
-        width: calc(100% - 10px);
-        margin: 10px;
-    }
-    .perfil-img:hover{      
-            transform: none;
-            box-shadow: none;
-        
-    }
-
-    .cabecalho{
-        justify-content:flex-start;
-        align-items: center;
-        flex-direction: column;
-    }
-   
-    .descricao{
-        text-align: center;
-        font-size: 2em;
-        width: 100%;
-        flex-direction: column;
-        padding: 10px;         
-    
-    }
-    
-    .social-icons{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .social-icons_UL{
-        flex-direction: row;
-    }
-    .social-icons_UL li, .navegacao-sites_UL li{
-        padding: 0 10px 10px 0; 
-    }
-    .navegacao-sites{
-        margin: 10px;
-    }
-
-    .social-icons img{
-        padding: 10px;
-    }
-    .texto-container{
- 
-        width: calc(100% - 10px);
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin: 10px;
-        line-height: 4.5em;
-        
-        }
-         .desktop{
-             display: none;
-            }
-        .mobile{
-            display: flex;
-            font-size: 3.5em;
-
-        }
-
-    
-    .projetos-geral{
-        width: calc(100%-10px);
-        margin: 10px;
-        flex-direction: column;
-        flex-wrap: wrap;
-        text-align: center; 
-    
-    }
-    .projetos-geral h2{
-        margin: 25px 0;
-        font-size: 2em;
-    }
-    .projetos{
-        justify-content:center;
-        padding: 0 ; 
-    }
-    .logo-alura,.logo-freeway,.logo-pong{
-        margin: 15px;
-        width: 250PX; /* width of container */
-        height:  250PX; /* height of container */
-        object-fit:contain;
-        
-        transition: none;     
-    }
-
-
-    }

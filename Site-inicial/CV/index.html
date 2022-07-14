@@ -5,6 +5,7 @@
         <link rel = "stylesheet" href = "./CSS/reset.css">
         <link rel="stylesheet" href="./CSS/index.css">
         <link rel="stylesheet" href="./CSS/cabecalho/header.css">
+        <link rel="stylesheet" href="./CSS/menu-float/menu-float.css">
         <link rel="stylesheet" href="./CSS/form-contrate_me.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,92 +38,96 @@
     </header>
     <body>
         <main>
-            <div class="container-main">
-                <div class = "container-img_perfil">
-                    <div>
-                        <img src="./imagens/foto_perfil/eu jovem-export.png" class="perfil-img">
-                        <h2 class = "nome_img">
-                            Pedro Almeida
-                        </h2>
-                        <p class="funcao_img" >
-                            Software Developer
-                        </p>
+            <div class = "container-img_perfil">
+                <div>
+                    <img src="./imagens/foto_perfil/eu jovem-export.png" class="perfil-img">
+                    <h2 class = "nome_img">
+                        Pedro Almeida
+                    </h2>
+                    <p class="funcao_img" >
+                        Software Developer
+                    </p>
 
-                        <button class="botao">Download CV <img class= "download-gif"src="./imagens/download.gif"</button>
-                    </div>
-                    <div class = "detalhes">
-                        <h2 class = "subtitulo-azul"><br>Detalhes</h2> 
-                        <p><br>Nome : Pedro Henrique S. de Almeida<br><br>
-                        Endereço : Campo Grande - MS<br><br>
-                        Celular : (67) 9.9322-6534 (67) 9.8429-3989<br><br>
-                        E-mail : p.almeida@live.com<br><br>
-                        </p>
-                    </div>
-                    <div class ="me-contrate">
-                        <h2 class = "subtitulo-azul">Me Contrate</h2>
-                        <div class="contact-right clearfix">
+                    <button class="botao">Download CV <img class= "download-gif"src="./imagens/download.gif"</button>
+                </div>
+                <div class = "detalhes">
+                    <h2 class = "subtitulo-azul"><br>Detalhes</h2> 
+                    <p><br>Nome : Pedro Henrique S. de Almeida<br><br>
+                    Endereço : Campo Grande - MS<br><br>
+                    Celular : (67) 9.9322-6534 (67) 9.8429-3989<br><br>
+                    E-mail : p.almeida@live.com<br><br>
+                    </p>
+                </div>
+                <div class ="me-contrate">
+                    <h2 class = "subtitulo-azul">Me Contrate</h2>
+                    <div class="contact-right clearfix">
 
-                            <form class="formulario" >
-    
-                                <div class="input-field">
-                                    <label>Nome</label>
-                                    <input type="text" name="full_name" class="require">
-                                    
-                                </div>
-    
-                                <div class="input-field">
-                                    <label class="">Email</label>
-                                    <input type="text" name="email" class="require" data-valid="email" data-error="Email should be valid.">
-                                    
-                                </div>
-    
-                                <div class="input-field">
-                                    <label class="">Assunto</label>
-                                    <input type="text" name="subject" class="require">
-                                   
-                                </div>
-    
-                                <div class="input-field">
-                                    <h2>Mensagem</h2>
-                                    <textarea rows="7" cols="40" name="message" class="materialize-textarea"></textarea>
-                                    <div class="response"></div>
-                                </div>
-                                <button type="button" class="botao"></i>Enviar</button>
-                            </form>
-                        </div>
+                        <form class="formulario" >
+
+                            <div class="input-field">
+                                <label>Nome</label>
+                                <input type="text" name="full_name" class="require">
+                                
+                            </div>
+
+                            <div class="input-field">
+                                <label class="">Email</label>
+                                <input type="text" name="email" class="require" data-valid="email" data-error="Email should be valid.">
+                                
+                            </div>
+
+                            <div class="input-field">
+                                <label class="">Assunto</label>
+                                <input type="text" name="subject" class="require">
+                               
+                            </div>
+
+                            <div class="input-field">
+                                <h2>Mensagem</h2>
+                                <textarea rows="7" cols="40" name="message" class="materialize-textarea"></textarea>
+                                <div class="response"></div>
+                            </div>
+                            <button type="button" class="botao"></i>Enviar</button>
+                        </form>
                     </div>
                 </div>
+            </div>
+            <div class="container-main">
+               
                 
-                <div class="texto-container">
+                <div class="ola_mundo-container">
                     <h2 class="saudacao-main"> Olá, Mundo!</h2>
-                    <div class="apresentacao-main">
+                </div>
+                    <div class="sobre_mim-main">
                     <h2 class = "subtitulo-azul">Sobre Mim</h2>
-                    <p><br>Meu nome é Pedro Henrique S. de Almeida, tenho 21 anos e sou apaixonado em criar ! 
-                        Eu Estou no 2º semestre de TADS na INSTED e estagio na Infortech.
-                        Estou aprendendo e descobrindo as minhas vocações e onde me encaixo no mercado.
+                    <p class = "texto">Meu nome é Pedro Henrique S. de Almeida, tenho 21 anos e sou apaixonado em criar ! 
+                        Eu Estou no 2º semestre de TADS na INSTED e estagio na Infortech.<br>
+                        Estou aprendendo e descobrindo as minhas vocações e onde me encaixo no mercado.<br>
                         Estou sempre desenvolvendo e criando. Misturo sempre técnicas de ilustração com o desenvolvimento.</p>
                 </div>
-                <div class="skills-container">
+                <section class="skills-container">
                     <h2 class = "subtitulo-azul">Skills</h2>
-                    
-                    <h2 class = "subtitulo">Proficiência</h2>
+                    <h2 class = "subtitulo">Proficiências</h2>
                     <div class = "container-graficos">
                         <img id = "graficos" class="html " src="./imagens/html.png"> 
                         <img id = "graficos" class="css" src="./imagens/css.png">
                         <img id = "graficos" class="js" src="./imagens/js.png">
                         <img id = "graficos" class="illustrator" src="./imagens/illustrator.png">   
                     </div> 
+            </section> 
+            <div>
+                <h2 class = "subtitulo-azul">Skills</h2>
+                    <h2 class = "subtitulo">Proficiência</h2>
+                    <div class = "container-graficos">
+                        <img id = "graficos" class="html " src="./imagens/html.png"> 
+                       
+                    </div> 
                 </div>
-            
-            </div> 
+            </div>
+
         </main>
         <script src="./Script/index.js"></script>
     </body>
     <script></script>
-    <footer>
-        <div class='container-pe'>
-            <p class="copyright"><em>&copy</em> Copyright 2022</p> 
-            <p class="designed">Designed by <em>Me</em></p>
-        </div>  
-    </footer>
+
 </html>
