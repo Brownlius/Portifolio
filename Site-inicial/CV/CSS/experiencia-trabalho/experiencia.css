@@ -1,0 +1,32 @@
+
+.containers-prof_edu{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   
+}
+.container-profissional{
+   width: 45%;
+   flex-direction: column;
+   border-right: 4px solid aliceblue;
+}
+   .cargo{
+      line-height: 2rem;
+      font-weight: bolder;
+      text-align: center;
+      padding: 10px;
+      font-size: 1.5em;
+      color: rgb(24, 214, 119);
+   }
+   .periodo{
+      padding: 10px;
+      line-height: 3rem;
+      font-weight: lighter;
+      color:rgb(26, 157, 245);
+
+   }
+.container-educacao{
+   width: 45%;
+   border-right: 4px solid aliceblue;
+   flex-direction:column;
+}

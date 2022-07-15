@@ -7,73 +7,65 @@ html{
     src: url('../fonts/Pixel\ Emulator.otf') format('truetype');
   }
 body{
-    
+    font-size: 1.2rem;
+    line-height: 1.5rem;
     background-color: rgb(26, 157, 245);
   }
+#containers{
+   padding: 10px;
+   background: rgb(18, 28, 41);
+   border-radius: 3px;
+}
+#containers-inner{
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: rgb(19, 31, 46);
+    box-shadow: -5px  5px 5px rgb(15, 23, 34);
+ }
 .subtitulo-azul{
-    width: 100%;
     color: rgb(26, 157, 245);
     font-family: 'pixel-font';
-    font-size: 1.5em;
-    line-height: 1.6em;
+    line-height: 1.6rem;
 }
 .container-main{
+    position: relative;
     width: 70%;
     float: right;
-    margin: 20px;
+    margin: 20px 20px 0 0;
     background-size: cover; 
     min-height:100vh;
     color: aliceblue;
 }
-
+.ola_mundo-container{
+line-height: 3rem;
+}
 .saudacao-main{
     text-align: center;
     font-family: 'pixel-font';
-    font-size: 2.5em;
-    padding: 10px;
-    background: rgb(20, 33, 44);
-    border-radius: 3px;
+    font-size: 2.5rem; 
 }
-.sobre_mim-main{
+.sobre_mim-container{
     margin: 20px 0;
-    padding: 10px;
-    line-height: 1.8em;
-    background: rgb(20, 33, 44);
-    border-radius: 3px;
-}
-.texto {
-    font-size: 1.3em;
-    
 }
 .skills-container{
-    width: calc(100% - 20px);
     margin: 20px 0;
-    padding: 10px;
-    background: rgb(20, 33, 44);
-    border-radius: 3px;
-    height: 100vh;
 }
 .subtitulo{
-    display: flex;
+    text-align: center;
     color: aliceblue;
     font-family: 'pixel-font';  
-    font-size: 1.25em;
-    justify-content: center;
 }
 .container-graficos{
-    margin: 40px 0;
-    display: flex;
-    justify-content: space-between;
-    
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
 }
-#graficos{
-    display: flex;
-    padding: 30px;
-    width: 200px;
-    height: 200px;  
+#grafico{
+    margin: 15px;
+    width: 20%;  
+    max-width: 250px;
     border-radius: 50%;
-    
-    
 }
      .html{
         

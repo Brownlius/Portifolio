@@ -5,7 +5,8 @@
         <link rel = "stylesheet" href = "./CSS/reset.css">
         <link rel="stylesheet" href="./CSS/index.css">
         <link rel="stylesheet" href="./CSS/cabecalho/header.css">
-        <link rel="stylesheet" href="./CSS/menu-float/menu-float.css">
+        <link rel="stylesheet" href="./CSS/menu-perfil/menu-float.css">
+        <link rel="stylesheet" href="./CSS/experiencia-trabalho/experiencia.css">
         <link rel="stylesheet" href="./CSS/form-contrate_me.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,29 +39,33 @@
     </header>
     <body>
         <main>
-            <div class = "container-img_perfil">
-                <div>
-                    <img src="./imagens/foto_perfil/eu jovem-export.png" class="perfil-img">
+            <div id="containers" class = "container-img_perfil">
+                <h2 class="subtitulo-azul">Perfil</h2>
+                <div id= "containers-inner">
+                    <div >
+                    <img  src="./imagens/foto_perfil/eu jovem-export.png" class="perfil-img">
                     <h2 class = "nome_img">
                         Pedro Almeida
                     </h2>
                     <p class="funcao_img" >
                         Software Developer
                     </p>
-
+                </div>        
                     <button class="botao">Download CV <img class= "download-gif"src="./imagens/download.gif"</button>
                 </div>
                 <div class = "detalhes">
-                    <h2 class = "subtitulo-azul"><br>Detalhes</h2> 
+                    <h2 class = "subtitulo-azul">Detalhes</h2> 
+                    <div id= "containers-inner">
                     <p><br>Nome : Pedro Henrique S. de Almeida<br><br>
                     Endereço : Campo Grande - MS<br><br>
                     Celular : (67) 9.9322-6534 (67) 9.8429-3989<br><br>
                     E-mail : p.almeida@live.com<br><br>
                     </p>
                 </div>
-                <div class ="me-contrate">
+                </div>
+                <div  class ="me-contrate">
                     <h2 class = "subtitulo-azul">Me Contrate</h2>
-                    <div class="contact-right clearfix">
+                    <div id= "containers-inner" class="contact-right clearfix">
 
                         <form class="formulario" >
 
@@ -82,49 +87,101 @@
                                
                             </div>
 
-                            <div class="input-field">
+                            <div class="input-mensagem">
                                 <h2>Mensagem</h2>
-                                <textarea rows="7" cols="40" name="message" class="materialize-textarea"></textarea>
-                                <div class="response"></div>
+                                <textarea rows="7" cols="38" name="message" class="materialize-textarea"></textarea>
+                                <div></div>
                             </div>
                             <button type="button" class="botao"></i>Enviar</button>
                         </form>
                     </div>
                 </div>
             </div>
-            <div class="container-main">
-               
-                
-                <div class="ola_mundo-container">
+            <section class="container-main">
+                <section id="containers" class="ola_mundo-container">
                     <h2 class="saudacao-main"> Olá, Mundo!</h2>
-                </div>
-                    <div class="sobre_mim-main">
+                </section>
+                <section id="containers" class="sobre_mim-container">
                     <h2 class = "subtitulo-azul">Sobre Mim</h2>
                     <p class = "texto">Meu nome é Pedro Henrique S. de Almeida, tenho 21 anos e sou apaixonado em criar ! 
                         Eu Estou no 2º semestre de TADS na INSTED e estagio na Infortech.<br>
                         Estou aprendendo e descobrindo as minhas vocações e onde me encaixo no mercado.<br>
                         Estou sempre desenvolvendo e criando. Misturo sempre técnicas de ilustração com o desenvolvimento.</p>
-                </div>
-                <section class="skills-container">
+                </section>
+                <section id="containers" class="skills-container">
                     <h2 class = "subtitulo-azul">Skills</h2>
                     <h2 class = "subtitulo">Proficiências</h2>
-                    <div class = "container-graficos">
-                        <img id = "graficos" class="html " src="./imagens/html.png"> 
-                        <img id = "graficos" class="css" src="./imagens/css.png">
-                        <img id = "graficos" class="js" src="./imagens/js.png">
-                        <img id = "graficos" class="illustrator" src="./imagens/illustrator.png">   
+                    <div id = "containers-inner" class = "container-graficos">
+                        <img id = "grafico" class="html " src="./imagens/html.png"> 
+                        <img id = "grafico" class="css" src="./imagens/css.png">
+                        <img id = "grafico" class="js" src="./imagens/js.png">
+                        <img id = "grafico" class="illustrator" src="./imagens/illustrator.png">   
                     </div> 
             </section> 
-            <div>
-                <h2 class = "subtitulo-azul">Skills</h2>
-                    <h2 class = "subtitulo">Proficiência</h2>
-                    <div class = "container-graficos">
-                        <img id = "graficos" class="html " src="./imagens/html.png"> 
-                       
-                    </div> 
-                </div>
-            </div>
+            <section id="containers" class="container-exp">
+                <h2 class = "subtitulo-azul">Qualificações</h2>
+                
 
+                <div class = "containers-prof_edu">
+                    <div id = "containers-inner" class = "container-profissional">  
+                        <h2 class = "subtitulo">Profissional</h2>
+                        <div >
+                            <h3 class="cargo">Aux. Administrativo - Netway</h3>
+                            <h4 class="periodo">Jul 2017 - Jan 2019</h4>
+                            <p class="descricao_trabalho">Desenvolver o trabalho de coordenar equipes técnicas para campo.<br>
+                            Organizar base de dados de clientes.<br>
+                            Responsável por organizar e realizar manutenção do sistema de cobrança e fornecimento de internet.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="cargo">Atendente Telemarketing - Tahto</h3>
+                            <h4 class="periodo">Ago 2020 - Ago 2021</h4>
+                            <p class="descricao_trabalho">Atendimento direto ao cliente na equipe de consultoria.<br>
+                            Realizar planilhas para calculos de Renda Variável.<br>
+                            Desevolvimento de dashboards para apresentação de resultados de equipe.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="cargo">Monitor de diagnóstico - Tahto</h3>
+                            <h4 class="periodo">Set 2021 - Março 2022</h4>
+                            <p class="descricao_trabalho">Realizar acompanhamento de funcionarios analisando resultados e metas,
+                                agindo para garantir  a qualidade do serviço.<br>
+                            Desenvolvimento de análise do Oi Conecta, a fim de realizar melhorias.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="cargo">Estagiário em Desenvolvimento de software - Infortech</h3>
+                            <h4 class="periodo">Abr 2022 - Atualmente</h4>
+                            <p class="descricao_trabalho">Acompanhando desenvedores C#.<br>
+                            Realizando diversos cursos para para desenvolvimento pessoal e profissional.    
+                            </p>
+                        </div>
+                    </div>
+                    <div id = "containers-inner" class = "container-educacao">
+                        <h2 class = "subtitulo">Educacional</h2>
+                        <div>
+                            <h3 class="cargo">TADS - INSTED</h3>
+                            <h4 class="periodo">Fev 2022 - Dez 2024</h4>
+                            <p class="descricao_trabalho">Faculdade de Tecnologia e Análise de Desenvolvimento de Sistemas.</p>
+                        </div>
+                        <div>
+                            <h3 class="cargo">Iniciante em programação - Alura</h3>
+                            <h4 class="periodo">abril 2022 - Mai 2022</h4>
+                            <p class="descricao_trabalho">O entrando no universo da 
+                                programação. Começando com a criação de sites utilizando as linguagens populares CSS, HTML e JavaScript
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="cargo">Formação Linguagem C++ - Alura</h3>
+                            <h4 class="periodo">Maio 2021 - jun 2022</h4>
+                            <p class="descricao_trabalho">Aprendi a programar em C++, com o paradigma da orientação a objetos
+                                 e dominando recursos essenciais de uma das principais linguagens no mercado.
+                            </p>
+                        </div>
+                </div> 
+            </div>
+        </section> 
+    </section> 
         </main>
         <script src="./Script/index.js"></script>
     </body>
