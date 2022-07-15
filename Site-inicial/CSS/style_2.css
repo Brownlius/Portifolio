@@ -34,7 +34,6 @@ html{
 /*  Nome e função */
 .lista{
     display: flex;
-    
 }
 .social-icons,.navegacao-sites{
     
@@ -43,11 +42,9 @@ html{
     flex-direction: column;
     align-items: center;
 }
-
 .social-icons_UL,.navegacao-sites_UL{
     display: flex;
 }
-
 .social-icons_UL li, .navegacao-sites_UL li{
     padding: 0 10px 10px 0;
     font-size: 1.5em;   
@@ -69,7 +66,6 @@ html{
 .marca-site{
     color: rgb(24, 214, 119);
     text-decoration: none;
-    
 }
 .social-icons img{
     width: 35px;
@@ -186,7 +182,7 @@ html{
 .projetos h3:hover{
     color: rgb(24, 214, 119);
     background-color: rgb(20, 33, 44);
-    border-radius: 3%;
+    border-radius: 5px;
 }
 
 .logo-alura,.logo-freeway,.logo-pong,.logo-snake{
