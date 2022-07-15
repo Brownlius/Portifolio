@@ -6,10 +6,12 @@ html{
     src: url('../fonts/Pixel\ Emulator.otf') format('truetype');
   }
 .cabecalho{
-    width: 100%;
+    width: 70vw;
+    margin-left: auto;
+    margin-right: 20px;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     background-color: rgb(20, 33, 44);
     color:aliceblue;
     border-bottom: 4px solid aliceblue ;

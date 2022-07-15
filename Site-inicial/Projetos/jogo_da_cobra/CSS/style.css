@@ -6,7 +6,7 @@
 .cabeca{
     display: flex;
     justify-content: center;
-    background-color:rgb(20, 33, 44) ;
+    background-color: rgb(18, 28, 41);
     border: 4px solid aliceblue;
     border-radius: 5px;
     width: 50vw;

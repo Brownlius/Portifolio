@@ -10,7 +10,7 @@ html{
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    background-color: rgb(20, 33, 44);
+    background-color:  rgb(18, 28, 41);
     color:aliceblue;
     border-bottom: 4px solid aliceblue ;
 }
@@ -46,6 +46,8 @@ html{
     display: flex;
 }
 .social-icons_UL li, .navegacao-sites_UL li{
+    
+    text-decoration: none;
     padding: 0 10px 10px 0;
     font-size: 1.5em;   
 
@@ -57,12 +59,13 @@ html{
 .navegacao-sites_UL li :active{
     transform: scale(0.9);
 }
+.navegacao-sites_UL:visited{
+    text-decoration: none;
+}
 .navegacao-sites{
     text-transform: uppercase;
 }
-.navegacao-sites a{
-    font-weight: bolder;
-}
+
 .marca-site{
     color: rgb(24, 214, 119);
     text-decoration: none;
@@ -115,6 +118,7 @@ html{
     height: 25%;
     width: 75%;
     display: flex;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     margin: 10% 0 0 0;
@@ -208,7 +212,7 @@ html{
     padding: 10px 0 0 0;
     line-height: 2em;
     color: aliceblue;
-    background-color: rgb(20, 33, 44);
+    background-color:  rgb(18, 28, 41);
     border-top: 4px solid aliceblue;
     display: flex;
     justify-content: center;

@@ -2,6 +2,9 @@ html{
     font-family: 'Oswald', sans-serif;
     color: aliceblue;
 }
+::selection{
+    background: rgb(13, 20, 29);
+}
 @font-face {
     font-family: 'pixel-font';
     src: url('../fonts/Pixel\ Emulator.otf') format('truetype');
@@ -28,19 +31,23 @@ body{
     font-family: 'pixel-font';
     line-height: 1.6rem;
 }
+
 .container-main{
     position: relative;
-    width: 70%;
+    width: 70vw;
     float: right;
-    margin: 20px 20px 0 0;
+    margin: 20px 20px 20px 0;
     background-size: cover; 
     min-height:100vh;
     color: aliceblue;
 }
 .ola_mundo-container{
 line-height: 3rem;
+position: sticky;
+    top:0 ;
 }
 .saudacao-main{
+    
     text-align: center;
     font-family: 'pixel-font';
     font-size: 2.5rem; 
@@ -69,16 +76,36 @@ line-height: 3rem;
 }
      .html{
         
-        background: conic-gradient(rgb(24, 214, 119) 75%, rgb(20, 33, 44) 25%);
+        background: conic-gradient(rgb(24, 214, 119) 75%,  rgb(18, 28, 41) 25%);
         
     }
      .css{
-        background: conic-gradient(rgb(24, 214, 119) 70%, rgb(20, 33, 44) 30%);
+        background: conic-gradient(rgb(24, 214, 119) 70%,  rgb(18, 28, 41) 30%);
     }
      .js{
-        background: conic-gradient(rgb(24, 214, 119) 50%, rgb(20, 33, 44) 50%);
+        background: conic-gradient(rgb(24, 214, 119) 50%,  rgb(18, 28, 41) 50%);
     }
      .illustrator{
-        background: conic-gradient(rgb(24, 214, 119) 85%, rgb(20, 33, 44) 15%);
+        background: conic-gradient(rgb(24, 214, 119) 85%,  rgb(18, 28, 41) 15%);
     }
 
+.container-pe {
+    width: 70vw;
+    margin: 0 20px 0 auto;
+    position: relative;
+    bottom: 0;
+    line-height: 2rem;
+    color: aliceblue;
+    background-color:  rgb(18, 28, 41);
+    border-top: 4px solid aliceblue;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+}
+.container-pe em {
+    color:rgb(24, 214, 119);
+}

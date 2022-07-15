@@ -1,13 +1,15 @@
 
 .container-img_perfil{
-
+    overflow-y: scroll;
+    position: fixed;
+    top:0;
     float: left;
     width: 25%;
-    margin: 20px 0 20px 20px;
-   
+    height: 100vh;
+    margin: 0 0 20px 20px;
     
 }
-    .perfil-img{    
+    .perfil-img{  
         display: flex;
         margin: 0 auto;
         align-items: center;
@@ -22,13 +24,11 @@
     .nome_img{
         font-family: 'pixel-font';
         text-align: center;
-
         font-size: 1.5em;
     }
     .funcao_img{
         font-weight: bolder;
         text-align: center;
-
         font-size: 1.5em;
         color: rgb(24, 214, 119);
     }
