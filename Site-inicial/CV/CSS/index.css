@@ -10,6 +10,8 @@ html{
     src: url('../fonts/Pixel\ Emulator.otf') format('truetype');
   }
 body{
+    
+    overflow-x: hidden;
     font-size: 1.2rem;
     line-height: 1.5rem;
     background-color: rgb(26, 157, 245);
@@ -107,6 +109,8 @@ position: sticky;
     color: aliceblue;
     background-color:  rgb(18, 28, 41);
     border-top: 4px solid aliceblue;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
