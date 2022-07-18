@@ -5,6 +5,16 @@ html{
     font-family: 'pixel-font';
     src: url('../fonts/Pixel\ Emulator.otf') format('truetype');
   }
+  ::-webkit-scrollbar {
+    width: 5px;
+}   
+::-webkit-scrollbar-track {
+    background:rgb(19, 31, 46);       /* color of the tracking area */
+}
+::-webkit-scrollbar-thumb {
+    background-color:aliceblue;      
+}
+
 .cabecalho{
     width: 100%;
     display: flex;

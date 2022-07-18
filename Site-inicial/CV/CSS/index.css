@@ -14,13 +14,22 @@ body{
     line-height: 1.5rem;
     background-color: rgb(26, 157, 245);
   }
+::-webkit-scrollbar {
+    width: 5px;
+}   
+::-webkit-scrollbar-track {
+    background:rgb(19, 31, 46);       /* color of the tracking area */
+}
+::-webkit-scrollbar-thumb {
+    background-color:aliceblue;      
+}
 #containers{
    padding: 10px;
    background: rgb(18, 28, 41);
    border-radius: 3px;
 }
 #containers-inner{
-    margin: 20px 0;
+    margin: 10px 0;
     padding: 10px;
     border-radius: 3px;
     background-color: rgb(19, 31, 46);
@@ -36,7 +45,7 @@ body{
     position: relative;
     width: 70vw;
     float: right;
-    margin: 20px 20px 20px 0;
+    margin: 10px 10px 10px 0;
     background-size: cover; 
     min-height:100vh;
     color: aliceblue;
@@ -91,7 +100,7 @@ position: sticky;
 
 .container-pe {
     width: 70vw;
-    margin: 0 20px 0 auto;
+    margin: 0 10px 0 auto;
     position: relative;
     bottom: 0;
     line-height: 2rem;
