@@ -60,13 +60,18 @@
 
 @media screen and (max-width: 480px){
 
-   .container-img_perfil{
+   .container-img_perfil
+   {
     display: flex;
     position: relative;
     width: 90vw;        
     float: none;
     margin:10px;
     flex-direction:column;
+    }
+    .perfil-img
+    { 
+        width: 80vw;
     }
 }
     

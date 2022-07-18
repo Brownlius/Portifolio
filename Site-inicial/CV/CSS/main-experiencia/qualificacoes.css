@@ -3,26 +3,19 @@
    display: flex;
    flex-direction: row;
    justify-content: space-between;
-   height: 40vh;   
 }
-.container-profissional{
+.container-qualificacoes { 
    overflow-y: scroll;
+   height: 40vh;
    width: 46%;
    flex-direction: column;
    border-right: 4px solid aliceblue;
 }
-.container-educacao{
-   overflow-y: scroll;
-   width: 46%;
-   border-right: 4px solid aliceblue;
-   flex-direction:column;
-} 
    .cargo{
       border-top: 1px solid aliceblue;
       line-height: 2rem;
       font-weight: bolder;
       text-align: center;
-      
       font-size: 1.5em;
       color: rgb(24, 214, 119);
    }
@@ -31,4 +24,16 @@
       line-height: 3rem;
       font-weight: lighter;
       color:rgb(26, 157, 245);
+   }
+   @media screen and (max-width: 480px){
+      .containers-prof_edu{
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
+         width: 100%;
+      }
+      .container-qualificacoes {
+         width: 100%;
+         height: 60vh;
+      }
    }

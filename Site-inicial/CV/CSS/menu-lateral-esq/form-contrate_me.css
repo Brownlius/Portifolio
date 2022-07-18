@@ -1,4 +1,5 @@
 .input-field{
+   align-items: flex-start;
    font-size: 1.3rem;
    align-items: center;
    margin: 15px 0;
@@ -6,6 +7,9 @@
    color: aliceblue;
    padding: 5px;
    border-bottom: 2px solid aliceblue;
+}
+.input-field label{
+   width: 20%;
 }
 .input-field input{
    width: 100%;
@@ -18,7 +22,8 @@
    transition: 0.1s;
 }
 .materialize-textarea{
-   margin: 10px;
+   width: calc(100% - 20px);
+   padding: 10px;
    text-align: start;
    background:  rgb(18, 28, 41);   
    border: 1px solid aliceblue;

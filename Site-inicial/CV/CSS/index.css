@@ -10,7 +10,7 @@ html{
     src: url('../fonts/Pixel\ Emulator.otf') format('truetype');
   }
 body{
-    
+
     font-size: 1.2rem;
     line-height: 1.5rem;
     background-color: rgb(26, 157, 245);
@@ -83,10 +83,11 @@ position: sticky;
 }
 #grafico{
     margin: 15px;
-    width: 20%;  
     max-width: 250px;
+    width: 33%;
     border-radius: 50%;
 }
+
      .html{
         
         background: conic-gradient(rgb(24, 214, 119) 75%,  rgb(18, 28, 41) 25%);
@@ -127,9 +128,22 @@ position: sticky;
 
 @media screen and (max-width: 480px){
 
-       .container-main{
-        width: 95vw;
+    .container-main{
+        display: flex;
+        float: none;
+        width: 90vw;
         margin: 10px;
-        position: relative;
-       } 
+        padding: 10px;
+        flex-direction: column;
+    } 
+    .ola_mundo-container{
+        display: none;
+    }
+    .sobre_mim-container{
+        margin:0;
+        }
+    .container-pe {
+        width: 100vw;
+        }
+    
 }
