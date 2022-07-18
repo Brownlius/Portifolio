@@ -5,7 +5,7 @@ html{
     font-family: 'pixel-font';
     src: url('../fonts/Pixel\ Emulator.otf') format('truetype');
   }
-  ::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 5px;
 }   
 ::-webkit-scrollbar-track {
@@ -102,7 +102,7 @@ html{
 .container-main{
     display:flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: rgb(26, 157, 245);
     background-size: cover; 
     min-height:100vh;
@@ -110,17 +110,14 @@ html{
 }
 
 .perfil-img{
-    width: 24%; 
-    object-fit:cover;
-    margin: 10px 10px 0 0 ;
-    border-radius: 1%;
+    background-color: rgb(19, 31, 46);
+    box-shadow: -5px  5px 5px rgb(15, 23, 34);
+    border-radius: 3px;
+    width: 20vw; 
+    margin: 10px;
     transition: 0.3s all;
     display:flex;
 }
-    .perfil-img:hover{
-        transform: scale(1.01);
-
-    }
     .mobile{
         display: none;
     }
@@ -175,6 +172,10 @@ html{
     font-size: 2.5em;
 }
 .projetos{
+    
+    background-color: rgb(19, 31, 46);
+    box-shadow: -5px  5px 5px rgb(15, 23, 34);
+    border-radius: 3px;
     justify-content: space-between;
     display: flex;
     flex-direction: row;
@@ -190,12 +191,12 @@ html{
     font-size: 2em;
     width: 300px;
     height: 2em;
-    color:rgb(20, 33, 44);
+    color:rgb(26, 157, 245);
     transition: 0.5s all;
 }
 .projetos h3:hover{
     color: rgb(24, 214, 119);
-    background-color: rgb(20, 33, 44);
+    background-color:rgb(15, 23, 34);
     border-radius: 5px;
 }
 
@@ -238,8 +239,8 @@ html{
 @media screen and (max-width: 480px){
 
     .perfil-img{
-        width: calc(100% - 10px);
-        margin: 10px;
+        width: 95vw;
+        margin: 10px auto;
     }
     .perfil-img:hover{      
             transform: none;

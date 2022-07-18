@@ -97,3 +97,10 @@ html{
 }
 
 
+@media screen and (max-width: 480px){
+
+    .cabecalho{
+     position: relative;
+     width: 100vw;        
+     }
+ }

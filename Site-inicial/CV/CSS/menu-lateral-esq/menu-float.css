@@ -57,3 +57,16 @@
         line-height: 1.2em;
         font-size: 1.1em;
     }
+
+@media screen and (max-width: 480px){
+
+   .container-img_perfil{
+    display: flex;
+    position: relative;
+    width: 90vw;        
+    float: none;
+    margin:10px;
+    flex-direction:column;
+    }
+}
+    
