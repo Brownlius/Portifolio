@@ -1,4 +1,4 @@
-.input-field{
+.input-field {
    align-items: flex-start;
    font-size: 1.3rem;
    align-items: center;
@@ -12,7 +12,7 @@
    width: 20%;
 }
 .input-field input{
-   width: 100%;
+   width: 80%;
    color: aliceblue;
    padding: 5px;
    margin: 5px 10px;
@@ -28,4 +28,8 @@
    background:  rgb(18, 28, 41);   
    border: 1px solid aliceblue;
    color: aliceblue;
+   border-radius: 3px;
+}
+.input-mensagem h2{
+   padding: 10px 0;
 }
