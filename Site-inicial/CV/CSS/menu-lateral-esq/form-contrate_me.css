@@ -12,6 +12,8 @@
    width: 20%;
 }
 .input-field input{
+   font-family: 'Oswald', sans-serif;
+   font-size: 1rem;
    width: 80%;
    color: aliceblue;
    padding: 5px;

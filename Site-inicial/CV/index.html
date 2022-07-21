@@ -66,32 +66,33 @@
                     <h2 class = "subtitulo-azul">Me Contrate</h2>
                     <div id= "containers-inner" class="contact-right clearfix">
 
-                        <form class="formulario" >
-
+                        <form action="https://api.staticforms.xyz/submit" method="post" class="formulario">
+                            <input type="hidden" name="accessKey" value="b8309469-3849-4089-95c2-ef944a443365">
+                            <input type="hidden" name="redirectTo" value="https://pedroalmeida.vercel.app/CV/index.html">
                             <div class="input-field">
                                 <label>Nome</label>
-                                <input type="text" name="full_name" class="require">
+                                <input type="text" name="name" required>
                                 
                             </div>
-
                             <div class="input-field">
                                 <label class="">Email</label>
-                                <input type="text" name="email" class="require" data-valid="email" data-error="Email should be valid.">
+                                <input type="text" name="email" data-valid="email" data-error="Email deve ser válido." required>
                                 
                             </div>
 
                             <div class="input-field">
                                 <label class="">Assunto</label>
-                                <input type="text" name="subject" class="require">
+                                <input type="text" name="subject" required>
                                
                             </div>
 
                             <div class="input-mensagem">
                                 <h2>Mensagem</h2>
-                                <textarea rows="7" name="message" class="materialize-textarea"></textarea>
+                                <textarea rows="7" name="message" class="materialize-textarea" required></textarea>
                                 <div></div>
                             </div>
-                            <button type="button" class="botao"></i>Enviar</button>
+                            <button type="submit" value="Enviar" class="botao" ></i>Enviar</button>
+
                         </form>
                     </div>
                 </div>
