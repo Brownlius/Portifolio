@@ -1,0 +1,28 @@
+@font-face {
+   font-family: 'pixel-font';
+   src: url('./fonts/Pixel\ Emulator.otf') format('truetype');
+ }
+html{
+   font-family: 'Oswald', sans-serif;
+   color: aliceblue;
+}
+body{
+   font-size: 1.2rem;
+   line-height: 1.5rem;
+   background-color: rgb(26, 157, 245);
+ }
+a{
+   color: rgb(26, 157, 245);
+}
+::-webkit-scrollbar {
+   width: 5px;
+}   
+::-webkit-scrollbar-track {
+   background:rgb(19, 31, 46);     
+}
+::-webkit-scrollbar-thumb {
+   background-color:aliceblue;      
+}
+::selection{
+   background: rgb(18, 28, 41);
+}

@@ -1,20 +1,3 @@
-html{
-    font-family: 'Oswald', sans-serif;
-}
-@font-face {
-    font-family: 'pixel-font';
-    src: url('../fonts/Pixel\ Emulator.otf') format('truetype');
-  }
-::-webkit-scrollbar {
-    width: 5px;
-}   
-::-webkit-scrollbar-track {
-    background:rgb(19, 31, 46);       /* color of the tracking area */
-}
-::-webkit-scrollbar-thumb {
-    background-color:aliceblue;      
-}
-
 .cabecalho{
     width: 100%;
     display: flex;
@@ -53,11 +36,11 @@ html{
     align-items: center;
 }
 .social-icons_UL,.navegacao-sites_UL{
+    
     display: flex;
 }
 .social-icons_UL li, .navegacao-sites_UL li{
-    
-    text-decoration: none;
+
     padding: 0 10px 10px 0;
     font-size: 1.5em;   
 
@@ -65,6 +48,7 @@ html{
 .navegacao-sites_UL li:hover{
     transform: scale(1.02) rotate(1deg);
     cursor: pointer;
+    
 }
 .navegacao-sites_UL li :active{
     transform: scale(0.9);
@@ -74,6 +58,7 @@ html{
 }
 .navegacao-sites{
     text-transform: uppercase;
+    
 }
 
 .marca-site{
@@ -150,9 +135,7 @@ html{
             50%{width: 0;}
             100%{ width: 100;} 
           } 
-          ::selection{
-            background: rgb(20, 33, 44);
-          }
+          
         .texto-container em{
             color: rgb(24, 214, 119);
             font-weight: bolder;
@@ -172,7 +155,6 @@ html{
     font-size: 2.5em;
 }
 .projetos{
-    
     background-color: rgb(19, 31, 46);
     box-shadow: -5px  5px 5px rgb(15, 23, 34);
     border-radius: 3px;
@@ -185,11 +167,13 @@ html{
            
 }
 .projetos h3{
+    
+    line-height: 2.5rem;
     display: flex;
     justify-content: center;
+    align-items: center;
     font-family: 'pixel-font';
     font-size: 2em;
-    width: 300px;
     height: 2em;
     color:rgb(26, 157, 245);
     transition: 0.5s all;
