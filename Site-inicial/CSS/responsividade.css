@@ -1,0 +1,79 @@
+@media screen and (max-width: 480px){
+
+   .perfil-img{
+       width: 95vw;
+       margin: 10px auto;
+   }
+   .perfil-img:hover{      
+           transform: none;
+           box-shadow: none;  
+   }
+   .cabecalho{
+       justify-content:flex-start;
+       align-items: center;
+       flex-direction: column;
+   }
+   .descricao{
+       text-align: center;
+       font-size: 2em;
+       width: 100%;
+       flex-direction: column;
+       padding: 10px;         
+   }
+   .social-icons{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+   .social-icons_UL{
+       flex-direction: row;
+   }
+   .social-icons_UL li, .navegacao-sites_UL li{
+       padding: 0 10px 10px 0; 
+   }
+   .navegacao-sites{
+       margin: 10px;
+   }
+   .social-icons img{
+       padding: 10px;
+   }
+   .texto-container{
+       width: calc(100% - 10px);
+       display: flex;
+       justify-content: center;
+       flex-direction: row;
+       flex-wrap: wrap;
+       margin: 10px;
+       line-height: 4.5em;
+       }
+        .desktop{
+            display: none;
+           }
+       .mobile{
+           display: flex;
+           font-size: 3.5em;
+       }
+   .projetos-geral{
+       width: calc(100%-10px);
+       margin: 10px;
+       flex-direction: column;
+       flex-wrap: wrap;
+       text-align: center; 
+   
+   }
+   .projetos-geral h2{
+       margin: 25px 0;
+       font-size: 2em;
+   }
+   .projetos{
+       justify-content:center;
+       padding: 0 ; 
+   }
+   .logo-alura,.logo-freeway,.logo-pong{
+       margin: 15px;
+       width: 250PX; /* width of container */
+       height:  250PX; /* height of container */
+       object-fit:contain;
+       transition: none;     
+   }
+}

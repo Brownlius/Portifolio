@@ -1,0 +1,23 @@
+
+.container-pe {
+   width: 70vw;
+   margin: 0 10px 0 auto;
+   position: relative;
+   bottom: 0;
+   line-height: 2rem;
+   color: aliceblue;
+   background-color:  rgb(18, 28, 41);
+   border-top: 4px solid aliceblue;
+   border-top-left-radius: 3px;
+   border-top-right-radius: 3px;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+.copyright{
+   width: 100%;
+   text-align: center;
+}
+.container-pe em {
+   color:rgb(24, 214, 119);
+}

@@ -1,0 +1,57 @@
+.projetos-geral{
+   width: 100%;
+   margin: 10px;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   text-align: center; 
+}
+.projetos-geral h2{
+   margin-bottom: 20px;
+   font-size: 2.5em;
+}
+.projetos{
+   background-color: rgb(19, 31, 46);
+   box-shadow: -5px  5px 5px rgb(15, 23, 34);
+   border-radius: 3px;
+   justify-content: space-between;
+   display: flex;
+   flex-direction: row;
+   padding: 10px ; 
+   flex-wrap: wrap;
+   text-align: center;    
+}
+.projetos h3{
+   line-height: 2.5rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-family: 'pixel-font';
+   font-size: 2em;
+   height: 2em;
+   color:rgb(26, 157, 245);
+   transition: 0.5s all;
+}
+.projetos h3:hover{
+   color: rgb(24, 214, 119);
+   background-color:rgb(15, 23, 34);
+   border-radius: 5px;
+}
+.logo-alura,.logo-freeway,.logo-pong,.logo-snake{
+   margin: 15px;
+   width: 250PX; /* width of container */
+   height:  250PX; /* height of container */
+   object-fit:fill;
+   border-radius: 1%;
+   background-color: aliceblue;
+   border: 4px solid  aliceblue;
+   transition: 0.4s all;       
+}
+.logo-alura:hover,.logo-freeway:hover,.logo-pong:hover,.logo-snake:hover{
+   cursor: pointer;
+   transform: scale(1.01)rotate(1deg);
+}
+.logo-alura:active,.logo-freeway:active,.logo-pong:active{
+   transform: scale(0.99);
+}
+

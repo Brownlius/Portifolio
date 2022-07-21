@@ -1,0 +1,70 @@
+.cabecalho{
+   width: 100vw;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color:  rgb(18, 28, 41);
+   color:aliceblue;
+   border-bottom: 4px solid aliceblue ;
+}
+.descricao-container{
+   text-align: center;
+   font-size: 2rem ;
+   display: flex;
+   flex-direction: column;
+   padding: 20px;  
+   line-height: 3rem;  
+}
+.funcao{
+   font-family: 'pixel-font';
+   text-align: center;
+   font-size: 1.8rem ;
+}
+   .funcao em{
+      color: rgb(24, 214, 119);
+   }
+/*  Nome e função */
+.lista{
+   display: flex;
+}
+.social-icons,.navegacao-sites{
+   font-family: 'pixel-font';
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.social-icons_UL,.navegacao-sites_UL{
+   display: flex;
+}
+.social-icons_UL a, .navegacao-sites_UL a{
+   padding-right: 10px;
+   font-size: 1.8rem;  
+   transition: 0.5s all; 
+}
+.navegacao-sites_UL a:hover{
+   cursor: pointer;
+   color: rgb(24, 214, 119);
+   background-color:rgb(15, 23, 34);
+   border-radius: 5px;
+}
+.navegacao-sites_UL a:active{
+   transform: scale(0.9);
+}
+.navegacao-sites{
+   text-transform: uppercase; 
+}
+.social-icons img{
+   width: 35px;
+   padding: 10px;
+   animation: rede-sociais 3s linear infinite;
+}
+   @keyframes rede-sociais{
+      from {transform:scale(1.01) rotate(2deg);}
+      50% {transform: scale(0.95) rotate(1.5deg);}
+      75% {transform: scale(0.92) rotate(-1deg);}
+      to {transform: scale(1) rotate(2deg);}
+   }
+.social-icons li :hover{
+   animation-play-state: paused;
+   cursor: pointer;
+}

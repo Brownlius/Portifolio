@@ -1,0 +1,24 @@
+
+@media screen and (max-width: 480px){
+
+   body{
+       overflow-x: hidden;
+   }   
+   .container-main{
+       display: flex;
+       float: none;
+       width: 90vw;
+       margin: 10px;
+       padding: 10px;
+       flex-direction: column;
+   } 
+   .ola_mundo-container{
+       display: none;
+   }
+   .sobre_mim-container{
+       margin:0;
+       }
+   .container-pe {
+       width: 100vw;
+       }
+}
