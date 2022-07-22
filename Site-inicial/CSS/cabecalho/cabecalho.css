@@ -24,11 +24,9 @@
       color: rgb(24, 214, 119);
    }
 /*  Nome e função */
-.lista{
-   display: flex;
-}
+
 .social-icons,.navegacao-sites{
-   font-family: 'pixel-font';
+   font-family: 'pixel-font'; 
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -37,7 +35,7 @@
    display: flex;
 }
 .social-icons_UL a, .navegacao-sites_UL a{
-   padding-right: 10px;
+   padding-left: 10px;
    font-size: 1.8rem;  
    transition: 0.5s all; 
 }

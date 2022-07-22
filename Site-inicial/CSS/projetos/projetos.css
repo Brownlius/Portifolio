@@ -7,6 +7,7 @@
    text-align: center; 
 }
 .projetos-geral h2{
+   line-height: 2rem;
    margin-bottom: 20px;
    font-size: 2.5em;
 }
