@@ -1,4 +1,4 @@
-@media screen and (max-width: 580px){
+@media screen and (max-width: 780px){
     .cabecalho{
         
         justify-content:flex-start;
@@ -21,7 +21,7 @@
            box-shadow: none;  
    }
 
-   .descricao{
+   .descricao-container{
        text-align: center;
        font-size: 2em;
        width: 100%;
@@ -46,7 +46,7 @@
        padding: 10px;
    }
    .texto-container{
-       width: calc(100% - 10px);
+       width: 100vw;
        display: flex;
        justify-content: center;
        flex-direction: row;
@@ -62,12 +62,11 @@
            font-size: 3.5em;
        }
    .projetos-geral{
-       width: calc(100%-10px);
+       width: 100vw;
        margin: 10px;
        flex-direction: column;
        flex-wrap: wrap;
        text-align: center; 
-   
    }
    .projetos-geral h2{
        margin: 25px 0;
@@ -77,6 +76,9 @@
        justify-content:center;
        padding: 0 ; 
    }
+   .projetos li{
+        width: 100vw; 
+    }
    .logo-alura,.logo-freeway,.logo-pong{
        margin: 15px;
        width: 250PX; /* width of container */

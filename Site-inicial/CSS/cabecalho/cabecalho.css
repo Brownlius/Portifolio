@@ -35,7 +35,7 @@
    display: flex;
 }
 .social-icons_UL a, .navegacao-sites_UL a{
-   padding-left: 10px;
+   padding-right: 10px;
    font-size: 1.8rem;  
    transition: 0.5s all; 
 }

@@ -6,48 +6,45 @@
     background-size: cover; 
     color: aliceblue;
 }
-
+.container-cima{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
 .perfil-img{
+    display:flex;
+    width: 30%; 
+    margin: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    border-radius: 3px;
     background-color: rgb(19, 31, 46);
     box-shadow: -5px  5px 5px rgb(15, 23, 34);
-    border-radius: 3px;
-    width: 20vw; 
-    margin: 10px;
     transition: 0.3s all;
-    display:flex;
 }
     .mobile{
         display: none;
     }
 .texto-container{
-    height: 25%;
-    width: 75%;
     display: flex;
     justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 10% 0 0 0;
-    line-height: 4.5em;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    line-height: 3rem;
+    background-color: rgb(19, 31, 46);
+    box-shadow: -5px  5px 5px rgb(15, 23, 34);
+    border-radius: 3px;
     }
-        .desktop{
-            font-size: 2em;
-            white-space:nowrap;
-            overflow:hidden;
-            width: 30em;
-            animation: type 8s steps(60, end); 
-        }
-        .desktop:nth-child(2){
-            animation: type2 4s steps(60, end);
-          }
-          @keyframes type{ 
-            from { width: 0; } 
-          } 
-          @keyframes type2{
-            0%{width: 0;}
-            50%{width: 0;}
-            100%{ width: 100;} 
-          } 
-        .texto-container em{
-            color: rgb(24, 214, 119);
-            font-weight: bolder;
-        }
+    .desktop{
+        font-size: 2em;
+        white-space:nowrap;
+        overflow:hidden;
+        width: 30rem;
+        animation: type 8s steps(80, end); 
+    }
+    .texto-container em{
+        color: rgb(24, 214, 119);
+        font-weight: bolder;
+    }
