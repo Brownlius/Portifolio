@@ -1,89 +1,46 @@
 @media screen and (max-width: 780px){
     .cabecalho{
-        
-        justify-content:flex-start;
-        align-items: center;
+        justify-content:center;
         flex-direction: column;
     }
-        .listas{
-            width: 100vw;
-            font-family: 'pixel-font'; 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    .cabecalho .listas{
+        font-family: 'pixel-font'; 
+        display: flex;
+        flex-direction: column;
+    }
+    /*--------------------------------*/
+    .container-main{
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
    .perfil-img{
-       width: 100vw;
-       margin: 10px auto;
-   }
-   .perfil-img:hover{      
-           transform: none;
-           box-shadow: none;  
-   }
-
-   .descricao-container{
-       text-align: center;
-       font-size: 2em;
+        padding: 0;
        width: 100%;
-       flex-direction: column;
-       padding: 10px;         
-   }
-   .social-icons{
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-   }
-   .social-icons_UL{
-       flex-direction: row;
+       margin: 10px 0;
    }
    .social-icons_UL li, .navegacao-sites_UL li{
        padding: 0 10px 10px 0; 
    }
-   .navegacao-sites{
-       margin: 10px;
-   }
-   .social-icons img{
-       padding: 10px;
-   }
    .texto-container{
-       width: 100vw;
-       display: flex;
-       justify-content: center;
-       flex-direction: row;
-       flex-wrap: wrap;
-       margin: 10px;
+       margin: 0;
+       padding: 0;
        line-height: 4.5em;
        }
-        .desktop{
-            display: none;
-           }
-       .mobile{
-           display: flex;
-           font-size: 3.5em;
-       }
-   .projetos-geral{
-       width: 100vw;
-       margin: 10px;
-       flex-direction: column;
-       flex-wrap: wrap;
-       text-align: center; 
-   }
-   .projetos-geral h2{
-       margin: 25px 0;
-       font-size: 2em;
-   }
-   .projetos{
-       justify-content:center;
-       padding: 0 ; 
-   }
-   .projetos li{
-        width: 100vw; 
+       .projetos-geral h2{
+        margin: 25px 0;
+    }
+    .projetos{
+        justify-content: center;
     }
    .logo-alura,.logo-freeway,.logo-pong{
        margin: 15px;
        width: 250PX; /* width of container */
-       height:  250PX; /* height of container */
+       height: 250PX; /* height of container */
        object-fit:contain;
        transition: none;     
+   }
+   .container-pe{
+    padding: 10px;
    }
 }

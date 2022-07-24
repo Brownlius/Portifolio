@@ -1,5 +1,4 @@
 .projetos-geral{
-   width: 100vw;
    display: flex;
    flex-direction: column;
    text-align: center; 
@@ -9,27 +8,26 @@
    margin:10px;
    font-size: 2.5em;
 }
-.projetos{
+.projetos-container{
    display:flex;
    justify-content: space-between;
    flex-direction: row;
-   margin: 10px ; 
+   margin: 10px; 
    flex-wrap: wrap;
    text-align: center;    
    border-radius: 3px;
    background-color: rgb(19, 31, 46);
    box-shadow: -5px  5px 5px rgb(15, 23, 34);
 }
-.projetos li{
+.projetos-container li{
    display: flex;
    justify-content: center;
    align-items: center;
-   margin: 20px;
    margin: 10px;
    flex-direction: column;
    
 }
-.projetos h3{
+.projetos-container h3{
    width: 20vw;
    color:rgb(26, 157, 245);
    line-height: 2.5rem;
@@ -42,7 +40,7 @@
    height: 2em;
    transition: 0.5s all;
 }
-   .projetos h3:hover{
+   .projetos-container h3:hover{
       color: rgb(24, 214, 119);
       background-color:rgb(15, 23, 34);
       border-radius: 3px;

@@ -3,14 +3,11 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     background-color: rgb(26, 157, 245);
-    background-size: cover; 
     color: aliceblue;
 }
 .container-cima{
-    width: 100vw;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
 }
 .perfil-img{
     display:flex;
@@ -21,14 +18,9 @@
     border-radius: 3px;
     background-color: rgb(19, 31, 46);
     box-shadow: -5px  5px 5px rgb(15, 23, 34);
-    transition: 0.3s all;
-}
-    .mobile{
-        display: none;
-    }
+}   
 .texto-container{
     display: flex;
-    justify-content: center;
     width: 100%;
     margin: 10px;
     padding: 10px;
@@ -39,10 +31,6 @@
     }
     .desktop{
         font-size: 2em;
-        white-space:nowrap;
-        overflow:hidden;
-        width: 30rem;
-        animation: type 8s steps(80, end); 
     }
     .texto-container em{
         color: rgb(24, 214, 119);
