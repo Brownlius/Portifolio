@@ -1,7 +1,9 @@
 .projetos-geral{
+   margin: auto;
    display: flex;
    flex-direction: column;
    text-align: center; 
+   justify-content: center;
 }
 .projetos-geral h2{
    line-height: 3rem;

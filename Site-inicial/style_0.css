@@ -3,6 +3,7 @@
    src: url('./fonts/Pixel\ Emulator.otf') format('truetype');
  }
 html{
+   overflow-x:hidden ;
    font-family: 'Oswald', sans-serif;
    color: aliceblue;
 }

@@ -1,13 +1,13 @@
 .container-main{
     display:flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
     background-color: rgb(26, 157, 245);
     color: aliceblue;
 }
 .container-cima{
     display: flex;
     flex-direction: row;
+    width: 100vw;
 }
 .perfil-img{
     display:flex;
@@ -21,7 +21,7 @@
 }   
 .texto-container{
     display: flex;
-    width: 100%;
+    width: 100%;  
     margin: 10px;
     padding: 10px;
     line-height: 3rem;
