@@ -23,7 +23,7 @@
        margin: 10px 0;
    }
    .social-icons_UL li, .navegacao-sites_UL li{
-       padding: 0 10px 10px 0; 
+       padding: 10px; 
    }
    .texto-container{
         justify-content: center;
