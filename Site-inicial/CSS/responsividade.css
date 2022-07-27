@@ -2,6 +2,7 @@
     .cabecalho{
         justify-content:center;
         flex-direction: column;
+        width:auto;
     }
     .cabecalho .listas{
         
@@ -25,13 +26,14 @@
     }
    .perfil-img{
         padding: 0;
-       width: 100%;
-       margin: 10px 0;
+        width:95%;
+       margin: 10px auto;
    }
    .social-icons_UL li, .navegacao-sites_UL li{
        padding: 10px; 
    }
    .texto-container{
+       width:auto;
        justify-content: center;
        text-align: center; 
        padding: 0;
