@@ -1,5 +1,8 @@
-@media screen and (max-width: 480px){
-
+@media screen and (max-width: 780px){
+    .cabecalho{
+        position: relative;
+        width: 100vw;        
+    }
    body{
        overflow-x: hidden;
    }   

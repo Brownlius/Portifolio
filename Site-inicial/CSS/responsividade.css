@@ -4,9 +4,15 @@
         flex-direction: column;
     }
     .cabecalho .listas{
-        font-family: 'Mirc-font'; 
+        
         display: flex;
         flex-direction: column;
+    }
+    .funcao{
+        font-size: 3rem;
+    }
+    .navegacao-sites{
+        font-size: 2rem;
     }
     /*--------------------------------*/
     .container-main{
@@ -26,8 +32,8 @@
        padding: 10px; 
    }
    .texto-container{
-        justify-content: center;
-       margin: 0;
+       justify-content: center;
+       text-align: center; 
        padding: 0;
        line-height: 4.5em;
        }

@@ -108,7 +108,7 @@ footer {
     background: url("img-produto/bg.jpg");
     padding:40px 0;
 }
-@media screen and (max-width: 480px){
+@media screen and (max-width: 780px){
     .caixa,ul.produtos{
         width:auto;
     }

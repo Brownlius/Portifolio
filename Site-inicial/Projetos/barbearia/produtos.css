@@ -98,7 +98,7 @@ footer {
     font-size: 0.7em;
     margin: 10px 0 0;
 }
-@media screen and (max-width: 480px){
+@media screen and (max-width: 780px){
 .caixa,ul.produtos{
     width:auto;
 }

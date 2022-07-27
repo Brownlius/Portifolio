@@ -25,7 +25,7 @@
       font-weight: lighter;
       color:rgb(26, 157, 245);
    }
-   @media screen and (max-width: 480px){
+   @media screen and (max-width: 780px){
       .containers-prof_edu{
          display: flex;
          flex-direction: row;

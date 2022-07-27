@@ -91,12 +91,12 @@ html{
     cursor: pointer;
     transform: rotate(2deg);
 }
-
-
-@media screen and (max-width: 480px){
-
+@media screen and (max-width: 780px){
     .cabecalho{
-     position: relative;
-     width: 100vw;        
-     }
- }
+        position: relative;
+        width: 100vw;       
+    }
+        .saudacao{
+            line-height: 1.5rem;
+        }
+}
