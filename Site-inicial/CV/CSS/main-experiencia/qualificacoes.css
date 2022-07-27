@@ -1,5 +1,5 @@
 .containers-prof_edu{
-   line-height: 2rem;
+   line-height: 1.8rem;
    display: flex;
    flex-direction: row;
    justify-content: space-between;
@@ -14,14 +14,14 @@
    .cargo{
       border-top: 1px solid aliceblue;
       line-height: 2rem;
-      font-weight: bolder;
       text-align: center;
-      font-size: 1.5em;
+      font-family: 'Mirc-font';
+      font-size: 1.6rem;
       color: rgb(24, 214, 119);
    }
    .periodo{
       padding: 10px;
-      line-height: 3rem;
+      line-height: 2rem;
       font-weight: lighter;
       color:rgb(26, 157, 245);
    }

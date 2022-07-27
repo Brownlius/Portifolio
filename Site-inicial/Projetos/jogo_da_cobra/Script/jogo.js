@@ -189,7 +189,7 @@ function mostraCoracao(){
     }
 }
 function mostraPontos(){
-    ctx.font = '42px personalizada';
+    ctx.font = '42px Mirc-font';
     ctx.fillStyle = 'aliceblue';
     ctx.fillText(comidasComidasTotal,15, 36);
 }

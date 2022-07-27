@@ -1,10 +1,6 @@
 html{
-    font-family: 'Oswald', sans-serif;
+    font-family: 'osvald', sans-serif;
 }
-@font-face {
-    font-family: 'pixel-font';
-    src: url('../fonts/Pixel\ Emulator.otf') format('truetype');
-  }
 .cabecalho{
     width: 70vw;
     margin-left: auto;
@@ -20,22 +16,22 @@ html{
 }
  /* Nome e função */
 .saudacao{
-    font-family: 'pixel-font';
+    font-family: 'Mirc-font';
     text-align: center;
-    font-size: 1.6em ;
+    font-size: 2rem ;
     display: flex;
     flex-direction: column;
     padding: 20px;  
-    line-height: 1.2em;  
+    line-height: 1.2rem;  
 }
 .ola{
     
     color: rgb(24, 214, 119);
 }
 .funcao{
-    font-family: 'pixel-font';
+    font-family: 'Mirc-font';
     text-align: center;
-    font-size: 0.8em ;
+    font-size: 1.2rem ;
 }
 
 /*  Nome e função */
@@ -48,7 +44,7 @@ html{
     flex-direction: column;
     align-items: center;
     
-    font-family: 'pixel-font';
+    font-family: 'Mirc-font';
 }
 
 .social-icons_UL,.navegacao-sites_UL{
@@ -57,7 +53,7 @@ html{
 
 .social-icons_UL li, .navegacao-sites_UL li{
     padding: 0 15px 15px 0;
-    font-size: 1.5em;   
+    font-size: 2rem;   
 
 }
 .navegacao-sites_UL li:hover{
