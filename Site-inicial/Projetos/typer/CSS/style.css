@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'pixel-font';
-    src: url('./fonts/Pixel\ Emulator.otf') format('truetype');
+    font-family:'Mirc-font';
+    src: url('../../../fonts/FixedSys.ttf') format('truetype');
   }
 h1::selection{
     background-color: aliceblue;
@@ -14,7 +14,7 @@ html{
     font-family:monospace;
 }
 .titulo{
-    font-family: 'pixel-font';
+    font-family: 'Mirc-font';
     font-weight: bold;
     padding: 5px;
     font-size:4rem;
@@ -100,9 +100,11 @@ html{
     justify-content: flex-start;
 }
 h2{
+    font-family: Mirc-font;
     font-size: 4rem;
     text-align:center;
     padding: 5px;
+    
 }
 
 .tabela{
