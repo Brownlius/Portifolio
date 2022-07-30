@@ -47,7 +47,7 @@
       background-color:rgb(15, 23, 34);
       border-radius: 3px;
    }
-.logo-alura,.logo-freeway,.logo-pong,.logo-snake{
+.logo-alura,.logo-freeway,.typer-logo,.logo-snake{
    
    margin: 15px;
    width: 250px; /* width of container */
@@ -58,11 +58,11 @@
    border: 4px solid  aliceblue;
    transition: 0.4s all;       
 }
-   .logo-alura:hover,.logo-freeway:hover,.logo-pong:hover,.logo-snake:hover{
+   .logo-alura:hover,.logo-freeway:hover,.typer-logo:hover,.logo-snake:hover{
       cursor: pointer;
       transform: scale(1.01)rotate(1deg);
    }
-   .logo-alura:active,.logo-freeway:active,.logo-pong:active{
+   .logo-alura:active,.logo-freeway:active,.typer-logo:active{
       transform: scale(0.99);
    }
 

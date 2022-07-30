@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'pixel-font';
+    src: url('./fonts/Pixel\ Emulator.otf') format('truetype');
+  }
+h1::selection{
+    background-color: aliceblue;
+    
+    
+}
+::selection{
+    background-color:rgb(24, 214, 119);
+}
+html{
+    font-family:monospace;
+}
+.titulo{
+    font-family: 'pixel-font';
+    font-weight: bold;
+    padding: 5px;
+    font-size:4rem;
+    background-color:rgb(24, 214, 119);
+    border-bottom: 3px solid rgb(19, 31, 46);
+    text-align: center;
+}
+.container-main{
+    padding: 10px;
+}
+.frase{
+    font-size:2rem;
+    margin-left:20px;
+    margin-bottom: 20px;
+}
+.infos{
+    text-align: center;
+    font-size:2rem;
+    line-height: 2.5rem;
+}
+.icones{
+    vertical-align: middle;
+}
+.container-campo_digitacao{
+    display: flex;
+    flex-direction: column;
+}
+.campo_digitacao{
+    border: 2px solid rgb(19, 31, 46);
+    background-color:  aliceblue;
+    border-radius: 3px;
+    padding:10px;
+    margin: 10px 0;
+    font-size: 1.5rem;
+    height: 150px;
+    transition: 0.2s;
+}
+.campo_digitacao:disabled{
+    border: 3px solid  aliceblue;
+    opacity: 80%;
+    background-color:  rgb(221, 231, 240);
+}
+.campo_digitacao:focus{
+    outline: none;
+    background-color:  aliceblue;
+}
+.btn-reiniciar{
+    border: 3px solid rgb(19, 31, 46);
+    font-family:monospace;
+    margin-left: 60px;
+    background:rgb(24, 214, 119);
+    text-align: center;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    box-shadow: -1px 1px 2px rgb(19, 31, 46);
+    transition: 0.2s all;
+}
+
+.btn-reiniciar:active{
+    transform: scale(0.98);
+    border: 2px solid rgb(24, 214, 119);
+
+}
+.btn-reiniciar:disabled{
+    transform: scale(1);
+    border: 2px solid rgb(24, 214, 119);
+    text-decoration: line-through;
+}
+
+.borda-certa{
+    border: 3px solid rgb(24, 214, 119);
+}
+.borda-errada{
+    border: 3px solid tomato;
+
+}
+.container-tabela{
+    margin: 10px 0;
+    border-top: 3px solid  rgb(19, 31, 46);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+h2{
+    font-size: 4rem;
+    text-align:center;
+    padding: 5px;
+}
+
+.tabela{
+}
+thead{
+    line-height: 4rem;
+    border-top: 1px solid  rgb(19, 31, 46);
+    border-bottom: 1px solid  rgb(19, 31, 46);
+    font-size: 3rem;
+    margin: 15px;
+}
+tbody{
+    font-size: 1.5rem;
+    line-height: 2rem;
+}

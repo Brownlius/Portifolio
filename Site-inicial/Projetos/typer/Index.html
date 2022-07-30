@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html >
+    <title>
+        JQuery Pt1
+    </title>
+    <head>
+        <link rel = "stylesheet" href = "../../reset.css">
+        <link rel = "stylesheet" href = "./CSS/style.css">
+        <!-- <link rel = "stylesheet" href = "../../style_0.css"> -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    </head>
+    <header>
+        <h1 class = 'titulo'>Almeida's Typer</h1> 
+    </header>
+
+    <body class="container-corpo">
+        <main class= "container-main">
+            <div>
+                <p class ="frase">Uma Palavra. ta certo? Pera, 4.</p>
+                <ul class="infos"> 
+                    <li >
+                        <i class="material-icons icones">description</i>
+                        <span class= "contador_palavras-frase"> 0 </span> palavras 
+                    </li>
+                    <li>
+                        <i class="material-icons icones">query_builder</i>
+                        <span class = "cronometro-frase">3</span> segundos 
+                    </li>
+                </ul>
+            </div>
+
+            <div class= 'container-campo_digitacao'>
+                <textarea class ="campo_digitacao"></textarea>
+                <button class = "btn-reiniciar">Reiniciar</button>
+            </div>
+            <div>
+                <ul class="infos">
+                    <li>
+                        <span class ="contador_caracteres-campo_digitacao">0</span> caracteres
+                    </li>
+                    <li>
+                        <span class ="contador_palavras-campo_digitacao">0</span> palavras
+                    </li>
+                </ul>
+            </div>
+            <section>
+                <div class= "container-tabela">
+                    <h2>Placar</h2>
+                    <table class = "tabela">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Nº de palavras</th>
+                                <th></th>
+                            </tr> 
+                        </thead>
+                        <tbody> 
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </body>
+    <script src="./Script/index.js"></script>
+</html>
