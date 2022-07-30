@@ -1,6 +1,9 @@
 @font-face {
-    font-family:'personalizada';
-    src: url('../fonts/I-pixel-u.ttf') format('truetype');
+    font-family:'Mirc-font';
+    src: url('../../../fonts/FixedSys.ttf') format('truetype');
+  }
+  html{
+    font-family:  'Mirc-font';
   }
 
 .cabeca{
@@ -14,7 +17,6 @@
     margin: 0 auto;
 }
 .titulo{
-    font-family:  'personalizada';
     font-size:3em;
     margin: 5px auto 0 ;
     color: rgb(24, 214, 119);
@@ -44,7 +46,6 @@ body{
     width: 15vw;
     background-color: rgb(20, 33, 44);
     display: flex;
-    font-family:'personalizada';
     font-size : 2em; 
     color: rgb(24, 214, 119);
     justify-content: center;

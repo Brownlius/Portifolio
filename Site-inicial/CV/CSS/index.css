@@ -12,8 +12,9 @@
  }
 .subtitulo-azul{
     color: rgb(26, 157, 245);
-    font-family: 'pixel-font';
-    line-height: 1.6rem;
+    font-family: 'Mirc-font';
+    line-height: 1.9rem;
+    font-size: 1.5rem;
 }
 
 .container-main{
@@ -31,9 +32,8 @@ position: sticky;
     top:0 ;
 }
 .saudacao-main{
-    
     text-align: center;
-    font-family: 'pixel-font';
+    font-family: 'Mirc-font';
     font-size: 2.5rem; 
 }
 .sobre_mim-container{
@@ -45,7 +45,8 @@ position: sticky;
 .subtitulo{
     text-align: center;
     color: aliceblue;
-    font-family: 'pixel-font';  
+    font-size: 1.5rem;
+    font-family: 'Mirc-font';  
 }
 .container-graficos{
     display: flex;
@@ -61,11 +62,8 @@ position: sticky;
     width: 33%;
     border-radius: 50%;
 }
-
      .html{
-        
         background: conic-gradient(rgb(24, 214, 119) 75%,  rgb(18, 28, 41) 25%);
-        
     }
      .css{
         background: conic-gradient(rgb(24, 214, 119) 70%,  rgb(18, 28, 41) 30%);

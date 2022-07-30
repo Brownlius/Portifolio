@@ -16,7 +16,7 @@
    line-height: 3rem;  
 }
 .funcao{
-   font-family: 'pixel-font';
+   font-family: 'Mirc-font';
    text-align: center;
    font-size: 1.8rem ;
 }
@@ -26,7 +26,7 @@
 /*  Nome e função */
 
 .social-icons,.navegacao-sites{
-   font-family: 'pixel-font'; 
+   font-family: 'Mirc-font'; 
    display: flex;
    flex-direction: column;
    align-items: center;

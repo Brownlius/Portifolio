@@ -1,4 +1,3 @@
-
 .container-img_perfil{
     overflow-y: scroll;
     position: fixed;
@@ -22,14 +21,14 @@
             transform: scale(1.01);
         }
     .nome_img{
-        font-family: 'pixel-font';
+        font-family: 'Mirc-font';
         text-align: center;
-        font-size: 1.5em;
+        font-size: 2rem;
     }
     .funcao_img{
         font-weight: bolder;
         text-align: center;
-        font-size: 1.5em;
+        font-size: 1.5rem;
         color: rgb(24, 214, 119);
     }
     .botao{
@@ -39,9 +38,9 @@
         align-items: center;
         width: 85%;
         height: 3rem;
-        font-size: 1rem;
+        font-size: 1.5rem;
         background-color: aliceblue;
-        font-family: 'pixel-font';
+        font-family: 'Mirc-font';
         border:none;
         border-radius: 3px;
         transition: 0.5s;
@@ -54,11 +53,11 @@
         width: 45px;
     }
     .detalhes{
-        line-height: 1.2em;
-        font-size: 1.1em;
+        line-height: 1.2rem;
+        font-size: 1.1rem;
     }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 780px){
 
    .container-img_perfil
    {

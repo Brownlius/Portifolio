@@ -2,11 +2,18 @@
     .cabecalho{
         justify-content:center;
         flex-direction: column;
+        width:auto;
     }
     .cabecalho .listas{
-        font-family: 'pixel-font'; 
+        
         display: flex;
         flex-direction: column;
+    }
+    .funcao{
+        font-size: 3rem;
+    }
+    .navegacao-sites{
+        font-size: 2rem;
     }
     /*--------------------------------*/
     .container-main{
@@ -19,15 +26,16 @@
     }
    .perfil-img{
         padding: 0;
-       width: 100%;
-       margin: 10px 0;
+        width:95%;
+       margin: 10px auto;
    }
    .social-icons_UL li, .navegacao-sites_UL li{
        padding: 10px; 
    }
    .texto-container{
-        justify-content: center;
-       margin: 0;
+       width:auto;
+       justify-content: center;
+       text-align: center; 
        padding: 0;
        line-height: 4.5em;
        }

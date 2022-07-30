@@ -194,7 +194,7 @@ h4{
     margin:0 auto;
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 780px){
 .caixa, .principal,.conteudobeneficios,.mapaconteudo,.video{
     width:auto;
 }
