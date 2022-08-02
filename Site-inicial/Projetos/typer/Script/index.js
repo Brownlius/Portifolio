@@ -29,39 +29,6 @@ function ConfereDigitacao(){
     }
 }
 
-function contaPalavrasFrase(){
-
-    let frase = $('.frase').text();
-    let frasedividida = frase.split(/\S+/);
-    let qtdPalavras = frasedividida.length - 1;
-    mudaContadorPalavrasFrase(qtdPalavras);
-}
-    function mudaContadorPalavrasFrase(qtdPalavras){
-
-        $('.contador_palavras-frase').text(qtdPalavras);
-    }
-
-function contaPalavrasInput(){   
-
-    let conteudoCampoTexto = campoTexto.val();
-    let qtdPalavras = conteudoCampoTexto.split(/\S+/).length - 1;    
-    mudaContadorPalavrasinput(qtdPalavras);
-}
-    function mudaContadorPalavrasinput(qtdPalavras){
-
-        $(".contador_palavras-campo_digitacao").html(qtdPalavras);
-    }
-
-function contaCaracteresInput(){
-    let conteudoCampoTexto = campoTexto.val();
-    qtdCaracteresCampoTexto = conteudoCampoTexto.length;
-    mudaContadorCaracteresInput(qtdCaracteresCampoTexto);
-}
-    function mudaContadorCaracteresInput(qtdCaracteresCampoTexto){
-
-        $('.contador_caracteres-campo_digitacao').html(qtdCaracteresCampoTexto);
-    }
-
 function reiniciarCampos(){
     campoTexto.attr('disabled',false);
     campoTexto.val("");
@@ -97,34 +64,4 @@ function cronometro(){
         $(".btn-reiniciar").attr("disabled",false) 
     }
 
-function inserePlacar(){
-    let corpoTabela = $('.tabela').find('tbody');
-    let linha = novaLinha();
-    $(linha).appendTo(corpoTabela);
-    linha.find(".btn-remover").click(excluirLinha);
 
-}
-function novaLinha(){
-   let qtdPalavrasPlacar = $('.contador_palavras-campo_digitacao').text();
-   var user = "Pedro";
-
-   let linha = $("<tr>");  
-   let colunaNome  =  $("<td>").html(user);
-   let colunaPalavras  =  $("<td>").html(qtdPalavrasPlacar);
-   let colunabtnRemove = $("<td>");
-   let LinkRemover = $("<a>").addClass("btn-remover").attr("href","#");
-   let iconeBtnRemover = $("<i>").addClass("material-icons icones").html("remove_circle");
-   
-   LinkRemover.append(iconeBtnRemover);
-
-   colunabtnRemove.append(LinkRemover);
-   linha.append(colunaNome);
-   linha.append(colunaPalavras);
-   linha.append(colunabtnRemove);
-   return linha;
-};
-
-function excluirLinha(event){
-    event.preventDefault();
-    $(this).parent().parent().remove();
-}

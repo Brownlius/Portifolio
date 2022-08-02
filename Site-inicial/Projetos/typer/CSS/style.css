@@ -3,9 +3,7 @@
     src: url('../../../fonts/FixedSys.ttf') format('truetype');
   }
 h1::selection{
-    background-color: aliceblue;
-    
-    
+    background-color: rgb(24, 214, 119);
 }
 ::selection{
     background-color:rgb(24, 214, 119);
@@ -13,14 +11,17 @@ h1::selection{
 html{
     font-family:monospace;
 }
-.titulo{
+h1{
     font-family: 'Mirc-font';
-    font-weight: bold;
-    padding: 5px;
+    padding: 20px;
     font-size:4rem;
-    background-color:rgb(24, 214, 119);
-    border-bottom: 3px solid rgb(19, 31, 46);
     text-align: center;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+    background-color:rgb(19, 31, 46);
+    border-bottom: 3px solid aliceblue;
 }
 .container-main{
     padding: 10px;
