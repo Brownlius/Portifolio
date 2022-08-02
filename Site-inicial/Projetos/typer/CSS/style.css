@@ -62,10 +62,13 @@ h1{
     outline: none;
     background-color:  aliceblue;
 }
-.btn-reiniciar{
+.container-btns{
+    padding: 10px;
+}
+.btns{
     border: 3px solid rgb(19, 31, 46);
     font-family:monospace;
-    margin-left: 60px;
+    margin: 10px;
     background:rgb(24, 214, 119);
     text-align: center;
     width: 75px;
@@ -75,12 +78,12 @@ h1{
     transition: 0.2s all;
 }
 
-.btn-reiniciar:active{
+.btns:active{
     transform: scale(0.98);
     border: 2px solid rgb(24, 214, 119);
 
 }
-.btn-reiniciar:disabled{
+.btns:disabled{
     transform: scale(1);
     border: 2px solid rgb(24, 214, 119);
     text-decoration: line-through;
@@ -93,31 +96,34 @@ h1{
     border: 3px solid tomato;
 
 }
-.container-tabela{
+.container-placar{
+    display: none;
+    align-content: center;
     margin: 10px 0;
     border-top: 3px solid  rgb(19, 31, 46);
-    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+}  
+
+
+.tabela{
+    display: flex;
 }
 h2{
     font-family: Mirc-font;
     font-size: 4rem;
     text-align:center;
     padding: 5px;
-    
-}
 
-.tabela{
 }
 thead{
     line-height: 4rem;
     border-top: 1px solid  rgb(19, 31, 46);
     border-bottom: 1px solid  rgb(19, 31, 46);
     font-size: 3rem;
-    margin: 15px;
 }
-tbody{
-    font-size: 1.5rem;
+td{
+
+    font-size: 1.8rem;
     line-height: 2rem;
 }
+
