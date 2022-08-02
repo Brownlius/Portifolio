@@ -17,14 +17,29 @@ h1{
     font-size:4rem;
     text-align: center;
 }
-.titulo{
+.container-header{
     display: flex;
+    width: 100vw;
     justify-content: center;
     background-color:rgb(19, 31, 46);
     border-bottom: 3px solid aliceblue;
 }
+
+.titulo{
+    display: flex;
+}
 .container-main{
+    display: flex;
+    flex-direction: column;
     padding: 10px;
+}
+.container-cima{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+i{
+    color: rgb(19, 31, 46);
 }
 .frase{
     font-size:2rem;
@@ -32,7 +47,6 @@ h1{
     margin-bottom: 20px;
 }
 .infos{
-    text-align: center;
     font-size:2rem;
     line-height: 2.5rem;
 }
@@ -63,8 +77,9 @@ h1{
     background-color:  aliceblue;
 }
 .container-btns{
-    padding: 10px;
+    display: flex;
 }
+
 .btns{
     border: 3px solid rgb(19, 31, 46);
     font-family:monospace;
@@ -88,7 +103,11 @@ h1{
     border: 2px solid rgb(24, 214, 119);
     text-decoration: line-through;
 }
-
+.container-infos{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
 .borda-certa{
     border: 3px solid rgb(24, 214, 119);
 }
