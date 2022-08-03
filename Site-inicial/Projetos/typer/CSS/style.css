@@ -8,25 +8,22 @@ h1::selection{
 ::selection{
     background-color:rgb(24, 214, 119);
 }
-html{
-    font-family:monospace;
-}
 h1{
     font-family: 'Mirc-font';
     padding: 20px;
     font-size:4rem;
-    text-align: center;
 }
 .container-header{
     display: flex;
-    width: 100vw;
     justify-content: center;
     background-color:rgb(19, 31, 46);
     border-bottom: 3px solid aliceblue;
 }
-
-.titulo{
-    display: flex;
+.container-header .item{
+    
+    height: 3rem;
+    padding: auto 10px;
+    align-items: center;
 }
 .container-main{
     display: flex;
@@ -43,6 +40,7 @@ i{
 }
 .frase{
     font-size:2rem;
+    line-height: 2.5rem;
     margin-left:20px;
     margin-bottom: 20px;
 }

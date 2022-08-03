@@ -3,8 +3,9 @@
    src: url('./fonts/FixedSys.ttf') format('truetype');
  }
 
-
 html{
+   scrollbar-color: aliceblue rgb(19, 31, 46);
+   scrollbar-width:thin;
    overflow-x:hidden ;
    font-family: monospace;
    color: aliceblue;

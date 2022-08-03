@@ -18,7 +18,7 @@
 .funcao{
    font-family: 'Mirc-font';
    text-align: center;
-   font-size: 1.8rem ;
+   font-size:2.5rem;
 }
    .funcao em{
       color: rgb(24, 214, 119);
@@ -36,7 +36,7 @@
 }
 .social-icons_UL a, .navegacao-sites_UL a{
    padding-right: 10px;
-   font-size: 1.8rem;  
+   font-size:2.5rem;  
    transition: 0.5s all; 
 }
 .navegacao-sites_UL a:hover{
@@ -50,6 +50,7 @@
 }
 .navegacao-sites{
    text-transform: uppercase; 
+   font-size: 3rem;
 }
 .social-icons img{
    width: 35px;
