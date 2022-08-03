@@ -11,5 +11,5 @@ function reiniciarCampos(){
 $('.placar').click(exibePlacar);
 
 function exibePlacar(){
-    $(".container-placar").toggle(400);
+    $(".container-placar").stop().toggle(400);
  }

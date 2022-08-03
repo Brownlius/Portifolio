@@ -22,10 +22,28 @@ function novaLinha(){
     let linha = novaLinha();
     $(linha).appendTo(corpoTabela);
     linha.find(".btn-remover").click(excluirLinha);
+    scrollPlacar();
+    $(".container-placar").slideDown(400);
+    
+}
 
+function scrollPlacar(){
+    let topoPlacar = $(".container-placar").offset().top;
+   
+    $(".container-corpo").animate(
+    {
+        scrollTop: topoPlacar + "px"
+
+    },500);
 }
  
  function excluirLinha(event){
      event.preventDefault();
-     $(this).parent().parent().remove();
+     let linha = $(this).parent().parent();
+     linha.fadeOut(500);
+     setTimeout(function(){
+
+        linha.remove();
+
+     },500);
  }
