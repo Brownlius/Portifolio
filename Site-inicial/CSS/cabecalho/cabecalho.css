@@ -26,6 +26,7 @@
 /*  Nome e função */
 
 .social-icons,.navegacao-sites{
+   padding: 10px;
    font-family: 'Mirc-font'; 
    display: flex;
    flex-direction: column;

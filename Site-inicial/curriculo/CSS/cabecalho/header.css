@@ -56,13 +56,15 @@ html{
     font-size: 2rem;   
 
 }
-.navegacao-sites_UL li:hover{
-    transform: scale(1.02) rotate(1deg);
+.navegacao-sites_UL a{
+    transition: 0.5s all;
+}
+.navegacao-sites_UL a:hover{
     cursor: pointer;
-}
-.navegacao-sites_UL li :active{
-    transform: scale(0.9);
-}
+    color: rgb(24, 214, 119);
+    background-color:rgb(15, 23, 34);
+    border-radius: 5px;
+ }
 .navegacao-sites{
     text-transform: uppercase;
 }
