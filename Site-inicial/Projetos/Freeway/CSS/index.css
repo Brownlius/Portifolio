@@ -1,7 +1,3 @@
-@font-face {
-    font-family:'Mirc-font';
-    src: url('../../../fonts/FixedSys.ttf') format('truetype');
-}
 
 .cabeca{
     display: flex;
@@ -14,13 +10,12 @@
     margin: 0 auto;
 }
 .titulo{
-    font-family:  'Mirc-font';
-    font-size:3em;
-    margin: 5px auto 0 ;
+    font-family: 'Mirc-font';
+    font-size: 3rem;
+    line-height: 3rem;
     color: rgb(24, 214, 119);
 }
 body{ 
-    
     text-align: center;
     background-color: rgb(26, 157, 245);
 }

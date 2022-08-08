@@ -1,13 +1,17 @@
 @font-face {
    font-family: 'Mirc-font';
-   src: url('./fonts/FixedSys.ttf') format('truetype');
+   src: url('../src/fonts/mirc/FixedSys.ttf') format('truetype');
+ }
+ @font-face {
+   font-family: 'Fira-font';
+   src: url('../src/fonts/fira_code/FiraCode-Retina.ttf') format('truetype');
  }
 
 html{
    scrollbar-color: aliceblue rgb(19, 31, 46);
    scrollbar-width:thin;
    overflow-x:hidden ;
-   font-family: monospace;
+   font-family: 'Fira-font';
    color: aliceblue;
 }
 body{
@@ -17,6 +21,14 @@ body{
  }
 a{
    color: rgb(26, 157, 245);
+}
+.img-voltar{
+   display: flex;
+   transition: 1s;
+}
+.img-voltar:hover{
+   transform: scale(1.05) rotate(1deg);
+   cursor: pointer;
 }
 ::-webkit-scrollbar {
    width: 5px;

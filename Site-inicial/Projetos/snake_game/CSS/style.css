@@ -1,34 +1,18 @@
-@font-face {
-    font-family:'Mirc-font';
-    src: url('../../../fonts/FixedSys.ttf') format('truetype');
-  }
-  html{
-    font-family:  'Mirc-font';
-  }
-
 .cabeca{
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: rgb(18, 28, 41);
     border: 4px solid aliceblue;
-    border-radius: 5px;
+    border-radius: 3px;
     width: 50vw;
-    padding: 5px;
     margin: 0 auto;
-}
-.titulo{
-    font-size:3em;
-    margin: 5px auto 0 ;
+    font-family: mirc-font;
+    font-size: 2rem;
+    
     color: rgb(24, 214, 119);
 }
-.img-voltar{
-    display: flex;
-    transition: 1s;
-}
-.img-voltar:hover{
-    transform: scale(1.05) rotate(1deg);
-    cursor: pointer;
-}
+
 body{
     text-align: center;
     background-color: rgb(26, 157, 245);
@@ -43,19 +27,19 @@ body{
 }
 
 .timer{
+    display: flex;
+    justify-content: center;
     width: 15vw;
     background-color: rgb(20, 33, 44);
-    display: flex;
     font-size : 2em; 
     color: rgb(24, 214, 119);
-    justify-content: center;
     margin: 0 auto;
+    padding: 15px;
 }
-
 canvas{
     margin: 0 auto;
     border: 4px solid aliceblue;
-    border-radius: 5px;
+    border-radius: 3px;
     display: flex;
 }
 

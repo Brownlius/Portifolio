@@ -1,7 +1,4 @@
-@font-face {
-    font-family:'Mirc-font';
-    src: url('../../../fonts/FixedSys.ttf') format('truetype');
-  }
+
 h1::selection{
     background-color: rgb(24, 214, 119);
 }
@@ -14,15 +11,13 @@ h1{
     font-size:4rem;
 }
 .container-header{
+    padding: 15px;
     display: flex;
     justify-content: center;
     background-color:rgb(19, 31, 46);
     border-bottom: 3px solid aliceblue;
 }
 .container-header .item{
-    
-    height: 3rem;
-    padding: auto 10px;
     align-items: center;
 }
 .container-main{

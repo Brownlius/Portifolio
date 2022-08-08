@@ -49,13 +49,13 @@ function geraCanvas(){
 }
 
 function imgFundo(){
-    let fundoimg = novaImagem("Imagens/estrada.png");
+    let fundoimg = novaImagem("./src/images/estrada.png");
     ctx.drawImage(fundoimg, 0, 0, tela.width, tela.height);  
 }
 
 function geraBuraco(){
     
-    let buraco = novaImagem("Imagens/buraco.png");
+    let buraco = novaImagem("./src/images/buraco.png");
     for (let i = 0; i < buracos.length; i++){
         ctx.drawImage(buraco, buracos[i].posicaoX, buracos[i].posicaoY, buracos[i].altura, buracos[i].largura);  
     }
@@ -63,7 +63,7 @@ function geraBuraco(){
 }
 
 function mostraVida(){
-    let ImgVidas = novaImagem("Imagens/vida.png")
+    let ImgVidas = novaImagem("./src/images/vida.png")
     let deslocamento = 0;
     for (let i = 1; i <= vidas.qtd; i++) {
         ctx.drawImage(ImgVidas,(vidas.posicaoX + deslocamento),vidas.posicaoY,vidas.altura,vidas.largura);
@@ -72,14 +72,14 @@ function mostraVida(){
     }
 
 function imgPersonagem(){
-    let personagem = novaImagem("Imagens/personagem.png");
+    let personagem = novaImagem("./src/images/personagem.png");
     ctx.drawImage(personagem, michael.posicaoX, michael.posicaoY, michael.altura, michael.largura);  
 }
 function CarregaImgCarro(){
 
-    let carro1 = novaImagem("Imagens/car1.png");
-    let carro2 = novaImagem("Imagens/car2.png");
-    let carro3 = novaImagem("Imagens/car3.png")
+    let carro1 = novaImagem("./src/images/car1.png");
+    let carro2 = novaImagem("./src/images/car2.png");
+    let carro3 = novaImagem("./src/images/car3.png")
     ImgCarros.push(carro1, carro2,carro3);
 }   
 
