@@ -22,6 +22,18 @@ body{
 a{
    color: rgb(26, 157, 245);
 }
+.subtitulo-azul{
+   color: rgb(26, 157, 245);
+   font-family: 'Mirc-font';
+   line-height: 1.9rem;
+   font-size: 1.5rem;
+}
+.subtitulo{
+   text-align: center;
+   color: aliceblue;
+   font-size: 1.7rem;
+   font-family: 'Mirc-font';  
+}
 .img-voltar{
    display: flex;
    transition: 1s;

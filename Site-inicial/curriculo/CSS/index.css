@@ -10,12 +10,6 @@
     background-color: rgb(19, 31, 46);
     box-shadow: -5px  5px 5px rgb(15, 23, 34);
  }
-.subtitulo-azul{
-    color: rgb(26, 157, 245);
-    font-family: 'Mirc-font';
-    line-height: 1.9rem;
-    font-size: 1.5rem;
-}
 
 .container-main{
     position: relative;
@@ -40,26 +34,30 @@ position: sticky;
     margin: 20px 0;
 }
 .skills-container{
+    display: flex;
+    flex-direction: column;
     margin: 20px 0;
-}
-.subtitulo{
-    text-align: center;
-    color: aliceblue;
-    font-size: 1.5rem;
-    font-family: 'Mirc-font';  
+    height: 40vh;
 }
 .container-graficos{
+    overflow-y: hidden;
     display: flex;
-    flex-wrap: nowrap;
-    overflow-x: scroll;
+    align-self: center;
+    width: calc(100% - 20px);
+}
+.lista-graficos{
+    display: flex;
+    overflow-x:scroll;
+}
+.container-graficos li{
+    display: flex;
+    width: 100%;
     justify-content: center;
-    margin: 20px 0;
-    padding: 10px;
+    align-items: center;
 }
 #grafico{
-    margin: 15px;
-    max-width: 250px;
-    width: 33%;
+    height: 90%;
+    display: flex;
     border-radius: 50%;
 }
      .html{

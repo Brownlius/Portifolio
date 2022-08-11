@@ -5,7 +5,6 @@
         width:auto;
     }
     .cabecalho .listas{
-        
         display: flex;
         flex-direction: column;
     }
