@@ -51,7 +51,7 @@ position: sticky;
 }
 .container-graficos li{
     display: flex;
-    width: 100%;
+    width: 50%;
     justify-content: center;
     align-items: center;
 }
