@@ -51,7 +51,8 @@ position: sticky;
 }
 .container-graficos li{
     display: flex;
-    width: 85%;
+    width: 30%;
+    min-height: 150px;
     justify-content: center;
     align-items: center;
 }
@@ -67,9 +68,12 @@ position: sticky;
         background: conic-gradient(rgb(24, 214, 119) 70%,  rgb(18, 28, 41) 30%);
     }
      .js{
-        background: conic-gradient(rgb(24, 214, 119) 50%,  rgb(18, 28, 41) 50%);
+        background: conic-gradient(rgb(24, 214, 119) 60%,  rgb(18, 28, 41) 50%);
     }
      .illustrator{
         background: conic-gradient(rgb(24, 214, 119) 85%,  rgb(18, 28, 41) 15%);
+    }
+    .CSharp{
+        background: conic-gradient(rgb(24, 214, 119) 65%,  rgb(18, 28, 41) 15%);
     }
 

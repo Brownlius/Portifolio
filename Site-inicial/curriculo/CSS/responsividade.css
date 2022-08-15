@@ -23,6 +23,8 @@
    .container-pe {
        width: 100vw;
    }
-
+   .container-graficos li{
+    width: 85%;
+}
   
 }
