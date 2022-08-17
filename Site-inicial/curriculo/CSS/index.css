@@ -62,10 +62,10 @@ position: sticky;
     border-radius: 50%;
 }
      .html{
-        background: conic-gradient(rgb(24, 214, 119) 75%,  rgb(18, 28, 41) 25%);
+        background: conic-gradient(rgb(24, 214, 119) 85%,  rgb(18, 28, 41) 15%);
     }
      .css{
-        background: conic-gradient(rgb(24, 214, 119) 70%,  rgb(18, 28, 41) 30%);
+        background: conic-gradient(rgb(24, 214, 119) 80%,  rgb(18, 28, 41) 20%);
     }
      .js{
         background: conic-gradient(rgb(24, 214, 119) 60%,  rgb(18, 28, 41) 50%);
@@ -74,6 +74,9 @@ position: sticky;
         background: conic-gradient(rgb(24, 214, 119) 85%,  rgb(18, 28, 41) 15%);
     }
     .CSharp{
-        background: conic-gradient(rgb(24, 214, 119) 65%,  rgb(18, 28, 41) 15%);
+        background: conic-gradient(rgb(24, 214, 119) 55%,  rgb(18, 28, 41) 45%);
+    }
+    .CMoreMore{
+        background: conic-gradient(rgb(24, 214, 119) 70%,  rgb(18, 28, 41) 30%);
     }
 
