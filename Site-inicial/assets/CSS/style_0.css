@@ -49,7 +49,8 @@ a{
    background:rgb(19, 31, 46);     
 }
 ::-webkit-scrollbar-thumb {
-   background-color:aliceblue;      
+   background-color:aliceblue;   
+   
 }
 ::selection{
    background: rgb(18, 28, 41);
