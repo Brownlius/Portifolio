@@ -67,7 +67,7 @@ function update(){
 function novaImagem(src){
     let img = document.createElement("img");
     img.src = src;
-    document.querySelector('#canvas').appendChild(img);
+    document.querySelector('.corpo').appendChild(img);
     return img;
 }
 
