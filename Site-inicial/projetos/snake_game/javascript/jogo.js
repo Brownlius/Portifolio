@@ -64,6 +64,12 @@ function update(){
     condiçõesFimJogo();
     
 }
+function novaImagem(src){
+    let img = document.createElement("img");
+    img.src = src;
+    document.querySelector('#canvas').appendChild(img);
+    return img;
+}
 
 function canvas(){
     tela = document.getElementById("fundo-jogo");
@@ -214,7 +220,8 @@ function geraSushi(){
     ctx.drawImage(imgSushi, xSushi, ySushi, tamanhoBloco , tamanhoBloco); //comida
 }
 function geraObstaculos(){
-    let imgObstaculo = document.getElementById("obstaculos");
+	let imgObstaculo = novaImagem("../src/images/obstaculos.png");
+   // let imgObstaculo = document.getElementById("obstaculos");
     for (let i = 0; i <= xObstaculos.length; i++) {
     ctx.drawImage(imgObstaculo, xObstaculos[i], yObstaculos[i] , tamanhoBloco, tamanhoBloco);    
     }
