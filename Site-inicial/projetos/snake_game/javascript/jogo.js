@@ -187,7 +187,7 @@ function mostraComidas(){
     }
 }
 function mostraCoracao(){
-    let imagemCoracao = novaImagem("../coracao_snake.png")
+    let imagemCoracao = novaImagem("../snake_game/coracao_snake.png")
     for (let i = 1; i <= qtdVidas; i++) {
         xVidas += (tamanhoBloco/100) * 70 + tamanhoBloco;
         ctx.drawImage(imagemCoracao, ((tela.width / 10) * 6.5) + xVidas, 7.5, tamanhoBloco * 1.25, tamanhoBloco * 1.25);
