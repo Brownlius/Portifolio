@@ -91,7 +91,7 @@ function geraLinha(){
 }
 
 function geraCabeca(){
-    let cabeca = novaImagem("../src/images/cabeca/gabi_cima.png");
+    let cabeca = novaImagem("../../projetos/src/images/cabeca/gabi_cima.png");
     ctx.drawImage(cabeca, xGabi,yGabi,tamanhoBloco,tamanhoBloco);
 }   
 
