@@ -37,7 +37,7 @@ window.onload = function (){
     canvas();
     geraLocalDaComida();
     document.addEventListener('keyup',mudaDirecao);
-    setInterval(update, 1000/13);
+    setInterval(update, 1000/15);
     geraLocalDoObstaculo();
 }
 function update(){
