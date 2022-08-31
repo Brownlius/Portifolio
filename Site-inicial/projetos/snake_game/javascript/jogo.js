@@ -91,7 +91,7 @@ function geraLinha(){
 }
 
 function geraCabeca(){
-    let cabeca = novaImagem("../../projetos/src/images/cabeca/gabi_cima.png");
+    let cabeca = novaImagem("../snake_game/src/images/cabeca/gabi_cima.png");
     ctx.drawImage(cabeca, xGabi,yGabi,tamanhoBloco,tamanhoBloco);
 }   
 
@@ -187,7 +187,7 @@ function mostraComidas(){
     }
 }
 function mostraCoracao(){
-    let imagemCoracao = novaImagem("../snake_game/coracao_snake.png")
+    let imagemCoracao = novaImagem("../snake_game/src/images/coracao_snake.png")
     for (let i = 1; i <= qtdVidas; i++) {
         xVidas += (tamanhoBloco/100) * 70 + tamanhoBloco;
         ctx.drawImage(imagemCoracao, ((tela.width / 10) * 6.5) + xVidas, 7.5, tamanhoBloco * 1.25, tamanhoBloco * 1.25);
@@ -215,11 +215,11 @@ function rolagemInfinita(){
 }
 
 function geraSushi(){
-    imgSushi = novaImagem("../../projetos/src/images/sushi.png");
+    imgSushi = novaImagem("../snake_game/src/images/sushi.png");
     ctx.drawImage(imgSushi, xSushi, ySushi, tamanhoBloco , tamanhoBloco); //comida
 }
 function geraObstaculos(){
-	let imgObstaculo = novaImagem("../../projetos/src/images/obstaculos.png");
+	let imgObstaculo = novaImagem("../snake_game/src/images/obstaculos.png");
     for (let i = 0; i <= xObstaculos.length; i++) {
     ctx.drawImage(imgObstaculo, xObstaculos[i], yObstaculos[i] , tamanhoBloco, tamanhoBloco);    
     }
