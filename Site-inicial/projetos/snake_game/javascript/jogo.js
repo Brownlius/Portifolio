@@ -32,12 +32,12 @@ var mostra = document.querySelector('.timer');
 
 window.onload = function (){
 
+    setInterval(update, 1000/15);
     iniciaMovimento();
     iniciaContador(duracao, mostra);
     canvas();
     geraLocalDaComida();
     document.addEventListener('keyup',mudaDirecao);
-    setInterval(update, 1000/13);
     geraLocalDoObstaculo();
 }
 function update(){
@@ -64,13 +64,18 @@ function update(){
     condiçõesFimJogo();
     
 }
+function novaImagem(src){
+    let img = document.createElement("img");
+    img.src = src;
+    document.querySelector('#canvas').appendChild(img);
+    return img;
+}
 
 function canvas(){
-    tela = document.getElementById("fundo-jogo");
+    tela = document.getElementById("canvas");
     tela.width = linhas * tamanhoBloco;
     tela.height = colunas * tamanhoBloco;
     ctx = tela.getContext('2d');
-    
 }
 function geraCanvas(){
     ctx.fillStyle = 'rgb(20, 33, 44)'; // fundo - azul-escuro
@@ -86,7 +91,7 @@ function geraLinha(){
 }
 
 function geraCabeca(){
-    let cabeca =document.getElementById('gabi-cima');
+    let cabeca = novaImagem("../snake_game/images/cabeca/gabi_cima.png");
     ctx.drawImage(cabeca, xGabi,yGabi,tamanhoBloco,tamanhoBloco);
 }   
 
@@ -182,7 +187,7 @@ function mostraComidas(){
     }
 }
 function mostraCoracao(){
-    let imagemCoracao = document.getElementById('coracao');
+    let imagemCoracao = novaImagem("../snake_game/images/coracao_snake.png")
     for (let i = 1; i <= qtdVidas; i++) {
         xVidas += (tamanhoBloco/100) * 70 + tamanhoBloco;
         ctx.drawImage(imagemCoracao, ((tela.width / 10) * 6.5) + xVidas, 7.5, tamanhoBloco * 1.25, tamanhoBloco * 1.25);
@@ -210,11 +215,11 @@ function rolagemInfinita(){
 }
 
 function geraSushi(){
-    imgSushi = document.getElementById("sushi");
+    imgSushi = novaImagem("../snake_game/images/sushi.png");
     ctx.drawImage(imgSushi, xSushi, ySushi, tamanhoBloco , tamanhoBloco); //comida
 }
 function geraObstaculos(){
-    let imgObstaculo = document.getElementById('obstaculos');
+	let imgObstaculo = novaImagem("../snake_game/images/obstaculos.png");
     for (let i = 0; i <= xObstaculos.length; i++) {
     ctx.drawImage(imgObstaculo, xObstaculos[i], yObstaculos[i] , tamanhoBloco, tamanhoBloco);    
     }
